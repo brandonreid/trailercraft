@@ -1,0 +1,1279 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Post page should render 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <WithStyles(Post)
+    _id="5afdbf6c44d74b4e924f1d0b"
+    bucket="5afdbcd115bef94f7421eb0d"
+    content="<p>When I orbited the Earth in a spaceship, I saw for the first time how beautiful our planet is. Mankind, let us preserve and increase this beauty, and not destroy it!</p><p>Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.</p><p>If you could see the earth illuminated when you were in a place as dark as night, it would look to you more splendid than the moon.</p><p>To be the first to enter the cosmos, to engage, single-handed, in an unprecedented duel with nature&mdash;could one dream of anything more?</p><p>We choose to go to the moon in this decade and do the other things, not because they are easy, but because they are hard, because that goal will serve to organize and measure the best of our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to postpone, and one which we intend to win.</p><p>NASA is not about the &lsquo;Adventure of Human Space Exploration&rsquo;&hellip;We won&rsquo;t be doing it just to get out there in space &ndash; we&rsquo;ll be doing it because the things we learn out there will be making life better for a lot of people who won&rsquo;t be able to go.</p><p>Problems look mighty small from 150 miles up.</p><p>That&#39;s one small step for [a] man, one giant leap for mankind.</p><p>Where ignorance lurks, so too do the frontiers of discovery and imagination.</p><p>Dinosaurs are extinct today because they lacked opposable thumbs and the brainpower to build a space program.</p>"
+    created="2017-10-12T13:27:49.665Z"
+    created_at="2017-10-12T13:27:49.665Z"
+    metadata={
+      Object {
+        "author": Object {
+          "_id": "5afdbf6c44d74b4e924f1d09",
+          "bucket": "5afdbcd115bef94f7421eb0d",
+          "content": "<p>Something about John...</p>",
+          "created": "2017-10-12T13:27:49.665Z",
+          "created_at": "2017-10-12T13:27:49.665Z",
+          "metadata": Object {
+            "image": Object {
+              "imgix_url": "https://cosmic-s3.imgix.net/9a0a85b0-23f5-11e7-875c-3f5dc9c15c2b-male.jpg",
+              "url": "https://s3-us-west-2.amazonaws.com/cosmicjs/9a0a85b0-23f5-11e7-875c-3f5dc9c15c2b-male.jpg",
+            },
+          },
+          "metafields": Array [
+            Object {
+              "children": null,
+              "imgix_url": "https://cosmic-s3.imgix.net/9a0a85b0-23f5-11e7-875c-3f5dc9c15c2b-male.jpg",
+              "key": "image",
+              "title": "Image",
+              "type": "file",
+              "url": "https://s3-us-west-2.amazonaws.com/cosmicjs/9a0a85b0-23f5-11e7-875c-3f5dc9c15c2b-male.jpg",
+              "value": "9a0a85b0-23f5-11e7-875c-3f5dc9c15c2b-male.jpg",
+            },
+          ],
+          "modified_at": "2018-05-17T17:44:12.977Z",
+          "published_at": "2018-05-17T17:44:12.977Z",
+          "slug": "john-doe",
+          "status": "published",
+          "title": "John Doe",
+          "type_slug": "authors",
+        },
+        "hero": Object {
+          "imgix_url": "https://cosmic-s3.imgix.net/56363630-af74-11e7-b864-313f959a776e-react-blog.jpg",
+          "url": "https://s3-us-west-2.amazonaws.com/cosmicjs/56363630-af74-11e7-b864-313f959a776e-react-blog.jpg",
+        },
+        "teaser": "<p>I don&#39;t know what you could say about a day in which you have seen four beautiful sunsets.</p><p>It suddenly struck me that that tiny pea, pretty and blue, was the Earth. I put up my thumb and shut one eye, and my thumb blotted out the planet Earth. I didn&#39;t feel like a giant. I felt very, very small....</p>",
+      }
+    }
+    metafields={
+      Array [
+        Object {
+          "children": null,
+          "imgix_url": "https://cosmic-s3.imgix.net/56363630-af74-11e7-b864-313f959a776e-react-blog.jpg",
+          "key": "hero",
+          "title": "Hero",
+          "type": "file",
+          "url": "https://s3-us-west-2.amazonaws.com/cosmicjs/56363630-af74-11e7-b864-313f959a776e-react-blog.jpg",
+          "value": "56363630-af74-11e7-b864-313f959a776e-react-blog.jpg",
+        },
+        Object {
+          "children": null,
+          "key": "teaser",
+          "title": "Teaser",
+          "type": "html-textarea",
+          "value": "<p>I don&#39;t know what you could say about a day in which you have seen four beautiful sunsets.</p><p>It suddenly struck me that that tiny pea, pretty and blue, was the Earth. I put up my thumb and shut one eye, and my thumb blotted out the planet Earth. I didn&#39;t feel like a giant. I felt very, very small....</p>",
+        },
+        Object {
+          "children": null,
+          "key": "author",
+          "object": Object {
+            "_id": "5afdbf6c44d74b4e924f1d09",
+            "bucket": "5afdbcd115bef94f7421eb0d",
+            "content": "<p>Something about John...</p>",
+            "created": "2017-10-12T13:27:49.665Z",
+            "created_at": "2017-10-12T13:27:49.665Z",
+            "metadata": Object {
+              "image": Object {
+                "imgix_url": "https://cosmic-s3.imgix.net/9a0a85b0-23f5-11e7-875c-3f5dc9c15c2b-male.jpg",
+                "url": "https://s3-us-west-2.amazonaws.com/cosmicjs/9a0a85b0-23f5-11e7-875c-3f5dc9c15c2b-male.jpg",
+              },
+            },
+            "metafields": Array [
+              Object {
+                "children": null,
+                "imgix_url": "https://cosmic-s3.imgix.net/9a0a85b0-23f5-11e7-875c-3f5dc9c15c2b-male.jpg",
+                "key": "image",
+                "title": "Image",
+                "type": "file",
+                "url": "https://s3-us-west-2.amazonaws.com/cosmicjs/9a0a85b0-23f5-11e7-875c-3f5dc9c15c2b-male.jpg",
+                "value": "9a0a85b0-23f5-11e7-875c-3f5dc9c15c2b-male.jpg",
+              },
+            ],
+            "modified_at": "2018-05-17T17:44:12.977Z",
+            "published_at": "2018-05-17T17:44:12.977Z",
+            "slug": "john-doe",
+            "status": "published",
+            "title": "John Doe",
+            "type_slug": "authors",
+          },
+          "object_type": "authors",
+          "title": "Author",
+          "type": "object",
+          "value": "5afdbf6c44d74b4e924f1d09",
+        },
+      ]
+    }
+    modified_at="2017-10-12T17:39:54.476Z"
+    published_at="2018-05-17T17:44:12.979Z"
+    slug="a-wonderful-blog-post-about-earth"
+    status="published"
+    title="A Wonderful Blog Post About Earth"
+    type_slug="posts"
+  >
+    <Post
+      _id="5afdbf6c44d74b4e924f1d0b"
+      bucket="5afdbcd115bef94f7421eb0d"
+      classes={
+        Object {
+          "authorContainer": "Post-authorContainer-1",
+          "authorFigure": "Post-authorFigure-3",
+          "authorInfo": "Post-authorInfo-2",
+          "centerColumn": "Post-centerColumn-4",
+          "date": "Post-date-5",
+          "divider": "Post-divider-6",
+          "fullWidth": "Post-fullWidth-7",
+          "heroFigure": "Post-heroFigure-8",
+          "heroImg": "Post-heroImg-9",
+          "main": "Post-main-10",
+          "root": "Post-root-11",
+          "title": "Post-title-12",
+        }
+      }
+      content="<p>When I orbited the Earth in a spaceship, I saw for the first time how beautiful our planet is. Mankind, let us preserve and increase this beauty, and not destroy it!</p><p>Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.</p><p>If you could see the earth illuminated when you were in a place as dark as night, it would look to you more splendid than the moon.</p><p>To be the first to enter the cosmos, to engage, single-handed, in an unprecedented duel with nature&mdash;could one dream of anything more?</p><p>We choose to go to the moon in this decade and do the other things, not because they are easy, but because they are hard, because that goal will serve to organize and measure the best of our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to postpone, and one which we intend to win.</p><p>NASA is not about the &lsquo;Adventure of Human Space Exploration&rsquo;&hellip;We won&rsquo;t be doing it just to get out there in space &ndash; we&rsquo;ll be doing it because the things we learn out there will be making life better for a lot of people who won&rsquo;t be able to go.</p><p>Problems look mighty small from 150 miles up.</p><p>That&#39;s one small step for [a] man, one giant leap for mankind.</p><p>Where ignorance lurks, so too do the frontiers of discovery and imagination.</p><p>Dinosaurs are extinct today because they lacked opposable thumbs and the brainpower to build a space program.</p>"
+      created="2017-10-12T13:27:49.665Z"
+      created_at="2017-10-12T13:27:49.665Z"
+      metadata={
+        Object {
+          "author": Object {
+            "_id": "5afdbf6c44d74b4e924f1d09",
+            "bucket": "5afdbcd115bef94f7421eb0d",
+            "content": "<p>Something about John...</p>",
+            "created": "2017-10-12T13:27:49.665Z",
+            "created_at": "2017-10-12T13:27:49.665Z",
+            "metadata": Object {
+              "image": Object {
+                "imgix_url": "https://cosmic-s3.imgix.net/9a0a85b0-23f5-11e7-875c-3f5dc9c15c2b-male.jpg",
+                "url": "https://s3-us-west-2.amazonaws.com/cosmicjs/9a0a85b0-23f5-11e7-875c-3f5dc9c15c2b-male.jpg",
+              },
+            },
+            "metafields": Array [
+              Object {
+                "children": null,
+                "imgix_url": "https://cosmic-s3.imgix.net/9a0a85b0-23f5-11e7-875c-3f5dc9c15c2b-male.jpg",
+                "key": "image",
+                "title": "Image",
+                "type": "file",
+                "url": "https://s3-us-west-2.amazonaws.com/cosmicjs/9a0a85b0-23f5-11e7-875c-3f5dc9c15c2b-male.jpg",
+                "value": "9a0a85b0-23f5-11e7-875c-3f5dc9c15c2b-male.jpg",
+              },
+            ],
+            "modified_at": "2018-05-17T17:44:12.977Z",
+            "published_at": "2018-05-17T17:44:12.977Z",
+            "slug": "john-doe",
+            "status": "published",
+            "title": "John Doe",
+            "type_slug": "authors",
+          },
+          "hero": Object {
+            "imgix_url": "https://cosmic-s3.imgix.net/56363630-af74-11e7-b864-313f959a776e-react-blog.jpg",
+            "url": "https://s3-us-west-2.amazonaws.com/cosmicjs/56363630-af74-11e7-b864-313f959a776e-react-blog.jpg",
+          },
+          "teaser": "<p>I don&#39;t know what you could say about a day in which you have seen four beautiful sunsets.</p><p>It suddenly struck me that that tiny pea, pretty and blue, was the Earth. I put up my thumb and shut one eye, and my thumb blotted out the planet Earth. I didn&#39;t feel like a giant. I felt very, very small....</p>",
+        }
+      }
+      metafields={
+        Array [
+          Object {
+            "children": null,
+            "imgix_url": "https://cosmic-s3.imgix.net/56363630-af74-11e7-b864-313f959a776e-react-blog.jpg",
+            "key": "hero",
+            "title": "Hero",
+            "type": "file",
+            "url": "https://s3-us-west-2.amazonaws.com/cosmicjs/56363630-af74-11e7-b864-313f959a776e-react-blog.jpg",
+            "value": "56363630-af74-11e7-b864-313f959a776e-react-blog.jpg",
+          },
+          Object {
+            "children": null,
+            "key": "teaser",
+            "title": "Teaser",
+            "type": "html-textarea",
+            "value": "<p>I don&#39;t know what you could say about a day in which you have seen four beautiful sunsets.</p><p>It suddenly struck me that that tiny pea, pretty and blue, was the Earth. I put up my thumb and shut one eye, and my thumb blotted out the planet Earth. I didn&#39;t feel like a giant. I felt very, very small....</p>",
+          },
+          Object {
+            "children": null,
+            "key": "author",
+            "object": Object {
+              "_id": "5afdbf6c44d74b4e924f1d09",
+              "bucket": "5afdbcd115bef94f7421eb0d",
+              "content": "<p>Something about John...</p>",
+              "created": "2017-10-12T13:27:49.665Z",
+              "created_at": "2017-10-12T13:27:49.665Z",
+              "metadata": Object {
+                "image": Object {
+                  "imgix_url": "https://cosmic-s3.imgix.net/9a0a85b0-23f5-11e7-875c-3f5dc9c15c2b-male.jpg",
+                  "url": "https://s3-us-west-2.amazonaws.com/cosmicjs/9a0a85b0-23f5-11e7-875c-3f5dc9c15c2b-male.jpg",
+                },
+              },
+              "metafields": Array [
+                Object {
+                  "children": null,
+                  "imgix_url": "https://cosmic-s3.imgix.net/9a0a85b0-23f5-11e7-875c-3f5dc9c15c2b-male.jpg",
+                  "key": "image",
+                  "title": "Image",
+                  "type": "file",
+                  "url": "https://s3-us-west-2.amazonaws.com/cosmicjs/9a0a85b0-23f5-11e7-875c-3f5dc9c15c2b-male.jpg",
+                  "value": "9a0a85b0-23f5-11e7-875c-3f5dc9c15c2b-male.jpg",
+                },
+              ],
+              "modified_at": "2018-05-17T17:44:12.977Z",
+              "published_at": "2018-05-17T17:44:12.977Z",
+              "slug": "john-doe",
+              "status": "published",
+              "title": "John Doe",
+              "type_slug": "authors",
+            },
+            "object_type": "authors",
+            "title": "Author",
+            "type": "object",
+            "value": "5afdbf6c44d74b4e924f1d09",
+          },
+        ]
+      }
+      modified_at="2017-10-12T17:39:54.476Z"
+      published_at="2018-05-17T17:44:12.979Z"
+      slug="a-wonderful-blog-post-about-earth"
+      status="published"
+      title="A Wonderful Blog Post About Earth"
+      type_slug="posts"
+    >
+      <SideEffect(Head)>
+        <Head />
+      </SideEffect(Head)>
+      <WithStyles(AppBar)
+        title="A Wonderful Blog Post About Earth"
+      >
+        <AppBar
+          classes={
+            Object {
+              "appearanceBtn": "AppBar-appearanceBtn-13",
+              "backBtn": "AppBar-backBtn-14",
+              "header": "AppBar-header-15",
+              "header_topOfPage": "AppBar-header_topOfPage-16",
+              "title": "AppBar-title-17",
+              "title_topOfPage": "AppBar-title_topOfPage-18",
+            }
+          }
+          title="A Wonderful Blog Post About Earth"
+        >
+          <Headroom
+            calcHeightOnResize={true}
+            disable={false}
+            disableInlineStyles={false}
+            downTolerance={0}
+            onPin={[Function]}
+            onUnfix={[Function]}
+            onUnpin={[Function]}
+            parent={[Function]}
+            pinStart={0}
+            upTolerance={5}
+            wrapperStyle={Object {}}
+          >
+            <div
+              className="headroom-wrapper"
+              style={
+                Object {
+                  "height": null,
+                }
+              }
+            >
+              <div
+                className="headroom headroom--unfixed"
+                style={
+                  Object {
+                    "MsTransform": "translateY(0)",
+                    "WebkitTransform": "translateY(0)",
+                    "left": 0,
+                    "position": "relative",
+                    "right": 0,
+                    "top": 0,
+                    "transform": "translateY(0)",
+                    "zIndex": 1,
+                  }
+                }
+              >
+                <header
+                  className="AppBar-header-15 AppBar-header_topOfPage-16"
+                >
+                  <WithStyles(IconButton)
+                    aria-label="Back"
+                    className="AppBar-backBtn-14"
+                    onClick={[Function]}
+                  >
+                    <IconButton
+                      aria-label="Back"
+                      className="AppBar-backBtn-14"
+                      classes={
+                        Object {
+                          "colorInherit": "MuiIconButton-colorInherit-20",
+                          "colorPrimary": "MuiIconButton-colorPrimary-21",
+                          "colorSecondary": "MuiIconButton-colorSecondary-22",
+                          "disabled": "MuiIconButton-disabled-23",
+                          "label": "MuiIconButton-label-24",
+                          "root": "MuiIconButton-root-19",
+                        }
+                      }
+                      color="default"
+                      disabled={false}
+                      onClick={[Function]}
+                    >
+                      <WithStyles(ButtonBase)
+                        aria-label="Back"
+                        centerRipple={true}
+                        className="MuiIconButton-root-19 AppBar-backBtn-14"
+                        disabled={false}
+                        focusRipple={true}
+                        onClick={[Function]}
+                      >
+                        <ButtonBase
+                          aria-label="Back"
+                          centerRipple={true}
+                          className="MuiIconButton-root-19 AppBar-backBtn-14"
+                          classes={
+                            Object {
+                              "disabled": "MuiButtonBase-disabled-26",
+                              "focusVisible": "MuiButtonBase-focusVisible-27",
+                              "root": "MuiButtonBase-root-25",
+                            }
+                          }
+                          disableRipple={false}
+                          disabled={false}
+                          focusRipple={true}
+                          onClick={[Function]}
+                          tabIndex="0"
+                          type="button"
+                        >
+                          <button
+                            aria-label="Back"
+                            className="MuiButtonBase-root-25 MuiIconButton-root-19 AppBar-backBtn-14"
+                            disabled={false}
+                            onBlur={[Function]}
+                            onClick={[Function]}
+                            onFocus={[Function]}
+                            onKeyDown={[Function]}
+                            onKeyUp={[Function]}
+                            onMouseDown={[Function]}
+                            onMouseLeave={[Function]}
+                            onMouseUp={[Function]}
+                            onTouchEnd={[Function]}
+                            onTouchMove={[Function]}
+                            onTouchStart={[Function]}
+                            tabIndex="0"
+                            type="button"
+                          >
+                            <span
+                              className="MuiIconButton-label-24"
+                            >
+                              <pure(ArrowBack)>
+                                <ArrowBack>
+                                  <WithStyles(SvgIcon)>
+                                    <SvgIcon
+                                      classes={
+                                        Object {
+                                          "colorAction": "MuiSvgIcon-colorAction-31",
+                                          "colorDisabled": "MuiSvgIcon-colorDisabled-33",
+                                          "colorError": "MuiSvgIcon-colorError-32",
+                                          "colorPrimary": "MuiSvgIcon-colorPrimary-29",
+                                          "colorSecondary": "MuiSvgIcon-colorSecondary-30",
+                                          "root": "MuiSvgIcon-root-28",
+                                        }
+                                      }
+                                      color="inherit"
+                                      viewBox="0 0 24 24"
+                                    >
+                                      <svg
+                                        aria-hidden="true"
+                                        className="MuiSvgIcon-root-28"
+                                        focusable="false"
+                                        viewBox="0 0 24 24"
+                                      >
+                                        <g>
+                                          <path
+                                            d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </SvgIcon>
+                                  </WithStyles(SvgIcon)>
+                                </ArrowBack>
+                              </pure(ArrowBack)>
+                            </span>
+                            <WithStyles(TouchRipple)
+                              center={true}
+                              innerRef={[Function]}
+                            >
+                              <TouchRipple
+                                center={true}
+                                classes={
+                                  Object {
+                                    "child": "MuiTouchRipple-child-38",
+                                    "childLeaving": "MuiTouchRipple-childLeaving-39",
+                                    "childPulsate": "MuiTouchRipple-childPulsate-40",
+                                    "ripple": "MuiTouchRipple-ripple-35",
+                                    "ripplePulsate": "MuiTouchRipple-ripplePulsate-37",
+                                    "rippleVisible": "MuiTouchRipple-rippleVisible-36",
+                                    "root": "MuiTouchRipple-root-34",
+                                  }
+                                }
+                              >
+                                <TransitionGroup
+                                  childFactory={[Function]}
+                                  className="MuiTouchRipple-root-34"
+                                  component="span"
+                                  enter={true}
+                                  exit={true}
+                                >
+                                  <span
+                                    className="MuiTouchRipple-root-34"
+                                  />
+                                </TransitionGroup>
+                              </TouchRipple>
+                            </WithStyles(TouchRipple)>
+                          </button>
+                        </ButtonBase>
+                      </WithStyles(ButtonBase)>
+                    </IconButton>
+                  </WithStyles(IconButton)>
+                  <WithStyles(Typography)
+                    className="AppBar-title-17 AppBar-title_topOfPage-18"
+                    variant="title"
+                  >
+                    <Typography
+                      align="inherit"
+                      className="AppBar-title-17 AppBar-title_topOfPage-18"
+                      classes={
+                        Object {
+                          "alignCenter": "MuiTypography-alignCenter-54",
+                          "alignJustify": "MuiTypography-alignJustify-56",
+                          "alignLeft": "MuiTypography-alignLeft-53",
+                          "alignRight": "MuiTypography-alignRight-55",
+                          "body1": "MuiTypography-body1-50",
+                          "body2": "MuiTypography-body2-49",
+                          "button": "MuiTypography-button-52",
+                          "caption": "MuiTypography-caption-51",
+                          "colorError": "MuiTypography-colorError-64",
+                          "colorInherit": "MuiTypography-colorInherit-60",
+                          "colorPrimary": "MuiTypography-colorPrimary-61",
+                          "colorSecondary": "MuiTypography-colorSecondary-62",
+                          "colorTextSecondary": "MuiTypography-colorTextSecondary-63",
+                          "display1": "MuiTypography-display1-45",
+                          "display2": "MuiTypography-display2-44",
+                          "display3": "MuiTypography-display3-43",
+                          "display4": "MuiTypography-display4-42",
+                          "gutterBottom": "MuiTypography-gutterBottom-58",
+                          "headline": "MuiTypography-headline-46",
+                          "noWrap": "MuiTypography-noWrap-57",
+                          "paragraph": "MuiTypography-paragraph-59",
+                          "root": "MuiTypography-root-41",
+                          "subheading": "MuiTypography-subheading-48",
+                          "title": "MuiTypography-title-47",
+                        }
+                      }
+                      color="default"
+                      gutterBottom={false}
+                      headlineMapping={
+                        Object {
+                          "body1": "p",
+                          "body2": "aside",
+                          "display1": "h1",
+                          "display2": "h1",
+                          "display3": "h1",
+                          "display4": "h1",
+                          "headline": "h1",
+                          "subheading": "h3",
+                          "title": "h2",
+                        }
+                      }
+                      noWrap={false}
+                      paragraph={false}
+                      variant="title"
+                    >
+                      <h2
+                        className="MuiTypography-root-41 MuiTypography-title-47 AppBar-title-17 AppBar-title_topOfPage-18"
+                      >
+                        A Wonderful Blog Post About Earth
+                      </h2>
+                    </Typography>
+                  </WithStyles(Typography)>
+                  <WithStyles(IconButton)
+                    aria-label="Appearance"
+                    className="AppBar-appearanceBtn-13"
+                    onClick={[Function]}
+                  >
+                    <IconButton
+                      aria-label="Appearance"
+                      className="AppBar-appearanceBtn-13"
+                      classes={
+                        Object {
+                          "colorInherit": "MuiIconButton-colorInherit-20",
+                          "colorPrimary": "MuiIconButton-colorPrimary-21",
+                          "colorSecondary": "MuiIconButton-colorSecondary-22",
+                          "disabled": "MuiIconButton-disabled-23",
+                          "label": "MuiIconButton-label-24",
+                          "root": "MuiIconButton-root-19",
+                        }
+                      }
+                      color="default"
+                      disabled={false}
+                      onClick={[Function]}
+                    >
+                      <WithStyles(ButtonBase)
+                        aria-label="Appearance"
+                        centerRipple={true}
+                        className="MuiIconButton-root-19 AppBar-appearanceBtn-13"
+                        disabled={false}
+                        focusRipple={true}
+                        onClick={[Function]}
+                      >
+                        <ButtonBase
+                          aria-label="Appearance"
+                          centerRipple={true}
+                          className="MuiIconButton-root-19 AppBar-appearanceBtn-13"
+                          classes={
+                            Object {
+                              "disabled": "MuiButtonBase-disabled-26",
+                              "focusVisible": "MuiButtonBase-focusVisible-27",
+                              "root": "MuiButtonBase-root-25",
+                            }
+                          }
+                          disableRipple={false}
+                          disabled={false}
+                          focusRipple={true}
+                          onClick={[Function]}
+                          tabIndex="0"
+                          type="button"
+                        >
+                          <button
+                            aria-label="Appearance"
+                            className="MuiButtonBase-root-25 MuiIconButton-root-19 AppBar-appearanceBtn-13"
+                            disabled={false}
+                            onBlur={[Function]}
+                            onClick={[Function]}
+                            onFocus={[Function]}
+                            onKeyDown={[Function]}
+                            onKeyUp={[Function]}
+                            onMouseDown={[Function]}
+                            onMouseLeave={[Function]}
+                            onMouseUp={[Function]}
+                            onTouchEnd={[Function]}
+                            onTouchMove={[Function]}
+                            onTouchStart={[Function]}
+                            tabIndex="0"
+                            type="button"
+                          >
+                            <span
+                              className="MuiIconButton-label-24"
+                            >
+                              <pure(Settings)>
+                                <Settings>
+                                  <WithStyles(SvgIcon)>
+                                    <SvgIcon
+                                      classes={
+                                        Object {
+                                          "colorAction": "MuiSvgIcon-colorAction-31",
+                                          "colorDisabled": "MuiSvgIcon-colorDisabled-33",
+                                          "colorError": "MuiSvgIcon-colorError-32",
+                                          "colorPrimary": "MuiSvgIcon-colorPrimary-29",
+                                          "colorSecondary": "MuiSvgIcon-colorSecondary-30",
+                                          "root": "MuiSvgIcon-root-28",
+                                        }
+                                      }
+                                      color="inherit"
+                                      viewBox="0 0 24 24"
+                                    >
+                                      <svg
+                                        aria-hidden="true"
+                                        className="MuiSvgIcon-root-28"
+                                        focusable="false"
+                                        viewBox="0 0 24 24"
+                                      >
+                                        <g>
+                                          <path
+                                            d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </SvgIcon>
+                                  </WithStyles(SvgIcon)>
+                                </Settings>
+                              </pure(Settings)>
+                            </span>
+                            <WithStyles(TouchRipple)
+                              center={true}
+                              innerRef={[Function]}
+                            >
+                              <TouchRipple
+                                center={true}
+                                classes={
+                                  Object {
+                                    "child": "MuiTouchRipple-child-38",
+                                    "childLeaving": "MuiTouchRipple-childLeaving-39",
+                                    "childPulsate": "MuiTouchRipple-childPulsate-40",
+                                    "ripple": "MuiTouchRipple-ripple-35",
+                                    "ripplePulsate": "MuiTouchRipple-ripplePulsate-37",
+                                    "rippleVisible": "MuiTouchRipple-rippleVisible-36",
+                                    "root": "MuiTouchRipple-root-34",
+                                  }
+                                }
+                              >
+                                <TransitionGroup
+                                  childFactory={[Function]}
+                                  className="MuiTouchRipple-root-34"
+                                  component="span"
+                                  enter={true}
+                                  exit={true}
+                                >
+                                  <span
+                                    className="MuiTouchRipple-root-34"
+                                  />
+                                </TransitionGroup>
+                              </TouchRipple>
+                            </WithStyles(TouchRipple)>
+                          </button>
+                        </ButtonBase>
+                      </WithStyles(ButtonBase)>
+                    </IconButton>
+                  </WithStyles(IconButton)>
+                </header>
+              </div>
+            </div>
+          </Headroom>
+          <Connect(WithStyles(AppearanceDialog))
+            onClose={[Function]}
+            open={false}
+          >
+            <WithStyles(AppearanceDialog)
+              dispatch={[Function]}
+              onClose={[Function]}
+              open={false}
+              theme="light"
+            >
+              <AppearanceDialog
+                classes={
+                  Object {
+                    "button": "AppearanceDialog-button-65",
+                    "decreaseFontSizeBtn": "AppearanceDialog-decreaseFontSizeBtn-67",
+                    "dialog": "AppearanceDialog-dialog-66",
+                    "fontSizeBtnsContainer": "AppearanceDialog-fontSizeBtnsContainer-68",
+                    "increaseFontSizeBtn": "AppearanceDialog-increaseFontSizeBtn-69",
+                    "label": "AppearanceDialog-label-70",
+                    "switchContainer": "AppearanceDialog-switchContainer-71",
+                    "themeBtnsContainer": "AppearanceDialog-themeBtnsContainer-72",
+                  }
+                }
+                dispatch={[Function]}
+                onClose={[Function]}
+                open={false}
+                theme="light"
+              >
+                <WithStyles(Dialog)
+                  aria-labelledby="Appearance"
+                  classes={
+                    Object {
+                      "paper": "AppearanceDialog-dialog-66",
+                    }
+                  }
+                  onClose={[Function]}
+                  open={false}
+                >
+                  <Dialog
+                    TransitionComponent={[Function]}
+                    aria-labelledby="Appearance"
+                    classes={
+                      Object {
+                        "paper": "MuiDialog-paper-74 AppearanceDialog-dialog-66",
+                        "paperFullScreen": "MuiDialog-paperFullScreen-79",
+                        "paperFullWidth": "MuiDialog-paperFullWidth-78",
+                        "paperWidthMd": "MuiDialog-paperWidthMd-77",
+                        "paperWidthSm": "MuiDialog-paperWidthSm-76",
+                        "paperWidthXs": "MuiDialog-paperWidthXs-75",
+                        "root": "MuiDialog-root-73",
+                      }
+                    }
+                    disableBackdropClick={false}
+                    disableEscapeKeyDown={false}
+                    fullScreen={false}
+                    fullWidth={false}
+                    maxWidth="sm"
+                    onClose={[Function]}
+                    open={false}
+                    transitionDuration={
+                      Object {
+                        "enter": 225,
+                        "exit": 195,
+                      }
+                    }
+                  >
+                    <WithStyles(Modal)
+                      BackdropProps={
+                        Object {
+                          "transitionDuration": Object {
+                            "enter": 225,
+                            "exit": 195,
+                          },
+                        }
+                      }
+                      aria-labelledby="Appearance"
+                      className="MuiDialog-root-73"
+                      disableBackdropClick={false}
+                      disableEscapeKeyDown={false}
+                      onClose={[Function]}
+                      open={false}
+                      role="dialog"
+                    >
+                      <Modal
+                        BackdropComponent={[Function]}
+                        BackdropProps={
+                          Object {
+                            "transitionDuration": Object {
+                              "enter": 225,
+                              "exit": 195,
+                            },
+                          }
+                        }
+                        aria-labelledby="Appearance"
+                        className="MuiDialog-root-73"
+                        classes={
+                          Object {
+                            "hidden": "MuiModal-hidden-81",
+                            "root": "MuiModal-root-80",
+                          }
+                        }
+                        disableAutoFocus={false}
+                        disableBackdropClick={false}
+                        disableEnforceFocus={false}
+                        disableEscapeKeyDown={false}
+                        disableRestoreFocus={false}
+                        hideBackdrop={false}
+                        keepMounted={false}
+                        manager={
+                          ModalManager {
+                            "containers": Array [],
+                            "data": Array [],
+                            "handleContainerOverflow": true,
+                            "hideSiblingNodes": true,
+                            "modals": Array [],
+                          }
+                        }
+                        onClose={[Function]}
+                        open={false}
+                        role="dialog"
+                      />
+                    </WithStyles(Modal)>
+                  </Dialog>
+                </WithStyles(Dialog)>
+              </AppearanceDialog>
+            </WithStyles(AppearanceDialog)>
+          </Connect(WithStyles(AppearanceDialog))>
+        </AppBar>
+      </WithStyles(AppBar)>
+      <div
+        className="Post-root-11"
+      >
+        <main
+          className="Post-main-10"
+        >
+          <div
+            className="Post-authorContainer-1 Post-centerColumn-4"
+          >
+            <figure
+              className="Post-authorFigure-3"
+            >
+              <img
+                alt=""
+                heght="16px"
+                src="https://cosmic-s3.imgix.net/9a0a85b0-23f5-11e7-875c-3f5dc9c15c2b-male.jpg?w=16&h=16&fit=crop"
+                width="16px"
+              />
+            </figure>
+            <WithStyles(Typography)
+              variant="display1"
+            >
+              <Typography
+                align="inherit"
+                classes={
+                  Object {
+                    "alignCenter": "MuiTypography-alignCenter-54",
+                    "alignJustify": "MuiTypography-alignJustify-56",
+                    "alignLeft": "MuiTypography-alignLeft-53",
+                    "alignRight": "MuiTypography-alignRight-55",
+                    "body1": "MuiTypography-body1-50",
+                    "body2": "MuiTypography-body2-49",
+                    "button": "MuiTypography-button-52",
+                    "caption": "MuiTypography-caption-51",
+                    "colorError": "MuiTypography-colorError-64",
+                    "colorInherit": "MuiTypography-colorInherit-60",
+                    "colorPrimary": "MuiTypography-colorPrimary-61",
+                    "colorSecondary": "MuiTypography-colorSecondary-62",
+                    "colorTextSecondary": "MuiTypography-colorTextSecondary-63",
+                    "display1": "MuiTypography-display1-45",
+                    "display2": "MuiTypography-display2-44",
+                    "display3": "MuiTypography-display3-43",
+                    "display4": "MuiTypography-display4-42",
+                    "gutterBottom": "MuiTypography-gutterBottom-58",
+                    "headline": "MuiTypography-headline-46",
+                    "noWrap": "MuiTypography-noWrap-57",
+                    "paragraph": "MuiTypography-paragraph-59",
+                    "root": "MuiTypography-root-41",
+                    "subheading": "MuiTypography-subheading-48",
+                    "title": "MuiTypography-title-47",
+                  }
+                }
+                color="default"
+                gutterBottom={false}
+                headlineMapping={
+                  Object {
+                    "body1": "p",
+                    "body2": "aside",
+                    "display1": "h1",
+                    "display2": "h1",
+                    "display3": "h1",
+                    "display4": "h1",
+                    "headline": "h1",
+                    "subheading": "h3",
+                    "title": "h2",
+                  }
+                }
+                noWrap={false}
+                paragraph={false}
+                variant="display1"
+              >
+                <h1
+                  className="MuiTypography-root-41 MuiTypography-display1-45"
+                >
+                  John Doe
+                </h1>
+              </Typography>
+            </WithStyles(Typography)>
+          </div>
+          <WithStyles(Typography)
+            classes={
+              Object {
+                "root": "Post-centerColumn-4 Post-title-12",
+              }
+            }
+            variant="display3"
+          >
+            <Typography
+              align="inherit"
+              classes={
+                Object {
+                  "alignCenter": "MuiTypography-alignCenter-54",
+                  "alignJustify": "MuiTypography-alignJustify-56",
+                  "alignLeft": "MuiTypography-alignLeft-53",
+                  "alignRight": "MuiTypography-alignRight-55",
+                  "body1": "MuiTypography-body1-50",
+                  "body2": "MuiTypography-body2-49",
+                  "button": "MuiTypography-button-52",
+                  "caption": "MuiTypography-caption-51",
+                  "colorError": "MuiTypography-colorError-64",
+                  "colorInherit": "MuiTypography-colorInherit-60",
+                  "colorPrimary": "MuiTypography-colorPrimary-61",
+                  "colorSecondary": "MuiTypography-colorSecondary-62",
+                  "colorTextSecondary": "MuiTypography-colorTextSecondary-63",
+                  "display1": "MuiTypography-display1-45",
+                  "display2": "MuiTypography-display2-44",
+                  "display3": "MuiTypography-display3-43",
+                  "display4": "MuiTypography-display4-42",
+                  "gutterBottom": "MuiTypography-gutterBottom-58",
+                  "headline": "MuiTypography-headline-46",
+                  "noWrap": "MuiTypography-noWrap-57",
+                  "paragraph": "MuiTypography-paragraph-59",
+                  "root": "MuiTypography-root-41 Post-centerColumn-4 Post-title-12",
+                  "subheading": "MuiTypography-subheading-48",
+                  "title": "MuiTypography-title-47",
+                }
+              }
+              color="default"
+              gutterBottom={false}
+              headlineMapping={
+                Object {
+                  "body1": "p",
+                  "body2": "aside",
+                  "display1": "h1",
+                  "display2": "h1",
+                  "display3": "h1",
+                  "display4": "h1",
+                  "headline": "h1",
+                  "subheading": "h3",
+                  "title": "h2",
+                }
+              }
+              noWrap={false}
+              paragraph={false}
+              variant="display3"
+            >
+              <h1
+                className="MuiTypography-root-41 Post-centerColumn-4 Post-title-12 MuiTypography-display3-43"
+              >
+                A Wonderful Blog Post About Earth
+              </h1>
+            </Typography>
+          </WithStyles(Typography)>
+          <WithStyles(Typography)
+            classes={
+              Object {
+                "root": "Post-centerColumn-4 Post-date-5",
+              }
+            }
+            variant="subheading"
+          >
+            <Typography
+              align="inherit"
+              classes={
+                Object {
+                  "alignCenter": "MuiTypography-alignCenter-54",
+                  "alignJustify": "MuiTypography-alignJustify-56",
+                  "alignLeft": "MuiTypography-alignLeft-53",
+                  "alignRight": "MuiTypography-alignRight-55",
+                  "body1": "MuiTypography-body1-50",
+                  "body2": "MuiTypography-body2-49",
+                  "button": "MuiTypography-button-52",
+                  "caption": "MuiTypography-caption-51",
+                  "colorError": "MuiTypography-colorError-64",
+                  "colorInherit": "MuiTypography-colorInherit-60",
+                  "colorPrimary": "MuiTypography-colorPrimary-61",
+                  "colorSecondary": "MuiTypography-colorSecondary-62",
+                  "colorTextSecondary": "MuiTypography-colorTextSecondary-63",
+                  "display1": "MuiTypography-display1-45",
+                  "display2": "MuiTypography-display2-44",
+                  "display3": "MuiTypography-display3-43",
+                  "display4": "MuiTypography-display4-42",
+                  "gutterBottom": "MuiTypography-gutterBottom-58",
+                  "headline": "MuiTypography-headline-46",
+                  "noWrap": "MuiTypography-noWrap-57",
+                  "paragraph": "MuiTypography-paragraph-59",
+                  "root": "MuiTypography-root-41 Post-centerColumn-4 Post-date-5",
+                  "subheading": "MuiTypography-subheading-48",
+                  "title": "MuiTypography-title-47",
+                }
+              }
+              color="default"
+              gutterBottom={false}
+              headlineMapping={
+                Object {
+                  "body1": "p",
+                  "body2": "aside",
+                  "display1": "h1",
+                  "display2": "h1",
+                  "display3": "h1",
+                  "display4": "h1",
+                  "headline": "h1",
+                  "subheading": "h3",
+                  "title": "h2",
+                }
+              }
+              noWrap={false}
+              paragraph={false}
+              variant="subheading"
+            >
+              <h3
+                className="MuiTypography-root-41 Post-centerColumn-4 Post-date-5 MuiTypography-subheading-48"
+              >
+                May 17th, 2018
+              </h3>
+            </Typography>
+          </WithStyles(Typography)>
+          <hr
+            className="Post-centerColumn-4 Post-divider-6"
+          />
+          <figure
+            className="Post-heroFigure-8 Post-fullWidth-7"
+          >
+            <img
+              alt=""
+              className="Post-heroImg-9"
+              src="https://cosmic-s3.imgix.net/56363630-af74-11e7-b864-313f959a776e-react-blog.jpg?w=900&fit=crop"
+            />
+          </figure>
+          <span
+            className="Post-centerColumn-4"
+          >
+            <WithStyles(Typography)
+              component="span"
+              variant="body1"
+            >
+              <Typography
+                align="inherit"
+                classes={
+                  Object {
+                    "alignCenter": "MuiTypography-alignCenter-54",
+                    "alignJustify": "MuiTypography-alignJustify-56",
+                    "alignLeft": "MuiTypography-alignLeft-53",
+                    "alignRight": "MuiTypography-alignRight-55",
+                    "body1": "MuiTypography-body1-50",
+                    "body2": "MuiTypography-body2-49",
+                    "button": "MuiTypography-button-52",
+                    "caption": "MuiTypography-caption-51",
+                    "colorError": "MuiTypography-colorError-64",
+                    "colorInherit": "MuiTypography-colorInherit-60",
+                    "colorPrimary": "MuiTypography-colorPrimary-61",
+                    "colorSecondary": "MuiTypography-colorSecondary-62",
+                    "colorTextSecondary": "MuiTypography-colorTextSecondary-63",
+                    "display1": "MuiTypography-display1-45",
+                    "display2": "MuiTypography-display2-44",
+                    "display3": "MuiTypography-display3-43",
+                    "display4": "MuiTypography-display4-42",
+                    "gutterBottom": "MuiTypography-gutterBottom-58",
+                    "headline": "MuiTypography-headline-46",
+                    "noWrap": "MuiTypography-noWrap-57",
+                    "paragraph": "MuiTypography-paragraph-59",
+                    "root": "MuiTypography-root-41",
+                    "subheading": "MuiTypography-subheading-48",
+                    "title": "MuiTypography-title-47",
+                  }
+                }
+                color="default"
+                component="span"
+                gutterBottom={false}
+                headlineMapping={
+                  Object {
+                    "body1": "p",
+                    "body2": "aside",
+                    "display1": "h1",
+                    "display2": "h1",
+                    "display3": "h1",
+                    "display4": "h1",
+                    "headline": "h1",
+                    "subheading": "h3",
+                    "title": "h2",
+                  }
+                }
+                noWrap={false}
+                paragraph={false}
+                variant="body1"
+              >
+                <span
+                  className="MuiTypography-root-41 MuiTypography-body1-50"
+                >
+                  <span
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "<p>When I orbited the Earth in a spaceship, I saw for the first time how beautiful our planet is. Mankind, let us preserve and increase this beauty, and not destroy it!</p><p>Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.</p><p>If you could see the earth illuminated when you were in a place as dark as night, it would look to you more splendid than the moon.</p><p>To be the first to enter the cosmos, to engage, single-handed, in an unprecedented duel with nature&mdash;could one dream of anything more?</p><p>We choose to go to the moon in this decade and do the other things, not because they are easy, but because they are hard, because that goal will serve to organize and measure the best of our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to postpone, and one which we intend to win.</p><p>NASA is not about the &lsquo;Adventure of Human Space Exploration&rsquo;&hellip;We won&rsquo;t be doing it just to get out there in space &ndash; we&rsquo;ll be doing it because the things we learn out there will be making life better for a lot of people who won&rsquo;t be able to go.</p><p>Problems look mighty small from 150 miles up.</p><p>That&#39;s one small step for [a] man, one giant leap for mankind.</p><p>Where ignorance lurks, so too do the frontiers of discovery and imagination.</p><p>Dinosaurs are extinct today because they lacked opposable thumbs and the brainpower to build a space program.</p>",
+                      }
+                    }
+                  />
+                </span>
+              </Typography>
+            </WithStyles(Typography)>
+          </span>
+          <hr
+            className="Post-centerColumn-4 Post-divider-6"
+          />
+          <WithStyles(AuthorInfo)
+            _id="5afdbf6c44d74b4e924f1d09"
+            bucket="5afdbcd115bef94f7421eb0d"
+            className="Post-centerColumn-4 Post-authorInfo-2"
+            content="<p>Something about John...</p>"
+            created="2017-10-12T13:27:49.665Z"
+            created_at="2017-10-12T13:27:49.665Z"
+            metadata={
+              Object {
+                "image": Object {
+                  "imgix_url": "https://cosmic-s3.imgix.net/9a0a85b0-23f5-11e7-875c-3f5dc9c15c2b-male.jpg",
+                  "url": "https://s3-us-west-2.amazonaws.com/cosmicjs/9a0a85b0-23f5-11e7-875c-3f5dc9c15c2b-male.jpg",
+                },
+              }
+            }
+            metafields={
+              Array [
+                Object {
+                  "children": null,
+                  "imgix_url": "https://cosmic-s3.imgix.net/9a0a85b0-23f5-11e7-875c-3f5dc9c15c2b-male.jpg",
+                  "key": "image",
+                  "title": "Image",
+                  "type": "file",
+                  "url": "https://s3-us-west-2.amazonaws.com/cosmicjs/9a0a85b0-23f5-11e7-875c-3f5dc9c15c2b-male.jpg",
+                  "value": "9a0a85b0-23f5-11e7-875c-3f5dc9c15c2b-male.jpg",
+                },
+              ]
+            }
+            modified_at="2018-05-17T17:44:12.977Z"
+            published_at="2018-05-17T17:44:12.977Z"
+            slug="john-doe"
+            status="published"
+            title="John Doe"
+            type_slug="authors"
+          >
+            <AuthorInfo
+              _id="5afdbf6c44d74b4e924f1d09"
+              bucket="5afdbcd115bef94f7421eb0d"
+              className="Post-centerColumn-4 Post-authorInfo-2"
+              classes={
+                Object {
+                  "content": "AuthorInfo-content-82",
+                  "image": "AuthorInfo-image-83",
+                  "root": "AuthorInfo-root-84",
+                }
+              }
+              content="<p>Something about John...</p>"
+              created="2017-10-12T13:27:49.665Z"
+              created_at="2017-10-12T13:27:49.665Z"
+              metadata={
+                Object {
+                  "image": Object {
+                    "imgix_url": "https://cosmic-s3.imgix.net/9a0a85b0-23f5-11e7-875c-3f5dc9c15c2b-male.jpg",
+                    "url": "https://s3-us-west-2.amazonaws.com/cosmicjs/9a0a85b0-23f5-11e7-875c-3f5dc9c15c2b-male.jpg",
+                  },
+                }
+              }
+              metafields={
+                Array [
+                  Object {
+                    "children": null,
+                    "imgix_url": "https://cosmic-s3.imgix.net/9a0a85b0-23f5-11e7-875c-3f5dc9c15c2b-male.jpg",
+                    "key": "image",
+                    "title": "Image",
+                    "type": "file",
+                    "url": "https://s3-us-west-2.amazonaws.com/cosmicjs/9a0a85b0-23f5-11e7-875c-3f5dc9c15c2b-male.jpg",
+                    "value": "9a0a85b0-23f5-11e7-875c-3f5dc9c15c2b-male.jpg",
+                  },
+                ]
+              }
+              modified_at="2018-05-17T17:44:12.977Z"
+              published_at="2018-05-17T17:44:12.977Z"
+              slug="john-doe"
+              status="published"
+              title="John Doe"
+              type_slug="authors"
+            >
+              <div
+                className="AuthorInfo-root-84 Post-centerColumn-4 Post-authorInfo-2"
+              >
+                <img
+                  alt="John Doe"
+                  className="AuthorInfo-image-83"
+                  height={120}
+                  src="https://cosmic-s3.imgix.net/9a0a85b0-23f5-11e7-875c-3f5dc9c15c2b-male.jpg"
+                  width={120}
+                />
+                <WithStyles(Typography)
+                  classes={
+                    Object {
+                      "root": "AuthorInfo-content-82",
+                    }
+                  }
+                  component="div"
+                  variant="body2"
+                >
+                  <Typography
+                    align="inherit"
+                    classes={
+                      Object {
+                        "alignCenter": "MuiTypography-alignCenter-54",
+                        "alignJustify": "MuiTypography-alignJustify-56",
+                        "alignLeft": "MuiTypography-alignLeft-53",
+                        "alignRight": "MuiTypography-alignRight-55",
+                        "body1": "MuiTypography-body1-50",
+                        "body2": "MuiTypography-body2-49",
+                        "button": "MuiTypography-button-52",
+                        "caption": "MuiTypography-caption-51",
+                        "colorError": "MuiTypography-colorError-64",
+                        "colorInherit": "MuiTypography-colorInherit-60",
+                        "colorPrimary": "MuiTypography-colorPrimary-61",
+                        "colorSecondary": "MuiTypography-colorSecondary-62",
+                        "colorTextSecondary": "MuiTypography-colorTextSecondary-63",
+                        "display1": "MuiTypography-display1-45",
+                        "display2": "MuiTypography-display2-44",
+                        "display3": "MuiTypography-display3-43",
+                        "display4": "MuiTypography-display4-42",
+                        "gutterBottom": "MuiTypography-gutterBottom-58",
+                        "headline": "MuiTypography-headline-46",
+                        "noWrap": "MuiTypography-noWrap-57",
+                        "paragraph": "MuiTypography-paragraph-59",
+                        "root": "MuiTypography-root-41 AuthorInfo-content-82",
+                        "subheading": "MuiTypography-subheading-48",
+                        "title": "MuiTypography-title-47",
+                      }
+                    }
+                    color="default"
+                    component="div"
+                    gutterBottom={false}
+                    headlineMapping={
+                      Object {
+                        "body1": "p",
+                        "body2": "aside",
+                        "display1": "h1",
+                        "display2": "h1",
+                        "display3": "h1",
+                        "display4": "h1",
+                        "headline": "h1",
+                        "subheading": "h3",
+                        "title": "h2",
+                      }
+                    }
+                    noWrap={false}
+                    paragraph={false}
+                    variant="body2"
+                  >
+                    <div
+                      className="MuiTypography-root-41 AuthorInfo-content-82 MuiTypography-body2-49"
+                    >
+                      <span
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "<p>Something about John...</p>",
+                          }
+                        }
+                      />
+                    </div>
+                  </Typography>
+                </WithStyles(Typography)>
+              </div>
+            </AuthorInfo>
+          </WithStyles(AuthorInfo)>
+          <hr
+            className="Post-centerColumn-4 Post-divider-6"
+          />
+        </main>
+        <WithStyles(Connect(SocialLinks))>
+          <Connect(SocialLinks)
+            classes={
+              Object {
+                "iconButton": "Connect-SocialLinks--iconButton-85",
+                "image": "Connect-SocialLinks--image-86",
+                "root": "Connect-SocialLinks--root-87",
+              }
+            }
+          >
+            <SocialLinks
+              classes={
+                Object {
+                  "iconButton": "Connect-SocialLinks--iconButton-85",
+                  "image": "Connect-SocialLinks--image-86",
+                  "root": "Connect-SocialLinks--root-87",
+                }
+              }
+              dispatch={[Function]}
+              links={
+                Object {
+                  "error": undefined,
+                  "finishedLoadAt": undefined,
+                  "isLoading": false,
+                  "items": undefined,
+                  "startedLoadAt": undefined,
+                }
+              }
+            >
+              <div
+                className="Connect-SocialLinks--root-87"
+              />
+            </SocialLinks>
+          </Connect(SocialLinks)>
+        </WithStyles(Connect(SocialLinks))>
+      </div>
+    </Post>
+  </WithStyles(Post)>
+</Provider>
+`;

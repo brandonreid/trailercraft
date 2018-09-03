@@ -3,19 +3,6 @@
   "version": "1.0.0",
   "description": "Website for trailercraft.com",
   "main": "index.js",
-  "scripts": {
-    "test": "NODE_ENV=test jest --config jest.config.js",
-    "test:watch": "npm run test -- --watch",
-    "eslint": "eslint . --ext .js,.jsx",
-    "eslint:watch": "esw . --ext .js,.jsx --watch",
-    "dev": "node server.js",
-    "build": "next build",
-    "start": "NODE_ENV=production node server.js",
-    "deploy": "npm run eslint && npm run test && now && now alias"
-  },
-  "directories": {
-    "lib": "lib"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/brandonreid/trailercraft.git"
@@ -26,6 +13,16 @@
     "url": "https://github.com/brandonreid/trailercraft/issues"
   },
   "homepage": "https://github.com/brandonreid/trailercraft#readme",
+  "scripts": {
+    "test": "NODE_ENV=test jest --config jest.config.js",
+    "test:watch": "npm run test -- --watch",
+    "eslint": "eslint . --ext .js,.jsx",
+    "eslint:watch": "esw . --ext .js,.jsx --watch",
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js",
+    "deploy": "npm run eslint && npm run test && now && now alias"
+  },
   "dependencies": {
     "@material-ui/core": "^1.0.0",
     "@material-ui/icons": "^1.0.0",

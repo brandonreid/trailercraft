@@ -1,46 +1,26 @@
-# Tralercraft Website
+# React/NextJS with CosmicJS Starter
+A simple starter for building SEO friendly react apps that leverage [CosmicJS](https://cosmicjs.com) as the backend and CMS.
 
-### Develop
+Sass is used for styles.
+Api requests are made using the [CosmicJS NPM package](https://www.npmjs.com/package/cosmicjs).
 
-#### Add required development config files
+## Getting Started
+- Clone and `npm install`
+- Add a `.env` file to the root of your project with your CosmicJS environment variables.
+- `npm run dev`
 
- - /.env _- secret variables (used on backend)_
+### Environment Variables
 ```
-PORT=<__PORT__>
-BUCKET_SLUG=<__BUCKET_SLUG__>
-```
-
-#### Run in development
-```
-npm run dev
-```
-
-### Deploy
-
-#### Add required production config files
-- /.env.production _- secret variables (used on backend)_
-```
-PORT=<__PORT__>
-BUCKET_SLUG=<__BUCKET_SLUG__>
-```
-- /.config.js _- public variables (used on frontend)_
-```
-API_URL: 'https://<__YOUR_DOMAIN__>/api',
-BASE_URL: 'https://<__YOUR_DOMAIN__>',
+COSMIC_BUCKET=XXXX
+COSMIC_WRITE_KEY=XXXX
+COSMIC_READ_KEY=XXXX
 ```
 
-- /now.json _- Now deployment configuration_
-```
-{
-  "alias": [
-    <__YOUR_DOMAIN__>
-  ],
-  "dotenv": ".env.production",
-  "public": false
-}
-```
+## Deploying to now
 
-#### Deploy via [Now](https://zeit.co/now)
-```
-npm run deploy
+To deploy to now just add keys via your console before running `now`:
+```sh
+$ now secret add COSMIC_BUCKET XXXX
+$ now secret add COSMIC_WRITE_KEY XXXX
+$ now secret add COSMIC_READ_KEY XXXX
 ```

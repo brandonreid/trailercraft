@@ -1,9 +1,8 @@
-import Navbar from '../components/Navbar';
-import css from './index.scss';
+import Navbar from '../components/navbar/Navbar';
 import Cosmic from 'cosmicjs';
 
 const Index = ({data}) => (
-  <div className={css.index}>
+  <div>
     <Navbar />
     <h1>Home</h1>
     <div>

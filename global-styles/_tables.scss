@@ -1,0 +1,89 @@
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  max-width: 100%;
+  & + table {
+    margin-top: 1em;
+  }
+  &.flush {
+    margin-top: 0;
+  }
+  th,
+  td {
+    padding: 0.25em 0.5em;
+    line-height: 1.4em;
+    border: 1px solid $frame;
+    vertical-align: middle;
+    &.separator {
+      font-weight: 700;
+      background-color: $shade;
+      border-bottom-width: 1px;
+    }
+  }
+  th {
+    text-align: left;
+    font-weight: 700;
+    background-color: $shade;
+    border-bottom-width: 2px;
+    &.empty {
+      background-color: transparent;
+      border-top: transparent;
+    }
+    &:first-child.empty { border-left: transparent; }
+    &:last-child.empty { border-right: transparent; }
+    &.center { text-align: center; }
+    &.right { text-align: right; }
+  }
+}
+
+table.no-borders {
+  th,
+  td {
+    border-left: 0;
+    border-right: 0;
+  }
+  th {
+    background-color: transparent;
+    border-top: 0;
+  }
+}
+
+table {
+  thead th .sort {
+    background: transparent;
+    color: $link;
+    line-height: 1.4em;
+    text-align: left;
+    font-weight: bold;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    white-space: initial;
+    user-select: initial;
+    &:hover,
+    &:focus {
+      color: lighten($link, 5%);
+    }
+    &:active,
+    &.active {
+      color: darken($link, 1%);
+      transform: none;
+    }
+    span:before {
+      font-size: 0.75em;
+      transform: translateY(-0.125em);
+    }
+  }
+}
+
+table.highlight {
+  tbody tr:hover {
+    background-color: $shade;
+  }
+}
+
+.responsive-table {
+  overflow: auto;
+  padding-bottom: 0.75em;
+}

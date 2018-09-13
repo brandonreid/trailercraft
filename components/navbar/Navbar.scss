@@ -1,0 +1,31 @@
+// example of a component based SASS definition through use of :local
+@import '../../global-styles/variables';
+
+:local {
+  .navbar {}
+  .subnav {
+    background-color: $red;
+    display: inline-block;
+    a {
+      color: white;
+      display: inline-block;
+      padding: 0.5em 0.5em;
+    }
+    .chevron {
+      width: 16px;
+      height: 1.4em;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    a.contactLink {
+      background-color: $black;
+      font-weight: bold;
+    }
+  }
+  .logo {
+    padding: 1em;
+    width: 30em;
+    max-width: 100%;
+  }
+  .mainNav {}
+}

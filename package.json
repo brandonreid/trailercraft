@@ -11,6 +11,10 @@
   },
   "author": "brandonreidak@gmail.com",
   "license": "ISC",
+  "browserslist": [
+    "last 2 versions",
+    "> 1%"
+  ],
   "dependencies": {
     "@zeit/next-sass": "^0.2.0",
     "cosmicjs": "^3.2.12",

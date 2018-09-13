@@ -1,0 +1,356 @@
+@mixin inputAutoSpacing {
+  // Manually add the '+ &' styles:
+  & + label,
+  & + input,
+  & + textarea,
+  & + .input-w-inlay,
+  & + .input-w-clear,
+  & + .input-w-button,
+  & + .checkable,
+  & + .inline-checkables,
+  & + p,
+  & + ul,
+  & + ol,
+  & + table,
+  & + .responsive-table {
+    margin-top: 0.75em;
+  }
+  & + h1,
+  & + h2,
+  & + h3,
+  & + h4,
+  & + h5,
+  & + h6 {
+    margin-top: 1em;
+  }
+  &.flush {
+    margin-top: 0;
+  }
+  & + p.error-msg {
+    margin-top: 0.25em;
+  }
+}
+// Add an instance of each item using the inputAutoSpacing
+// mixen into these styles.
+p,
+ul
+ol
+table,
+.responsive-table,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  & + input[type="text"],
+  & + input[type="password"],
+  & + input[type="search"],
+  & + input[type="date"],
+  & + input[type="time"],
+  & + input[type="datetime-local"],
+  & + input[type="month"],
+  & + input[type="number"],
+  & + input[type="email"],
+  & + input[type="tel"],
+  & + textarea,
+  & + .input-w-inlay,
+  & + .input-w-clear,
+  & + .input-w-button,
+  & + .checkable,
+  & + .inline-checkables {
+    margin-top: 1em;
+  }
+}
+
+// RESETS
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  // Chrome and Firefox set a `min-width: min-content;` on fieldsets,
+  // so we reset that to ensure it behaves more like a standard block element.
+  // See https://github.com/twbs/bootstrap/issues/12359.
+  min-width: 0;
+}
+
+input[type="file"] {
+  display: block;
+}
+
+input[type="range"] {
+  display: block;
+  width: 100%;
+}
+
+select[multiple],
+select[size] {
+  height: auto;
+}
+
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+input[type="search"] {
+  -webkit-appearance: none;
+}
+
+// Special styles for iOS temporal inputs
+//
+// In Mobile Safari, setting `display: block` on temporal inputs causes the
+// text within the input to become vertically misaligned. As a workaround, we
+// set a pixel line-height that matches the given height of the input, but only
+// for Safari. See https://bugs.webkit.org/show_bug.cgi?id=139848
+//
+// Note that as of 8.3, iOS doesn't support `datetime` or `week`.
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  input[type="date"],
+  input[type="time"],
+  input[type="datetime-local"],
+  input[type="month"] {
+    line-height: 22px;
+  }
+}
+
+label {
+  line-height: 1.6em;
+  font-weight: bold;
+  display: block;
+  padding-left: 0.25em;
+  &.error {
+    color: $red;
+  }
+  &.flush {
+    margin-top: 0;
+  }
+  &.required {
+    &:after {
+      content: '*';
+      color: $red;
+      display: inline-block;
+      margin-left: 0.25em;
+    }
+  }
+}
+
+input[type="text"],
+input[type="password"],
+input[type="search"],
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  line-height: 1.4em;
+  border: 1px solid lighten($grey, 40);
+  border-radius: 4px;
+  padding: 0.25em 0.75em;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  box-shadow: inset 0 1px 1px 0 rgba(black, 0.1);
+  @include inputAutoSpacing;
+  &:focus {
+    outline: 0;
+    border-color: $active;
+    box-shadow: 0 1px 1px 0 rgba(black, 0.1);
+  }
+  &.disabled,
+  &[disabled] {
+    background-color: $shade;
+    opacity: 0.65;
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+  &.error {
+    border-color: $red;
+  }
+}
+
+// .dropdown-input {
+//   position: relative;
+//   input {
+//     padding-right: 2em;
+//     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+//     &:focus {
+//       box-shadow: 0 1px 1px 0 rgba(black, 0.1);
+//     }
+//   }
+//   @extend .icon-drop-down;
+//   &:before {
+//     font-family: $icon-font-family;
+//     font-style: normal;
+//     font-weight: normal;
+//     color: $grey;
+//     line-height: 1.4em;
+//     speak: none;
+//     display: inline-block;
+//     width: 2em;
+//     text-align: center;
+//     padding: 0.25em 0;
+//     position: absolute;
+//     top: 1px;
+//     right: 0;
+//     pointer-events: none;
+//     /* For safety - reset parent styles, that can break glyph codes*/
+//     font-variant: normal;
+//     text-transform: none;
+//   }
+// }
+
+.input-w-inlay {
+  @include inputAutoSpacing;
+  input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    width: calc(100% - 2.8em);
+    display: inline-block;
+    vertical-align: top;
+    & + button {
+      margin-left: -0.422em;
+      border-color: lighten($grey, 40);
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      width: 100%;
+      max-width: 2.8em;
+      box-shadow: none;
+      &:before { margin-right: 0; }
+      &:active {
+        transform: none;
+        box-shadow: inset 0 1px 1px 0 rgba(black, 0.1);
+      }
+    }
+    &:focus + button {
+      border-top-color: $active;
+      border-right-color: $active;
+      border-bottom-color: $active;
+      box-shadow: 0 1px 1px 0 rgba(black, 0.1);
+    }
+    &.disabled,
+    &[disabled] {
+      & + button {
+        @extend button.disabled;
+        background-color: $shade;
+        box-shadow: none;
+      }
+    }
+  }
+  label.error + input + button,
+  input.error + button {
+    border-top-color: $red;
+    border-right-color: $red;
+    border-bottom-color: $red;
+  }
+}
+
+.input-w-clear {
+  position: relative;
+  @include inputAutoSpacing;
+  input {
+    padding-right: 2.25em;
+    &.disabled,
+    &[disabled] {
+      & + button {
+        @extend button.disabled;
+        @extend button.clear.disabled;
+      }
+    }
+  }
+  .clear {
+    padding: 0.3em 0.5em 0.2em;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    &:before {
+      margin-right: 0;
+    }
+  }
+}
+
+.input-w-button {
+  @include inputAutoSpacing;
+  @extend .clearfix;
+  input {
+    display: inline-block;
+    vertical-align: middle;
+    float: left;
+    margin-right: 0.5em;
+    max-width: calc(100% - 5.5em);
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+      & + button {
+        @extend button.disabled;
+      }
+    }
+  }
+  button {
+    float: left;
+    width: 5em;
+  }
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  &[disabled],
+  &.disabled {
+    cursor: not-allowed;
+  }
+}
+.checkable {
+  display: block;
+  @include inputAutoSpacing;
+  label {
+    font-weight: normal;
+    display: inline-block;
+    min-height: 1.4em;
+    padding-left: 1.333em;
+    text-indent: -1.333em;
+    margin-bottom: 0;
+    cursor: pointer;
+  }
+  input[type="radio"],
+  input[type="checkbox"] {
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    margin:0;
+    vertical-align: bottom;
+    position: relative;
+    top: -0.375em;
+    *overflow: hidden;
+  }
+  & + .checkable {
+    margin-top: 0.125em;
+  }
+  &.disabled {
+    cursor: not-allowed;
+    label {
+      color: $grey;
+      cursor: not-allowed;
+    }
+  }
+  &.error {
+    color: $red;
+  }
+}
+.inline-checkables {
+  @include inputAutoSpacing;
+  .checkable {
+    display: inline-block;
+    vertical-align: middle;
+    & + .checkable {
+      margin-top: 0;
+      margin-left: 1.5em;
+    }
+  }
+}

@@ -1,0 +1,187 @@
+html {
+  font-size: $base-font-size;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: $base-font-size;
+  font-family: $font-family;
+  font-weight: 400;
+  color: $text;
+}
+
+a {
+  cursor: pointer;
+  color: $link;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    color: darken($link, 10%);
+    text-decoration: underline;
+  }
+}
+
+p, time, a, em, strong {
+  font-family: $font-family;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: $font-family;
+  font-size: $base-font-size;
+  line-height: 1.4em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family;
+  font-weight: 400;
+  line-height: 1.184em;
+}
+
+h1 { font-size: 2.104em; }
+h2 { font-size: 1.579em; }
+h3 { font-size: 1.333em; }
+h4 { font-size: 1em; font-weight: 700; }
+h5 { font-size: 1em; font-weight: normal; }
+h6 { font-size: 1em; font-weight: 300; }
+
+/**
+* Paragraphs, header & lists do not have margin unless they are followed by another paragraph or header.
+*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  & + p,
+  & + ul,
+  & + ol,
+  & + table,
+  & + .responsive-table {
+    margin-top: 0.75em;
+  }
+  & + h1,
+  & + h2,
+  & + h3,
+  & + h4,
+  & + h5,
+  & + h6 {
+    margin-top: 1em;
+  }
+}
+p,
+ul,
+ol,
+table,
+.responsive-table {
+  & + h1,
+  & + h2,
+  & + h3,
+  & + h4,
+  & + h5,
+  & + h6 {
+    margin-top: 1em;
+  }
+}
+
+p {
+  line-height: 1.333em;
+  margin: 0;
+  & + p,
+  & + ul,
+  & + ol,
+  & + table,
+  & + .responsive-table {
+    margin-top: 0.5em;
+  }
+}
+ul,
+ol,
+table,
+.responsive-table, {
+  & + p {
+    margin-top: 0.5em;
+  }
+}
+
+ul,
+ol {
+  &.list-style-none {
+    padding-left: 0;
+    list-style: none;
+  }
+  & + ul,
+  & + ol,
+  & + table,
+  & + .responsive-table {
+    margin-top: 0.75em;
+  }
+}
+table,
+.responsive-table {
+  & + ul,
+  & + ol {
+    margin-top: 0.75em;
+  }
+}
+
+
+/* Utility Classes */
+
+.error-msg {
+  color: $red;
+  font-weight: bold;
+  &.light {
+    color: lighten($red, 16%);
+  }
+}
+
+.warning-msg {
+  color: darken($yellow, 21%);
+  font-weight: bold;
+  &.light {
+    color: $yellow;
+  }
+}
+
+.left {
+  text-align: left;
+}
+.center {
+  text-align: center;
+}
+.right {
+  text-align: right;
+}
+
+.large {
+  font-size: 1.125em;
+}
+small,
+.small {
+  font-size: 0.75em;
+}
+
+.flush {
+  margin: 0;
+}
+
+/**
+* The `sr-only` class will hide text needed only for users of screen readers.
+* This is useful for icon buttons and stuff screen readers would otherwise not be able to interact with.
+*/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}

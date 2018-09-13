@@ -1,0 +1,23 @@
+// example of global based SASS definitions
+
+// Not cloned from pattern library
+// @import 'grid';
+// @import 'icons';
+// @import 'promise-indicator';
+// @import 'panels';
+// @import 'cards';
+// @import 'people-cards';
+// @import 'group-cards';
+
+:global {
+  @import 'normalize';
+  @import 'variables';
+  @import 'utility';
+  @import 'typography';
+  @import 'buttons';
+  @import 'inputs';
+  @import 'tables';
+  body {
+    font-size: 14px;
+  }
+}

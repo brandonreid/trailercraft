@@ -18,6 +18,9 @@
   @import 'inputs';
   @import 'tables';
   body {
-    font-size: 14px;
+    font-size: $base-font-size - 2;
+    @media (min-width: 768px) {
+      font-size: $base-font-size;
+    }
   }
 }

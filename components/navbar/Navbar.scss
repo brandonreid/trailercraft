@@ -1,31 +1,203 @@
 // example of a component based SASS definition through use of :local
 @import '../../global-styles/variables';
 
+$subNavSmBp: 450px;
+$subNavMdBp: 768px;
+$fullNavWidth: 1100px;
+
 :local {
-  .navbar {}
-  .subnav {
-    background-color: $red;
+.navbar {
+  border-bottom: 1px solid $frame;
+}
+
+.subnav {
+  font-size: 0.9em;
+  background-color: $red;
+  text-align: right;
+  position: relative;
+  .redAngle {
+    display: none;
+  }
+  a {
+    color: white;
     display: inline-block;
-    a {
+    padding: 0.25em 0.5em 0.5em;
+    &:hover,
+    &:focus {
       color: white;
-      display: inline-block;
-      padding: 0.5em 0.5em;
     }
-    .chevron {
-      width: 16px;
-      height: 1.4em;
+    &.locationLink,
+    &.locationLink + svg {
+      display: none;
+    }
+  }
+  .chevron {
+    width: 16px;
+    height: 1.4em;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  a.contactLink {
+    background-color: $black;
+    font-weight: 800;
+    margin-left: 0.25em;
+    padding: 0.5em 0.75ej;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    .blackAngle {
+      display: none;
+    }
+  }
+  @media (min-width: 385px) {
+    a.locationLink,
+    a.locationLink + svg {
       display: inline-block;
-      vertical-align: middle;
+    }
+  }
+  @media (min-width: $subNavSmBp) {
+    float: right;
+    .redAngle {
+      display: block;
+      fill: $red;
+      position: absolute;
+      width: 2.75em;
+      height: 100%;
+      left: -2.25em;
     }
     a.contactLink {
-      background-color: $black;
-      font-weight: bold;
+      margin-left: 2em;
+      padding-right: 1.5em;
+      .blackAngle {
+        display: block;
+        fill: $black;
+        width: 2.75em;
+        height: 100%;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: -2em;
+      }
     }
   }
-  .logo {
-    padding: 1em;
-    width: 30em;
-    max-width: 100%;
+  @media (min-width: $subNavMdBp) {
+    a {
+      padding-bottom: 0.25em;
+    }
   }
-  .mainNav {}
+}
+
+.logo {
+  text-align: center;
+  padding: 1em;
+  max-width: 100%;
+  img {
+    width: 100%;
+    max-width: 22em;
+  }
+  @media (min-width: $subNavSmBp) {
+    border-top: 26.781px solid $black;
+  }
+  @media (min-width: $subNavMdBp) {
+    border-top: 26.094px solid $black;
+  }
+  @media (min-width: $fullNavWidth) {
+    border-top: none;
+    float: left;
+    text-align: left;
+    padding-top: 1.25em;
+    padding-bottom: 0;
+  }
+}
+
+.mainNav {
+  button.navBtn {
+    background-color: $shade;
+    padding: 0.5em;
+    border-top: 1px solid $frame;
+    border-radius: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: left;
+    color: $text;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    img {
+      display: none;
+    }
+    span {
+      flex-grow: 1;
+    }
+    svg.dropDownIcon {
+
+      fill: $text;
+      width: 1em;
+      height: 1em;
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 0.25em;
+    }
+    & + button {
+      margin-left: 0;
+    }
+  }
+  .partsAndServices {
+    background-color: $shade;
+    border-top: 1px solid $frame;
+    padding: 0.75em 0.5em;
+
+    color: $primary;
+    font-weight: 700;
+    display: block;
+    &:hover,
+    &:focus {
+      color: $primary;
+    }
+  }
+  @media (min-width: $subNavMdBp) {
+    text-align: center;
+    button.navBtn {
+      background-color: transparent;
+      padding: 0;
+      border-top: none;
+      width: auto;
+      display: inline-block;
+      margin-bottom: 0.25em;
+      text-align: center;
+      img {
+        display: block;
+        margin: 0 auto 0.25em;
+        width: 4em;
+        opacity: 0.4;
+      }
+      & + button {
+        margin-left: 3em;
+      }
+    }
+    .partsAndServices {
+      background-color: transparent;
+      color: $black;
+      border-top: none;
+      text-align: center;
+      font-weight: 800;
+      margin-left: 2.5em;
+      margin-right: 1em;
+      padding: 0.5em 0;
+      display: inline-block;
+      vertical-align: middle;
+      width: 4.5em;
+      &:hover,
+      &:focus {
+        color: $black;
+      }
+    }
+  }
+  @media (min-width: $fullNavWidth) {
+    text-align: right;
+    float: right;
+    width: calc(100% - 19em);
+  }
+}
+
 }

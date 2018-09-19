@@ -2,29 +2,10 @@
 
 :local {
 .homeHero {
-  width: 100vw;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
   padding: 13em 0;
   position: relative;
   overflow: hidden;
   box-shadow: 0 7px 13px 2px rgba($black, 0.38);
-  &:before {
-    content: ' ';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: -0.25em;
-    left: 0;
-    background: linear-gradient(
-      118deg,
-      rgba($red, 0.9) 0%,
-      rgba($red, 0) 25%,
-      rgba($red, 0) 75%,
-      rgba($red, 0.9) 100%
-    );
-  }
   .homeHeroText {
     background-color: rgba($black, 0.8);
     color: white;
@@ -57,12 +38,10 @@
   color: white;
   padding: 7em 0;
   position: relative;
-
-  margin-bottom: 10em;
   svg {
     fill: $red;
     position: absolute;
-    top: -0.5em;
+    top: -0.75em;
     left: 0.5em;
     width: 4em;
     height: 3em;
@@ -82,6 +61,41 @@
       text-transform: uppercase;
       font-weight: 800;
       margin-left: 1em;
+    }
+  }
+}
+
+.coreValue {
+  padding: 14em 0;
+  text-align: right;
+  .valueText {
+    background-color: rgba($black, 0.8);
+    display: inline-block;
+    color: white;
+    text-align: left;
+    padding: 2em;
+    max-width: 41em;
+    position: relative;
+    svg {
+      fill: rgba($red, 0.7);
+      position: absolute;
+      top: 1em;
+      left: 1em;
+      width: 5em;
+      height: 3.5em;
+    }
+    h2 {
+      font-weight: 800;
+      font-size: 2.3em;
+      position: relative;
+      z-index: 5;
+    }
+    p {
+      font-size: 1.333em;
+      line-height: 1.4em;
+      margin-top: 0.25em;
+      position: relative;
+      z-index: 5;
     }
   }
 }

@@ -6,7 +6,7 @@ const Index = ({data, heroWidth}) => (
   <div>
     <Navbar />
     <section
-      className={css.homeHero}
+      className={`${css.homeHero} hero red-gradient`}
       style={{
         backgroundImage: `url(${data.home_hero_image.imgix_url}?w=${heroWidth})`
       }}>
@@ -22,6 +22,17 @@ const Index = ({data, heroWidth}) => (
         <strong>{ data.number_of_years_in_business }</strong>
         <span>Years of business,<br /> employing over { data.apx_number_of_alaskan_employees } Alaskans.</span>
       </p>
+    </section>
+    <section
+      className={`${css.coreValue} hero top-left-pin`}
+      style={{
+        backgroundImage: `url(${data.core_value_background_image.imgix_url}?w={heroWidth})`
+      }}>
+      <div className={css.valueText}>
+        <svg className={css.chevron}><use xlinkHref="#chevron" /></svg>
+        <h2>{ data.core_value_title }</h2>
+        <p>{ data.core_value_text }</p>
+      </div>
     </section>
   </div>
 );

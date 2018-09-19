@@ -1,0 +1,29 @@
+.hero {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100vw;
+  &.top-left-pin {
+    background-position: top left;
+  }
+  &.left-pin {
+    background-position: center left;
+  }
+  &.red-gradient {
+    &:before {
+      content: ' ';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: -0.25em;
+      left: 0;
+      background: linear-gradient(
+        118deg,
+        rgba($red, 0.9) 0%,
+        rgba($red, 0) 25%,
+        rgba($red, 0) 75%,
+        rgba($red, 0.9) 100%
+      );
+    }
+  }
+}

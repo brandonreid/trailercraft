@@ -19,7 +19,11 @@ const Navbar = () => (
       </Link>
     </div>
     <div className={css.logo}>
-      <img src="/static/logo_trailercraft.svg" alt="TrailerCraft Logo" />
+      <Link href="/">
+        <a title="Home">
+          <img src="/static/logo_trailercraft.svg" alt="TrailerCraft Logo" />
+        </a>
+      </Link>
     </div>
     <nav className={css.mainNav}>
       <button className={`${css.navBtn} symbol`}>
@@ -48,7 +52,7 @@ const Navbar = () => (
         <svg className={css.dropDownIcon}><use xlinkHref="#dropDown"></use></svg>
       </button>
       <Link href="/">
-        <a className={css.partsAndServices}>Parts & Services</a>
+        <a className={css.partsAndServices}>Parts & Service</a>
       </Link>
     </nav>
   </div>

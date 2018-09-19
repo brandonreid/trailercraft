@@ -17,6 +17,7 @@
   @import 'buttons';
   @import 'inputs';
   @import 'tables';
+  @import 'heros';
   body {
     font-size: $base-font-size - 2;
     @media (min-width: 768px) {

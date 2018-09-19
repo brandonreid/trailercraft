@@ -11,9 +11,17 @@ const Index = ({data, heroWidth}) => (
         backgroundImage: `url(${data.home_hero_image.imgix_url}?w=${heroWidth})`
       }}>
       <div className={css.homeHeroText}>
-        <h2>{data.home_hero_title}</h2>
-        <p>{data.home_hero_text}</p>
+        <h2>{ data.home_hero_title }</h2>
+        <p>{ data.home_hero_text }</p>
       </div>
+      <svg className={css.chevron}><use xlinkHref="#chevron" /></svg>
+    </section>
+    <section className={css.heritage}>
+      <svg className={css.chevron}><use xlinkHref="#chevron" /></svg>
+      <p>
+        <strong>{ data.number_of_years_in_business }</strong>
+        <span>Years of business,<br /> employing over { data.apx_number_of_alaskan_employees } Alaskans.</span>
+      </p>
     </section>
   </div>
 );
@@ -31,6 +39,7 @@ Index.getInitialProps = async () => {
   const data = request.object.metadata;
 
   let heroWidth = 1200;
+  // TODO: Find out how to get a better width after the view inits
 
   return {data, heroWidth};
 }

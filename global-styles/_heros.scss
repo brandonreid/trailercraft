@@ -10,6 +10,7 @@
     background-position: center left;
   }
   &.red-gradient {
+    position: relative;
     &:before {
       content: ' ';
       position: absolute;

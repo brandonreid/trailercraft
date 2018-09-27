@@ -3,7 +3,6 @@
 :local {
 .homeHero {
   padding: 13em 0;
-  position: relative;
   overflow: hidden;
   box-shadow: 0 7px 13px 2px rgba($black, 0.38);
   .homeHeroText {
@@ -96,6 +95,62 @@
       margin-top: 0.25em;
       position: relative;
       z-index: 5;
+    }
+  }
+}
+
+.advantagesIntro {
+  border-top: 1.333em solid $black;
+  padding: 8em 0.5em;
+  &:before {
+    max-height: 100%;
+  }
+  svg {
+    fill: $black;
+    position: absolute;
+    top: -0.75em;
+    left: 0.5em;
+    width: 4em;
+    height: 3em;
+  }
+  .advantageText {
+    background-color: rgba($black, 0.8);
+    color: white;
+    max-width: 32em;
+    margin: 0 auto;
+    padding: 2em;
+    position: relative;
+    z-index: 10;
+    h2 {
+      font-weight: 800;
+      font-size: 2.3em;
+    }
+    p {
+      line-height: 1.4em;
+      margin-top: 0.25em;
+    }
+  }
+}
+
+.advantages {
+  display: flex;
+  flex-wrap: wrap;
+  .advantage {
+    width: 50%;
+    display: inline-flex;
+    align-items: center;
+    img {
+      float: left;
+      width: 50%;
+    }
+    .advantageText {
+      float: left;
+      width: 50%;
+      padding: 1.5em;
+      h3 {
+        font-weight: 700;
+      }
+      p {}
     }
   }
 }

@@ -2,7 +2,6 @@
 @import '../../global-styles/variables';
 
 $subNavSmBp: 450px;
-$subNavMdBp: 768px;
 $fullNavWidth: 1100px;
 
 :local {
@@ -81,7 +80,7 @@ $fullNavWidth: 1100px;
       }
     }
   }
-  @media (min-width: $subNavMdBp) {
+  @media (min-width: $sm-bp) {
     a {
       padding-bottom: 0.25em;
     }
@@ -99,7 +98,7 @@ $fullNavWidth: 1100px;
   @media (min-width: $subNavSmBp) {
     border-top: 26.781px solid $black;
   }
-  @media (min-width: $subNavMdBp) {
+  @media (min-width: $sm-bp) {
     border-top: 26.094px solid $black;
   }
   @media (min-width: $fullNavWidth) {
@@ -156,7 +155,7 @@ $fullNavWidth: 1100px;
       color: $primary;
     }
   }
-  @media (min-width: $subNavMdBp) {
+  @media (min-width: $sm-bp) {
     text-align: center;
     button.navBtn {
       background-color: transparent;

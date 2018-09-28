@@ -19,4 +19,8 @@ $icon-font-path: '../fonts/cmix-icons/';
 $base-font-size: 18px;
 $font-family: Avenir Next, 'Nunito Sans', "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 
+// For constrained content on desktop
 $constrained-width: 1080px;
+
+// Breakpoints
+$sm-bp: 768px;

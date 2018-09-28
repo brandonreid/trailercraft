@@ -65,18 +65,18 @@ const Index = ({data, imgWidths}) => (
         </div>
       </div>
       <div className={css.advantage}>
+        <img src={ `${data.advantages.advantage_3_image.imgix_url}?w=${imgWidths.advantageImgWidth}` } alt="" />
         <div className={css.advantageText}>
           <h3>{ data.advantages.advantage_3_header }</h3>
           <p>{ data.advantages.advantage_3_text }</p>
         </div>
-        <img src={ `${data.advantages.advantage_3_image.imgix_url}?w=${imgWidths.advantageImgWidth}` } alt="" />
       </div>
       <div className={css.advantage}>
+        <img src={ `${data.advantages.advantage_4_image.imgix_url}?w=${imgWidths.advantageImgWidth}` } alt="" />
         <div className={css.advantageText}>
           <h3>{ data.advantages.advantage_4_header }</h3>
           <p>{ data.advantages.advantage_4_text }</p>
         </div>
-        <img src={ `${data.advantages.advantage_4_image.imgix_url}?w=${imgWidths.advantageImgWidth}` } alt="" />
       </div>
     </section>
     <section className={css.callToAction}>

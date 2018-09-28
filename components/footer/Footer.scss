@@ -4,12 +4,70 @@
 .footer {
   background-color: $black;
   color: white;
-  padding: 1em;
+  padding: 1em 1em 2.5em;
   .logoContainer {
-    padding: 1em 0;
+    padding: 1.5em 0 2em;
+    margin: 0 auto;
+    max-width: $constrained-width;
     img {
       width: 100%;
       max-width: 22em;
+    }
+  }
+  .footerContent {
+    display: flex;
+    max-width: $constrained-width;
+    margin: 0 auto;
+    a {
+      color: lighten($link, 20);
+    }
+    .navContainer {
+      flex: 1;
+      h3 {}
+      nav {
+        display: flex;
+        & > ul:first-child {
+          margin-right: 2em;
+        }
+        ul {
+          list-style: none;
+          margin: 0 1em 0 0;
+          padding-left: 0;
+          li {
+            margin-top: 0.5em;
+          }
+          ul {
+            padding-left: 1em;
+          }
+        }
+      }
+    }
+    .locationsContainer {
+      flex: 1;
+      display: flex;
+      justify-content: space-around;
+      .location {
+        &:first-child {
+          margin-right: 1.5em;
+        }
+        h3 {
+          margin-bottom: 0.5rem;
+        }
+        address {
+          font-style: normal;
+          margin-bottom: 0.5em;
+        }
+        & > a {
+          display: block;
+          margin-bottom: 0.5em;
+        }
+        p {
+          margin: 0 0 0.5em;
+          strong {
+            display: block;
+          }
+        }
+      }
     }
   }
 }

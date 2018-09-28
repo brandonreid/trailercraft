@@ -197,4 +197,41 @@
   }
 }
 
+.specialFeature {
+  border-top: 1.333em solid $red;
+  padding: 10em 0;
+  svg {
+    fill: $red;
+    position: absolute;
+    top: -0.75em;
+    left: 0.5em;
+    width: 4em;
+    height: 3em;
+    z-index: 10;
+  }
+  &:before {
+    max-height: 100%;
+  }
+  .specialFeatureText {
+    background-color: rgba($black, 0.8);
+    color: white;
+    padding: 2em;
+    max-width: 35em;
+    position: relative;
+    z-index: 5;
+    h2 {
+      font-weight: 800;
+      font-size: 2.3em;
+    }
+    p {
+      line-height: 1.4em;
+      margin-top: 0.25em;
+      a {
+        color: lighten($link, 15);
+        display: block;
+        margin-top: 0.5em;
+      }
+    }
+  }
+}
 }

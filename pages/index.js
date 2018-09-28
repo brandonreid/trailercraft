@@ -1,6 +1,9 @@
-import Navbar from '../components/navbar/Navbar';
 import Cosmic from 'cosmicjs';
+
 import css from './index.scss';
+
+import Navbar from '../components/navbar/Navbar';
+import Footer from '../components/footer/Footer';
 
 const Index = ({data, imgWidths}) => (
   <div>
@@ -122,6 +125,21 @@ const Index = ({data, imgWidths}) => (
         </div>
       </div>
     </section>
+    <section
+      className={`${css.specialFeature} hero red-gradient`}
+      style={{
+        backgroundImage: `url(${data.special_feature.special_feature_background.imgix_url}?w=${imgWidths.heroWidth})`
+      }}>
+      <svg><use xlinkHref="#chevron" /></svg>
+      <div className={css.specialFeatureText}>
+        <h2>{ data.special_feature.special_feature_header }</h2>
+        <p>
+          { data.special_feature.special_feature_text }
+          <a href={data.special_feature.special_feature_learn_more_link}>Learn More</a>
+        </p>
+      </div>
+    </section>
+    <Footer />
   </div>
 );
 

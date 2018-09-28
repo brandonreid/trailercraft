@@ -20,10 +20,10 @@
       left: 0;
       background: linear-gradient(
         118deg,
-        rgba($red, 0.9) 0%,
+        rgba(darken($red, 5), 0.7) 0%,
         rgba($red, 0) 25%,
         rgba($red, 0) 75%,
-        rgba($red, 0.9) 100%
+        rgba(darken($red, 5), 0.7) 100%
       );
     }
   }

@@ -1,0 +1,28 @@
+@import '../../global-styles/variables';
+
+:local {
+.footer {
+  background-color: $black;
+  color: white;
+  padding: 1em;
+  .logoContainer {
+    padding: 1em 0;
+    img {
+      width: 100%;
+      max-width: 22em;
+    }
+  }
+}
+
+.copywrite {
+  background-color: black;
+  color: $shade;
+  text-align: center;
+  padding: 1em 0;
+  p {
+    font-size: 0.7em;
+    margin: 0;
+    a { color: lighten($link, 25); }
+  }
+}
+}

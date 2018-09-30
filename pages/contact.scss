@@ -1,0 +1,51 @@
+@import '../global-styles/variables';
+
+:local {
+.contactContainer {
+  background-color: $black;
+  color: white;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  .containedContact {
+    margin: 0 auto;
+    max-width: $constrained-width;
+    position: relative;
+    .tabs {
+      margin-top: 0.5em;
+      button {
+        background-color: transparent;
+        border-color: lighten($black, 10);
+        border-bottom-width: 0;
+        color: white;
+        border-radius: 0;
+        font-size: 1.5em;
+        &:hover,
+        &:focus {
+          background-color: rgba($red, 0.4);
+        }
+        &:active {
+          transform: none;
+        }
+        &.active {
+          background-color: $red;
+          border-color: $red;
+        }
+      }
+    }
+    .tabContent {
+      background-color: $shade;
+      color: $text;
+      padding: 1em;
+      position: absolute;
+      z-index: -10;
+      height: 0;
+      overflow: hidden;
+      &.active {
+        display: block;
+        position: static;
+        height: auto;
+      }
+    }
+  }
+}
+}

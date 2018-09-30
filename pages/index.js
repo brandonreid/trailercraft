@@ -2,12 +2,8 @@ import Cosmic from 'cosmicjs';
 
 import css from './index.scss';
 
-import Navbar from '../components/navbar/Navbar';
-import Footer from '../components/footer/Footer';
-
 const Index = ({data, imgWidths}) => (
   <div>
-    <Navbar />
     <section
       className={`${css.homeHero} hero red-gradient`}
       style={{
@@ -139,7 +135,6 @@ const Index = ({data, imgWidths}) => (
         </p>
       </div>
     </section>
-    <Footer />
   </div>
 );
 

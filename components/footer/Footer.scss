@@ -3,6 +3,7 @@
 :local {
 .footer {
   background-color: $black;
+  border-top: 1px solid $frame;
   color: white;
   padding: 1em 1em 2.5em;
   .logoContainer {

@@ -1,6 +1,9 @@
 import Document, { Head, Main, NextScript } from 'next/document'
 import css from '../global-styles/global-styles.scss';
 
+import Navbar from '../components/navbar/Navbar';
+import Footer from '../components/footer/Footer';
+
 export default class MyDocument extends Document {
   render() {
     return (
@@ -30,7 +33,9 @@ export default class MyDocument extends Document {
               </symbol>
             </defs>
           </svg>
+          <Navbar />
           <Main />
+          <Footer />
           <NextScript />
         </body>
       </html>

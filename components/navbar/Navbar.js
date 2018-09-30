@@ -6,12 +6,12 @@ const Navbar = () => (
   <div className={`${css.navbar} clearfix`}>
     <div className={css.subnav}>
       <svg className={css.redAngle}><use xlinkHref="#angle"></use></svg>
-      <Link href="/"><a className={css.locationLink}>Anchorage</a></Link>
+      <Link href="/contact?location=anchorage"><a className={css.locationLink}>Anchorage</a></Link>
       <svg className={css.chevron}><use xlinkHref="#chevron" /></svg>
-      <Link href="/"><a className={css.locationLink}>Fairbanks</a></Link>
+      <Link href="/contact?location=fairbanks"><a className={css.locationLink}>Fairbanks</a></Link>
       <svg className={css.chevron}><use xlinkHref="#chevron" /></svg>
       <a href="tel:1-907-563-3238">(907) 563-3238</a>
-      <Link href="/">
+      <Link href="/contact">
         <a className={css.contactLink}>
           <svg className={css.blackAngle}><use xlinkHref="#angle"></use></svg>
           <span>Contact</span>

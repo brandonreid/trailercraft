@@ -26,10 +26,10 @@ export default class MyDocument extends Document {
                   c-0.4,0-1.1,0.2-0.4,0.8l9,9.1l-8.8,9.3l0,0c-0.6,0.6,0,0.8,0.5,0.8h0.3c0,0,0,0,0,0h0h6.9l0,0c0,0,0.6,0,1-0.4l0,0L29.5,9.9z"/>
               </symbol>
               <symbol id="angle" viewBox="0 0 16 13">
-                <polygon class="st0" points="13,13 0,0 16,0 16,13 "/>
+                <polygon className="st0" points="13,13 0,0 16,0 16,13 "/>
               </symbol>
               <symbol id="dropDown" viewBox="0 0 29 14">
-                <polygon class="st0" points="0,0 5,0 14,9 23,0 29,0 14,14 "/>
+                <polygon className="st0" points="0,0 5,0 14,9 23,0 29,0 14,14 "/>
               </symbol>
             </defs>
           </svg>

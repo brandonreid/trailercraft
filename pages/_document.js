@@ -15,7 +15,7 @@ export default class MyDocument extends Document {
           <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,900" rel="stylesheet" />
           <title>TrailerCraft, Inc</title>
         </Head>
-        <body>
+        <body className={css.body}>
           <svg version="1.1"
                xmlns="http://www.w3.org/2000/svg"
                style={{display: 'none'}}>

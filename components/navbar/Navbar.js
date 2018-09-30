@@ -51,7 +51,7 @@ const Navbar = () => (
         <span>Trailers</span>
         <svg className={css.dropDownIcon}><use xlinkHref="#dropDown"></use></svg>
       </button>
-      <Link href="/">
+      <Link href="/parts-and-services">
         <a className={css.partsAndServices}>Parts & Service</a>
       </Link>
     </nav>

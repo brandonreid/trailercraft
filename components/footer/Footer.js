@@ -51,8 +51,8 @@ const Footer = () => (
                   <li><Link href="#0"><a>Side Dump Trailers</a></Link></li>
                 </ul>
               </li>
-              <li><Link href="#0"><a>Parts &amp; Services</a></Link></li>
-              <li><Link href="#0"><a>Blog</a></Link></li>
+              <li><Link href="/parts-and-services"><a>Parts &amp; Services</a></Link></li>
+              <li><Link href="/blog"><a>Blog</a></Link></li>
               <li><Link href="/contact"><a>Contact</a></Link></li>
             </ul>
           </nav>

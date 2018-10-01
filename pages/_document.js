@@ -1,8 +1,4 @@
 import Document, { Head, Main, NextScript } from 'next/document'
-import css from '../global-styles/global-styles.scss';
-
-import Navbar from '../components/navbar/Navbar';
-import Footer from '../components/footer/Footer';
 
 export default class MyDocument extends Document {
   render() {
@@ -15,7 +11,7 @@ export default class MyDocument extends Document {
           <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,900" rel="stylesheet" />
           <title>TrailerCraft, Inc</title>
         </Head>
-        <body className={css.body}>
+        <body>
           <svg version="1.1"
                xmlns="http://www.w3.org/2000/svg"
                style={{display: 'none'}}>
@@ -33,9 +29,7 @@ export default class MyDocument extends Document {
               </symbol>
             </defs>
           </svg>
-          <Navbar />
           <Main />
-          <Footer />
           <NextScript />
         </body>
       </html>

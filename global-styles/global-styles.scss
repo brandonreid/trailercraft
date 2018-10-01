@@ -19,10 +19,8 @@
   @import 'heros';
 
   @import 'page-contact';
-}
 
-:local {
-  .body {
+  body {
     font-size: $base-font-size - 2;
     @media (min-width: 768px) {
       font-size: $base-font-size;

@@ -52,10 +52,6 @@ h4 { font-size: 1em; font-weight: 700; }
 h5 { font-size: 1em; font-weight: normal; }
 h6 { font-size: 1em; font-weight: 300; }
 
-/**
-* Paragraphs, header & lists do not have margin unless they are followed by another paragraph or header.
-*/
-
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-weight: 800;
@@ -131,9 +127,6 @@ table,
   }
 }
 
-
-/* Utility Classes */
-
 .error-msg {
   color: $red;
   font-weight: bold;
@@ -172,10 +165,6 @@ small,
   margin: 0;
 }
 
-/**
-* The `sr-only` class will hide text needed only for users of screen readers.
-* This is useful for icon buttons and stuff screen readers would otherwise not be able to interact with.
-*/
 .sr-only {
   position: absolute;
   width: 1px;

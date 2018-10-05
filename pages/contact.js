@@ -20,6 +20,21 @@ class Contact extends React.Component {
     this.setState({activeTab: location});
   }
 
+  componentDidMount() {
+    if (window && window.location) {
+      // check route param and assign the location if there is one.
+      const vars = {};
+      window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+          vars[key] = value;
+      });
+      if (vars && vars.location !== undefined) {
+        this.setState({
+          activeTab: vars.location
+        });
+      }
+    }
+  }
+
   static async getInitialProps({ Component, router, ctx }) {
     const api = Cosmic();
     const bucket = api.bucket({

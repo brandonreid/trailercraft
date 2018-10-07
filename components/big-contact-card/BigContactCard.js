@@ -1,3 +1,4 @@
+import renderHTML from 'react-render-html';
 import classNames from 'classnames';
 
 import css from './BigContactCard.scss';
@@ -12,15 +13,13 @@ const BigContactCard = ({ data, locationName }) => (
         <address>
           <Textarea text={data.address} />
         </address>
-        <div
-          className={css.phoneNumbers}
-          dangerouslySetInnerHTML={{__html: data.main_phone_numbers}}
-        ></div>
+        <div className={css.phoneNumbers}>
+          {renderHTML(data.main_phone_numbers)}
+        </div>
         <p className={css.hoursTitle}><strong>Hours</strong></p>
-        <div
-          className={css.hours}
-          dangerouslySetInnerHTML={{__html: data.business_hours}}
-        ></div>
+        <div className={css.hours}>
+          {renderHTML(data.business_hours)}
+        </div>
       </div>
       <div>
         <a className={css.directionsLink}
@@ -40,12 +39,14 @@ const BigContactCard = ({ data, locationName }) => (
       >
         <h2>{locationName} Departments</h2>
         {data.department_contacts_left_column && (
-          <div className="additional-contacts-content"
-                dangerouslySetInnerHTML={{__html: data.department_contacts_left_column}}></div>
+          <div className="additional-contacts-content">
+            {renderHTML(data.department_contacts_left_column)}
+          </div>
         )}
         {data.department_contacts_right_column && (
-          <div className="additional-contacts-content"
-                dangerouslySetInnerHTML={{__html: data.department_contacts_right_column}}></div>
+          <div className="additional-contacts-content">
+            {renderHTML(data.department_contacts_right_column)}
+          </div>
         )}
       </div>
     ) : ''}

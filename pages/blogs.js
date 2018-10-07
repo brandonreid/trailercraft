@@ -4,7 +4,6 @@ import renderHTML from 'react-render-html';
 
 import css from './blogs.scss';
 
-// const Blogs = ({featured_image, title, content}) => (
 class Blogs extends React.Component {
   constructor(props) {
     super(props);

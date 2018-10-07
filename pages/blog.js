@@ -29,11 +29,11 @@ class Blog extends React.Component {
   
     const postsData = await bucket.getObjects({
       type: 'blog-posts',
-      limit: 25,
+      limit: 200,
       sort: '-created_at'
     });
     const posts = postsData.objects;
-  
+
     return {blog, posts};
   }
 

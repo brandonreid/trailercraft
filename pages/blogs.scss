@@ -1,0 +1,25 @@
+@import '../global-styles/variables';
+
+:local {
+  .blogsContainer {}
+  .heroTextContainer {
+    max-width: $constrained-width;
+    margin: 0 auto;
+    .heroText {
+      background-color: rgba($black, 0.8);
+      color: white;
+      display: inline-block;
+      max-width: 24em;
+      margin: 4em 0;
+      padding: 0.75rem 1rem;
+    }
+  }
+  .blogPage {
+    max-width: $constrained-width;
+    margin: 0 auto;
+    padding: 3em 0.5em;
+    img {
+      max-width: 100%;
+    }
+  }
+}

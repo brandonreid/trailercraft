@@ -1,38 +1,10 @@
 @import '../../../global-styles/variables';
 
-$transition: 300ms;
-$delay: 100ms;
-
 :local {
-.subnavWrapper {
-  text-align: left;
-  position: absolute;
-  right: 0;
-  left: 0;
-  overflow: hidden;
-
-  top: -200%;
-  z-index: -100;
-  transition: z-index $transition step-end $delay,
-              top $transition step-end $delay;
-  .subnavContainer {
-    background-color: $shade;
-    display: flex;
-
-    transform: translateY(-100%);
-    transition: transform $transition ease $delay;
-  }
-  &.show {
-    z-index: 500;
-    top: 100%;
-    transition: z-index $transition step-start,
-                top $transition step-start;
-    .subnavContainer {
-      transform: translateY(0);
-    }
-  }
+.componentContainer {
+  background-color: $shade;
+  display: flex;
 }
-
 .column {
   flex: 1;
   & + .column {
@@ -72,6 +44,31 @@ $delay: 100ms;
           color: $red;
           font-weight: bold;
           text-decoration: underline;
+        }
+      }
+      .sciItems {
+        display: flex;
+      }
+      a.sciItem {
+        flex: 1;
+        border: 2px solid $red;
+        background-color: $shade;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: block;
+        margin-right: 0.5em;
+        padding: 8em 0 1em;
+        &:last-child {
+          margin: 0;
+        }
+        span {
+          background-color: $red;
+          color: white;
+          font-weight: bold;
+          padding: 0.25em;
+          display: inline-block;
+          vertical-align: middle;
         }
       }
     }

@@ -4,6 +4,9 @@
 $subNavSmBp: 450px;
 $fullNavWidth: 1100px;
 
+$transition: 300ms;
+$delay: 100ms;
+
 :local {
 .navbar {
   background-color: white;
@@ -209,6 +212,31 @@ $fullNavWidth: 1100px;
     text-align: right;
     float: right;
     width: calc(100% - 19em);
+  }
+}
+
+.subnavWrapper {
+  text-align: left;
+  position: absolute;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  top: -200%;
+  z-index: -100;
+  transition: z-index $transition step-end $delay,
+              top $transition step-end $delay;
+  .subnavContainer {
+    transform: translateY(-100%);
+    transition: transform $transition ease $delay;
+  }
+  &.show {
+    z-index: 500;
+    top: 100%;
+    transition: z-index $transition step-start,
+                top $transition step-start;
+    .subnavContainer {
+      transform: translateY(0);
+    }
   }
 }
 

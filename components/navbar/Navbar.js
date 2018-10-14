@@ -66,7 +66,13 @@ class Navbar extends React.Component {
             <span>Trucks</span>
             <svg className={css.dropDownIcon}><use xlinkHref="#dropDown"></use></svg>
           </button>
-          <SubnavTrucks open={navItemOpen === 'trucks'} />
+          <div className={classNames(css.subnavWrapper, {
+            [css.show]: navItemOpen === 'trucks'
+          })}>
+            <div className={css.subnavContainer}>
+              <SubnavTrucks />
+            </div>
+          </div>
           <button className={`${css.navBtn} symbol`}>
             <img src="/static/bus.png" />
             <span>Busses</span>

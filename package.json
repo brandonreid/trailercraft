@@ -17,6 +17,7 @@
   ],
   "dependencies": {
     "@zeit/next-sass": "^0.2.0",
+    "async-reactor": "^1.2.2",
     "classnames": "^2.2.6",
     "cosmicjs": "^3.2.12",
     "dotenv": "^6.0.0",

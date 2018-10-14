@@ -3,6 +3,7 @@
 :local {
 .componentContainer {
   background-color: $shade;
+  border-bottom: 2px solid $black;
   display: flex;
 }
 .column {
@@ -51,6 +52,7 @@
       }
       a.sciItem {
         flex: 1;
+        max-width: 20em;
         border: 2px solid $red;
         background-color: $shade;
         background-size: cover;

@@ -8,6 +8,8 @@ $fullNavWidth: 1100px;
 .navbar {
   background-color: white;
   border-bottom: 1px solid $frame;
+  position: relative;
+  z-index: 400;
 }
 
 .subnav {
@@ -113,6 +115,7 @@ $fullNavWidth: 1100px;
 .mainNav {
   button.navBtn {
     background-color: $shade;
+    margin-left: 0;
     padding: 0.5em;
     border-top: 1px solid $frame;
     border-radius: 0;
@@ -125,21 +128,29 @@ $fullNavWidth: 1100px;
     width: 100%;
     img {
       display: none;
+      opacity: 0;
+      transition: opacity 200ms ease;
     }
     span {
       flex-grow: 1;
     }
     svg.dropDownIcon {
-
       fill: $text;
       width: 1em;
       height: 1em;
       display: inline-block;
       vertical-align: middle;
       margin-left: 0.25em;
+      transform: rotate(0deg);
+      transition: transform 200ms ease;
     }
-    & + button {
-      margin-left: 0;
+    &.showing {
+      svg.dropDownIcon {
+        transform: rotate(180deg);
+      }
+      img {
+        opacity: 1;
+      }
     }
   }
   .partsAndServices {
@@ -159,6 +170,7 @@ $fullNavWidth: 1100px;
     text-align: center;
     button.navBtn {
       background-color: transparent;
+      margin-left: 3em;
       padding: 0;
       border-top: none;
       width: auto;
@@ -171,8 +183,8 @@ $fullNavWidth: 1100px;
         width: 4em;
         opacity: 0.4;
       }
-      & + button {
-        margin-left: 3em;
+      &:first-child {
+        margin-left: 0em;
       }
     }
     .partsAndServices {

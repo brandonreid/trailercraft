@@ -1,9 +1,8 @@
 import React from 'react';
 import { asyncReactor } from 'async-reactor';
 import Cosmic from 'cosmicjs';
-import Link from 'next/link';
 
-import css from './Subnav.scss';
+import Subnav from './Subnav';
 
 function Loader() {
   return (
@@ -41,107 +40,48 @@ async function SubnavTrucks() {
   const wsHighway = westernStarHighwayRequest.objects;
   const wsVocational = westernStarVocationalRequest.objects;
 
+  const columns = [
+    {
+      logoUrl: '/static/logo_freightliner.svg',
+      logoAlt: 'Freightliner Logo',
+      contentItems: [
+        {
+          itemTitle: 'Highway',
+          moreLink: '/freightliner-highway',
+          products: [
+            ...freightHighway
+          ]
+        }, {
+          itemTitle: 'Vocational',
+          moreLink: '/freightliner-vocational',
+          products: [
+            ...freightVocational
+          ]
+        }
+      ]
+    }, {
+      logoUrl: '/static/logo_western-star.png',
+      logoAlt: 'Western Star Logo',
+      contentItems: [
+        {
+          itemTitle: 'Highway',
+          moreLink: '/western-star-highway',
+          products: [
+            ...wsHighway
+          ]
+        }, {
+          itemTitle: 'Vocational',
+          moreLink: '/western-star-vocational',
+          products: [
+            ...wsVocational
+          ]
+        }
+      ]
+    }
+  ];
+
   return (
-    <div className={css.componentContainer}>
-      <div className={css.column}>
-        <div className={css.logoContainer}>
-          <div className={css.logo}>
-            <img src="/static/logo_freightliner.svg" alt="Freightliner Logo"/>
-          </div>
-        </div>
-        <div className={css.colContent}>
-          <div className={css.subContentItem}>
-            <div className={css.sciHeader}>
-              <p>Highway</p>
-              <Link href="#0"><a>More</a></Link>
-            </div>
-            <div className={css.sciItems}>
-              {freightHighway.map(({title, metadata}, i) => (
-                <Link href="#0" key={i}>
-                  <a
-                    className={css.sciItem}
-                    style={{
-                      backgroundImage: `url(${metadata.product_image.imgix_url}?w=300)`
-                    }}
-                  >
-                    <span>{ title }</span>
-                  </a>
-                </Link>
-              ))}
-            </div>
-          </div>
-          <div className={css.subContentItem}>
-            <div className={css.sciHeader}>
-              <p>Vocational</p>
-              <Link href="#0"><a>More</a></Link>
-            </div>
-            <div className={css.sciItems}>
-              {freightVocational.map(({title, metadata}, i) => (
-                <Link href="#0" key={i}>
-                  <a
-                    className={css.sciItem}
-                    style={{
-                      backgroundImage: `url(${metadata.product_image.imgix_url}?w=300)`
-                    }}
-                  >
-                    <span>{ title }</span>
-                  </a>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className={css.column}>
-        <div className={css.logoContainer}>
-          <div className={css.logo}>
-            <img src="/static/logo_western-star.png" alt="Western Star Logo"/>
-          </div>
-        </div>
-        <div className={css.colContent}>
-          <div className={css.subContentItem}>
-            <div className={css.sciHeader}>
-              <p>Highway</p>
-              <Link href="#0"><a>More</a></Link>
-            </div>
-            <div className={css.sciItems}>
-              {wsHighway.map(({title, metadata}, i) => (
-                <Link href="#0" key={i}>
-                  <a
-                    className={css.sciItem}
-                    style={{
-                      backgroundImage: `url(${metadata.product_image.imgix_url}?w=300)`
-                    }}
-                  >
-                    <span>{ title }</span>
-                  </a>
-                </Link>
-              ))}
-            </div>
-          </div>
-          <div className={css.subContentItem}>
-            <div className={css.sciHeader}>
-              <p>Vocational</p>
-              <Link href="#0"><a>More</a></Link>
-            </div>
-            <div className={css.sciItems}>
-              {wsVocational.map(({title, metadata}, i) => (
-                <Link href="#0" key={i}>
-                  <a
-                    className={css.sciItem}
-                    style={{
-                      backgroundImage: `url(${metadata.product_image.imgix_url}?w=300)`
-                    }}
-                  >
-                    <span>{ title }</span>
-                  </a>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Subnav columns={columns} />
   );
 };
 

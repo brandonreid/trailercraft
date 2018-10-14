@@ -228,20 +228,24 @@ $delay: 100ms;
   overflow: hidden;
   top: -200vh;
   z-index: -100;
+  box-shadow: none;
   transition: z-index $transition step-end $delay,
-              top $transition step-end $delay;
+              top $transition step-end $delay,
+              box-shadow $transition step-end $delay;
   .subnavContainer {
     transform: translateY(-100%);
     transition: transform $transition cubic-bezier(.5,0,0,1) $delay;
   }
 }
-button.navBtn:hover + .subnavWrapper,
+button.navBtn.hoverable:hover + .subnavWrapper,
 .subnavWrapper:hover,
 .subnavWrapper.show {
   z-index: 500;
   top: 100%;
+  box-shadow: 0 0.5em 0.5em 0 rgba($black, 0.25);
   transition: z-index $transition step-start,
-              top $transition step-start;
+              top $transition step-start,
+              box-shadow $transition step-start;
   .subnavContainer {
     transform: translateY(0);
   }

@@ -147,6 +147,11 @@ $delay: 100ms;
       transform: rotate(0deg);
       transition: transform 200ms ease;
     }
+    &:hover {
+      img {
+        opacity: 0.75
+      }
+    }
     &.showing {
       svg.dropDownIcon {
         transform: rotate(180deg);
@@ -221,22 +226,24 @@ $delay: 100ms;
   right: 0;
   left: 0;
   overflow: hidden;
-  top: -200%;
+  top: -200vh;
   z-index: -100;
   transition: z-index $transition step-end $delay,
               top $transition step-end $delay;
   .subnavContainer {
     transform: translateY(-100%);
-    transition: transform $transition ease $delay;
+    transition: transform $transition cubic-bezier(.5,0,0,1) $delay;
   }
-  &.show {
-    z-index: 500;
-    top: 100%;
-    transition: z-index $transition step-start,
-                top $transition step-start;
-    .subnavContainer {
-      transform: translateY(0);
-    }
+}
+button.navBtn:hover + .subnavWrapper,
+.subnavWrapper:hover,
+.subnavWrapper.show {
+  z-index: 500;
+  top: 100%;
+  transition: z-index $transition step-start,
+              top $transition step-start;
+  .subnavContainer {
+    transform: translateY(0);
   }
 }
 

@@ -29,10 +29,10 @@ const Subnav = ({columns}) => (
           </div>
         </div>
         <div className={css.colContent}>
-          {contentItems.map(({title, moreLink, products}, i) => (
+          {contentItems.map(({itemTitle, moreLink, products}, i) => (
             <div className={css.subContentItem} key={i}>
               <div className={css.sciHeader}>
-                <p>{ title }</p>
+                <p>{ itemTitle }</p>
                 <Link href={moreLink}><a>More</a></Link>
               </div>
               <div className={css.sciItems}>

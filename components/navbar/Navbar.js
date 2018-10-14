@@ -7,6 +7,7 @@ import css from './Navbar.scss';
 import SubnavTrucks from './subnav/SubnavTrucks';
 import SubnavBusses from './subnav/SubnavBusses';
 import SubnavVans from './subnav/SubnavVans';
+import SubnavPlows from './subnav/SubnavPlows';
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -57,7 +58,7 @@ class Navbar extends React.Component {
             </a>
           </Link>
         </div>
-        <nav className={css.mainNav}>
+        <div className={css.mainNav}>
 
           <button
             className={classNames(`${css.navBtn} symbol`, {
@@ -116,20 +117,35 @@ class Navbar extends React.Component {
             </div>
           </div>
 
-          <button className={`${css.navBtn} symbol`}>
+          <button
+            className={classNames(`${css.navBtn} symbol`, {
+              [css.showing]: navItemOpen === 'plows',
+              [css.hoverable]: navItemOpen === ''
+            })}
+            onClick={() => setOpenTab('plows')}
+          >
             <img src="/static/plow.png" />
             <span>Plows</span>
             <svg className={css.dropDownIcon}><use xlinkHref="#dropDown"></use></svg>
           </button>
+          <div className={classNames(css.subnavWrapper, {
+            [css.show]: navItemOpen === 'plows'
+          })}>
+            <div className={css.subnavContainer}>
+              <SubnavPlows />
+            </div>
+          </div>
+
           <button className={`${css.navBtn} symbol`}>
             <img src="/static/trailer.png" />
             <span>Trailers</span>
             <svg className={css.dropDownIcon}><use xlinkHref="#dropDown"></use></svg>
           </button>
+
           <Link href="/parts-and-services">
             <a className={css.partsAndServices}>Parts &amp; Service</a>
           </Link>
-        </nav>
+        </div>
       </div>
     );
   }

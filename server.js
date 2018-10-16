@@ -13,7 +13,13 @@ app.prepare()
       const page = '/blogs';
       const queryParams = { slug: req.params.id };
       app.render(req, res, page, queryParams);
-    })
+    });
+
+    server.get('/trucks/:id', (req, res) => {
+      const page = '/trucks';
+      const queryParams = { slug: req.params.id };
+      app.render(req, res, page, queryParams);
+    });
 
     server.get('*', (req, res) => handle(req, res));
 

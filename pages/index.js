@@ -2,7 +2,6 @@ import React from 'react';
 import Cosmic from 'cosmicjs';
 
 import css from './index.scss';
-import { isNumber } from 'util';
 
 class Index extends React.Component {
   constructor(props) {

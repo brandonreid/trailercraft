@@ -7,6 +7,7 @@ import css from './Subnav.scss';
 //   {
 //     logoUrl: '/static/logo_freightliner.svg',
 //     logoAlt: 'Freightliner Logo',
+//     pageRoute: '/trucks',
 //     contentItems: [
 //       {
 //         itemTitle: 'Highway',
@@ -21,7 +22,7 @@ import css from './Subnav.scss';
 
 const Subnav = ({columns}) => (
   <div className={css.componentContainer}>
-    {columns.map(({logoUrl, logoAlt, contentItems}, i) => (
+    {columns.map(({logoUrl, logoAlt, pageRoute, contentItems}, i) => (
       <div className={css.column} key={i}>
         <div className={css.logoContainer}>
           <div className={css.logo}>
@@ -36,8 +37,11 @@ const Subnav = ({columns}) => (
                 <Link href={moreLink}><a>More</a></Link>
               </div>
               <div className={css.sciItems}>
-                {products.map(({title, metadata}, i) => (
-                  <Link href="#0" key={i}>
+                {products.map(({slug, title, metadata}, i) => (
+                  <Link
+                    href={`${pageRoute ? pageRoute : ''}/${slug}`}
+                    key={i}
+                  >
                     <a
                       className={css.sciItem}
                       style={{

@@ -1,0 +1,44 @@
+@import '../global-styles/_variables';
+
+:local {
+  .heroContainer {
+    padding: 8em 0;
+    .heroContent {
+      background-color: rgba($black, 0.8);
+      color: white;
+      padding: 1.5em;
+      max-width: 30em;
+      img {
+        margin-bottom: 0.5em;
+      }
+    }
+  }
+  .productList {
+    background-color: $shade;
+    display: flex;
+    flex-direction: row;
+    padding: 1em 0.5em;
+    .product {
+      background-color: white;
+      flex: 1;
+      margin: 0.5em;
+      .productImgContainer {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        padding: 14em 0 1em;
+        h3 {
+          background-color: rgba($black, 0.8);
+          color: white;
+          display: inline-block;
+          vertical-align: middle;
+          padding: 0.25em 0.5em;
+        }
+      }
+      .productDescription {
+        padding: 1em;
+      }
+    }
+  }
+  .callToAction {}
+}

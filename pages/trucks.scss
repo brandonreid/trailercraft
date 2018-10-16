@@ -1,0 +1,12 @@
+@import '../global-styles/_variables.scss';
+
+:local {
+  .trucksContainer {
+    max-width: $constrained-width;
+    margin: 0 auto;
+    padding: 1em 0.5em;
+    img {
+      max-width: 100%;
+    }
+  }
+}

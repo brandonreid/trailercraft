@@ -44,6 +44,7 @@ async function SubnavTrucks() {
     {
       logoUrl: '/static/logo_freightliner.svg',
       logoAlt: 'Freightliner Logo',
+      pageRoute: '/trucks',
       contentItems: [
         {
           itemTitle: 'Highway',
@@ -62,6 +63,7 @@ async function SubnavTrucks() {
     }, {
       logoUrl: '/static/logo_western-star.png',
       logoAlt: 'Western Star Logo',
+      pageRoute: '/trucks',
       contentItems: [
         {
           itemTitle: 'Highway',

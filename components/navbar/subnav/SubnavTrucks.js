@@ -49,12 +49,14 @@ async function SubnavTrucks() {
         {
           itemTitle: 'Highway',
           moreLink: '/freightliner-highway',
+          mobileTitle: 'Freightliner Highway',
           products: [
             ...freightHighway
           ]
         }, {
           itemTitle: 'Vocational',
           moreLink: '/freightliner-vocational',
+          mobileTitle: 'Freightliner Vocational',
           products: [
             ...freightVocational
           ]
@@ -68,12 +70,14 @@ async function SubnavTrucks() {
         {
           itemTitle: 'Highway',
           moreLink: '/western-star-highway',
+          mobileTitle: 'Western Star Highway',
           products: [
             ...wsHighway
           ]
         }, {
           itemTitle: 'Vocational',
           moreLink: '/western-star-vocational',
+          mobileTitle: 'Western Star Vocational',
           products: [
             ...wsVocational
           ]

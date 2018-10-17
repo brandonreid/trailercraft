@@ -33,6 +33,7 @@ async function SubnavBusses() {
         {
           itemTitle: 'Busses',
           moreLink: '/busses',
+          mobileTitle: 'Blue Bird Busses',
           products: [
             ...busses
           ]

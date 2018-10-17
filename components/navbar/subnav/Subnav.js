@@ -11,6 +11,7 @@ import css from './Subnav.scss';
 //     contentItems: [
 //       {
 //         itemTitle: 'Highway',
+//         mobileTitle: 'Freightliner Highway',
 //         moreLink: '/freightliner-highway',
 //         products: [
 //           ...bucketObjects
@@ -24,6 +25,18 @@ const Subnav = ({columns}) => (
   <div className={css.componentContainer}>
     {columns.map(({logoUrl, logoAlt, pageRoute, contentItems}, i) => (
       <div className={css.column} key={i}>
+        <div className={css.mobileMenu}>
+          {contentItems.map(({moreLink, mobileTitle}, i) => (
+            <div className={css.mobileLink} key={i}>
+              <Link href={moreLink}>
+                <a>
+                  <span>{ mobileTitle }</span>
+                  <svg className={css.chevron}><use xlinkHref="#chevron" /></svg>
+                </a>
+              </Link>
+            </div>
+          ))}
+        </div>
         <div className={css.logoContainer}>
           <div className={css.logo}>
             <img src={logoUrl} alt={logoAlt}/>

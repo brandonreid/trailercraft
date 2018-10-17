@@ -1,77 +1,122 @@
 @import '../../../global-styles/variables';
 
 :local {
-.componentContainer {
-  background-color: $shade;
-  border-bottom: 2px solid $black;
-  display: flex;
-}
+.componentContainer {}
 .column {
-  flex: 1;
   & + .column {
-    border-left: 3px solid $black;
+    border-top: 1px solid $frame;
   }
-  .logoContainer {
-    background-color: $black;
-    .logo {
-      background-color: white;
-      display: inline-block;
-      vertical-align: middle;
-      padding: 1em 1.5em;
-      position: relative;
-      top: 1.5em;
-      img {
-        max-width: 100%;
-        max-height: 2.5em;
+  .mobileMenu {
+    border-top: 1px solid $frame;
+    .mobileLink {
+      a {
+        display: block;
+        padding: 0.75em 0.5em;
+        padding-left: 1.5em;
+        display: flex;
+        justify-content: space-between;
+        span {
+          font-weight: bold;
+          display: inline-block;
+          vertical-align: middle;
+        }
+        .chevron {
+          fill: $link;
+          width: 1em;
+          height: 1em;
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
+      & + .mobileLink {
+        border-top: 1px solid $frame;
       }
     }
   }
+  .logoContainer,
   .colContent {
-    padding: 2em 0.5em 0.5em;
-    .subContentItem {
-      background-color: white;
-      padding: 0.5em;
-      & + .subContentItem {
-        margin-top: 0.5em;
+    display: none;
+  }
+}
+@media (min-width: $sm-bp) {
+  .componentContainer {
+    background-color: $shade;
+    border-bottom: 2px solid $black;
+    display: flex;
+  }
+  .column {
+    flex: 1;
+    & + .column {
+      border-top: none;
+      border-left: 3px solid $black;
+    }
+    .mobileMenu {
+      display: none;
+    }
+    .logoContainer {
+      background-color: $black;
+      display: block;
+      .logo {
+        background-color: white;
+        display: inline-block;
+        vertical-align: middle;
+        padding: 1em 1.5em;
+        position: relative;
+        top: 1.5em;
+        img {
+          max-width: 100%;
+          max-height: 2.5em;
+        }
       }
-      .sciHeader {
-        display: flex;
-        margin-bottom: 0.25em;
-        p {
-          font-weight: bold;
-          font-style: italic;
+    }
+    .colContent {
+      padding: 2em 0.5em 0.5em;
+      display: block;
+      .subContentItem {
+        background-color: white;
+        padding: 0.5em;
+        & + .subContentItem {
+          margin-top: 0.5em;
+        }
+        .sciHeader {
+          display: flex;
+          margin-bottom: 0.25em;
+          p {
+            font-weight: bold;
+            font-style: italic;
+            flex: 1;
+          }
+          a {
+            color: $red;
+            font-weight: bold;
+            text-decoration: underline;
+          }
+        }
+        .sciItems {
+          display: flex;
+        }
+        a.sciItem {
           flex: 1;
-        }
-        a {
-          color: $red;
-          font-weight: bold;
-          text-decoration: underline;
-        }
-      }
-      .sciItems {
-        display: flex;
-      }
-      a.sciItem {
-        flex: 1;
-        max-width: 20em;
-        border: 2px solid $red;
-        background-color: $shade;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        display: block;
-        margin-right: 0.5em;
-        padding: 8em 0 1em;
-        &:last-child {
-          margin: 0;
-        }
-        span {
-          background-color: $red;
-          color: white;
-          font-weight: bold;
-          padding: 0.25em;
-          display: inline-block;
-          vertical-align: middle;
+          max-width: 20em;
+          border: 2px solid $red;
+          background-color: $shade;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center center;
+          display: block;
+          margin-right: 0.5em;
+          padding: 8em 0 1em;
+          &:last-child {
+            margin: 0;
+          }
+          span {
+            background-color: $red;
+            color: white;
+            font-weight: bold;
+            padding: 0.25em;
+            display: inline-block;
+            vertical-align: middle;
+          }
         }
       }
     }

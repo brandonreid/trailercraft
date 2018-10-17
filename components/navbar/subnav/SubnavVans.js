@@ -38,6 +38,7 @@ async function SubnavVans() {
         {
           itemTitle: 'Sprinter Vans',
           moreLink: '/sprinter-vans',
+          mobileTitle: 'Sprinter Vans',
           products: [
             ...sprinterVans
           ]
@@ -50,6 +51,7 @@ async function SubnavVans() {
         {
           itemTitle: 'Backcountry Vans',
           moreLink: '/backcountry-vans',
+          mobileTitle: 'Backcountry Vans',
           products: [
             ...backcountryVans
           ]

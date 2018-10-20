@@ -1,20 +1,16 @@
 import Cosmic from 'cosmicjs';
+import renderHTML from 'react-render-html';
 
-import Textarea from '../components/textarea-filter';
+import css from './product.scss';
 
-import css from './trucks.scss';
-
-const Trucks = ({title, data}) => (
-  <div className={css.trucksContainer}>
+const Product = ({title, data}) => (
+  <div className={css.productContainer}>
     <h1>{ title }</h1>
     <img
       src={`${data.product_image.imgix_url}`}
       alt={`${title} Image`}
     />
-    <p>
-      <Textarea text={data.product_description} />
-    </p>
-    {console.log(data)}
+    { renderHTML(data.product_description) }
     {data.manufacturers_product_link_url && (
       <p>
         <a href={data.manufacturers_product_link_url} target="_blank">
@@ -22,10 +18,11 @@ const Trucks = ({title, data}) => (
         </a>
       </p>
     )}
+    <p>Call or stop by to learn more.</p>
   </div>
 );
 
-Trucks.getInitialProps = async ({ query: { slug }}) => {
+Product.getInitialProps = async ({ query: { slug }}) => {
   const api = Cosmic();
   const bucket = api.bucket({
     slug: process.env.COSMIC_BUCKET,
@@ -42,4 +39,4 @@ Trucks.getInitialProps = async ({ query: { slug }}) => {
   return {title, data};
 }
 
-export default Trucks;
+export default Product;

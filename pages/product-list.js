@@ -1,9 +1,10 @@
 import React from 'react';
 import Cosmic from 'cosmicjs';
+import renderHTML from 'react-render-html';
 
-import css from './freightliner-highway.scss';
+import css from './product-list.scss';
 
-class FreightlinerHighway extends React.Component {
+class ProductList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -11,7 +12,7 @@ class FreightlinerHighway extends React.Component {
     }
   }
 
-  static async getInitialProps() {
+  static async getInitialProps({ query: {slug} }) {
     const api = Cosmic();
     const bucket = api.bucket({
       slug: process.env.COSMIC_BUCKET,
@@ -19,16 +20,16 @@ class FreightlinerHighway extends React.Component {
       write_key: process.env.COSMIC_WRITE_KEY
     });
     const pageRequest = await bucket.getObject({
-      slug: 'freightliner-highway-products'
+      slug
     });
-    const trucksListRequest = await bucket.getObjects({
-      type: 'freightliner-highway-products'
+    const productListRequest = await bucket.getObjects({
+      type: slug
     });
 
     const pageData = pageRequest.object.metadata;
-    const trucks = trucksListRequest.objects;
+    const products = productListRequest.objects;
   
-    return {pageData, trucks};
+    return {pageData, products};
   }
 
   componentDidMount() {
@@ -51,9 +52,10 @@ class FreightlinerHighway extends React.Component {
     const {
       pageData: {
         hero_image,
-        hero_text
+        hero_text,
+        manufacturer_logo
       },
-      trucks
+      products
     } = this.props;
     return (
       <div>
@@ -64,12 +66,12 @@ class FreightlinerHighway extends React.Component {
           }}
         >
           <div className={css.heroContent}>
-            <img src="/static/logo_freightliner.svg" alt="Freightliner Logo"/>
+            <img src={manufacturer_logo.imgix_url} alt="Manufacturer Logo"/>
             <p>{ hero_text }</p>
           </div>
         </div>
         <div className={css.productList}>
-          {trucks.map(({title, metadata}, i) => (
+          {products.map(({title, metadata}, i) => (
             <div className={css.product} key={i}>
               <div
                 className={css.productImgContainer}
@@ -80,7 +82,7 @@ class FreightlinerHighway extends React.Component {
                 <h3>{ title }</h3>
               </div>
               <div className={css.productDescription}>
-                <p>{ metadata.product_description }</p>
+                { renderHTML(metadata.product_description) }
                 {metadata.manufacturers_product_link_url && (
                   <p>
                     <a
@@ -94,11 +96,14 @@ class FreightlinerHighway extends React.Component {
           ))}
         </div>
         <div className={css.callToAction}>
-          <h2>ADD CALL TO ACTION</h2>
+          <div className={css.ctaContent}>
+            <h2>Call or stop by to learn more.</h2>
+
+          </div>
         </div>
       </div>
     );
   }
 }
 
-export default FreightlinerHighway;
+export default ProductList;

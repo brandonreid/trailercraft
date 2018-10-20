@@ -21,5 +21,10 @@
     img {
       max-width: 100%;
     }
+    ul {
+      li + li {
+        margin-top: 0.5em;
+      }
+    }
   }
 }

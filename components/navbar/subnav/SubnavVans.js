@@ -20,15 +20,10 @@ async function SubnavVans() {
 
   const sprinterVanRequest = await bucket.getObjects({
     type: 'sprinter-van-products',
-    limit: 3
-  });
-  const backcountryVanRequest = await bucket.getObjects({
-    type: 'backcountry-van-products',
-    limit: 3
+    limit: 6
   });
 
   const sprinterVans = sprinterVanRequest.objects;
-  const backcountryVans = backcountryVanRequest.objects;
 
   const columns = [
     {
@@ -37,23 +32,10 @@ async function SubnavVans() {
       contentItems: [
         {
           itemTitle: 'Sprinter Vans',
-          moreLink: '/sprinter-vans',
+          moreLink: '/product-list/sprinter-van-products',
           mobileTitle: 'Sprinter Vans',
           products: [
             ...sprinterVans
-          ]
-        }
-      ]
-    }, {
-      logoUrl: '/static/logo_back-country-vans.png',
-      logoAlt: 'Backcountry Vans Logo',
-      contentItems: [
-        {
-          itemTitle: 'Backcountry Vans',
-          moreLink: '/backcountry-vans',
-          mobileTitle: 'Backcountry Vans',
-          products: [
-            ...backcountryVans
           ]
         }
       ]

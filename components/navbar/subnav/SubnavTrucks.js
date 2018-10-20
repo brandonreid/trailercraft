@@ -44,18 +44,18 @@ async function SubnavTrucks() {
     {
       logoUrl: '/static/logo_freightliner.svg',
       logoAlt: 'Freightliner Logo',
-      pageRoute: '/trucks',
+      pageRoute: '/product',
       contentItems: [
         {
           itemTitle: 'Highway',
-          moreLink: '/freightliner-highway',
+          moreLink: '/product-list/freightliner-highway-products',
           mobileTitle: 'Freightliner Highway',
           products: [
             ...freightHighway
           ]
         }, {
           itemTitle: 'Vocational',
-          moreLink: '/freightliner-vocational',
+          moreLink: '/product-list/freightliner-vocational-products',
           mobileTitle: 'Freightliner Vocational',
           products: [
             ...freightVocational
@@ -65,18 +65,18 @@ async function SubnavTrucks() {
     }, {
       logoUrl: '/static/logo_western-star.png',
       logoAlt: 'Western Star Logo',
-      pageRoute: '/trucks',
+      pageRoute: '/product',
       contentItems: [
         {
           itemTitle: 'Highway',
-          moreLink: '/western-star-highway',
+          moreLink: '/product-list/western-star-highway-products',
           mobileTitle: 'Western Star Highway',
           products: [
             ...wsHighway
           ]
         }, {
           itemTitle: 'Vocational',
-          moreLink: '/western-star-vocational',
+          moreLink: '/product-list/western-star-vocational-products',
           mobileTitle: 'Western Star Vocational',
           products: [
             ...wsVocational

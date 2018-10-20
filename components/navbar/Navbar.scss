@@ -31,8 +31,7 @@ $delay: 100ms;
     &:focus {
       color: white;
     }
-    &.locationLink,
-    &.locationLink + svg {
+    &.hideMobile {
       display: none;
     }
   }
@@ -41,6 +40,9 @@ $delay: 100ms;
     height: 1.4em;
     display: inline-block;
     vertical-align: middle;
+    &.hideMobile {
+      display: none;
+    }
   }
   a.contactLink {
     background-color: $black;
@@ -52,12 +54,6 @@ $delay: 100ms;
     position: relative;
     .blackAngle {
       display: none;
-    }
-  }
-  @media (min-width: 385px) {
-    a.locationLink,
-    a.locationLink + svg {
-      display: inline-block;
     }
   }
   @media (min-width: $subNavSmBp) {
@@ -88,6 +84,12 @@ $delay: 100ms;
   @media (min-width: $sm-bp) {
     a {
       padding-bottom: 0.25em;
+    }
+    a,
+    .chevron {
+      &.hideMobile {
+        display: inline-block;
+      }
     }
   }
 }

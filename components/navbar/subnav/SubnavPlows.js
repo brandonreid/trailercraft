@@ -43,14 +43,14 @@ async function SubnavPlows() {
       contentItems: [
         {
           itemTitle: 'Standard Vehicle Mounted Plows',
-          moreLink: '/western-vehicle-mounted-products',
+          moreLink: '/product-list/western-vehicle-mounted-products',
           mobileTitle: 'Western – Standard Vehicle Mounted Plows',
           products: [
             ...westernVehicleMounted
           ]
         }, {
           itemTitle: 'Industrial Plows',
-          moreLink: '/western-industrial-plows',
+          moreLink: '/product-list/western-industrial-products',
           mobileTitle: 'Western – Industrial Plows',
           products: [
             ...westernIndustrial
@@ -63,7 +63,7 @@ async function SubnavPlows() {
       contentItems: [
         {
           itemTitle: 'Plows',
-          moreLink: '/snowex-plows',
+          moreLink: '/product-list/snowex-products',
           mobileTitle: 'Snowex Plows',
           products: [
             ...snowexProducts

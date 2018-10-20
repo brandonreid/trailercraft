@@ -15,8 +15,14 @@ app.prepare()
       app.render(req, res, page, queryParams);
     });
 
-    server.get('/trucks/:id', (req, res) => {
-      const page = '/trucks';
+    server.get('/product/:id', (req, res) => {
+      const page = '/product';
+      const queryParams = { slug: req.params.id };
+      app.render(req, res, page, queryParams);
+    });
+
+    server.get('/product-list/:id', (req, res) => {
+      const page = '/product-list';
       const queryParams = { slug: req.params.id };
       app.render(req, res, page, queryParams);
     });

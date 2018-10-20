@@ -17,32 +17,41 @@ const Footer = () => (
                 <ul>
                   <li>Freightliner
                     <ul>
-                      <li><Link href="#0"><a>Highway</a></Link></li>
-                      <li><Link href="#0"><a>Vocational</a></Link></li>
+                      <li><Link href="/product-list/freightliner-highway-products"><a>Highway</a></Link></li>
+                      <li><Link href="/product-list/freightliner-vocational-products"><a>Vocational</a></Link></li>
                     </ul>
                   </li>
                   <li>Western Star Trucks
                     <ul>
-                      <li><Link href="#0"><a>Highway</a></Link></li>
-                      <li><Link href="#0"><a>Vocational</a></Link></li>
+                      <li><Link href="/product-list/western-star-highway-products"><a>Highway</a></Link></li>
+                      <li><Link href="/product-list/western-star-vocational-products"><a>Vocational</a></Link></li>
                     </ul>
                   </li>
                 </ul>
               </li>
-              <li><Link href="#0"><a>Busses</a></Link></li>
-              <li>Vans
-                <ul>
-                  <li><Link href="#0"><a>Sprinter</a></Link></li>
-                  <li><Link href="#0"><a>BackCountry</a></Link></li>
-                </ul>
-              </li>
+              <li><Link href="/product-list/bus-products"><a>Busses</a></Link></li>
+              <li><Link href="/product-list/sprinter-van-products"><a>Vans</a></Link></li>
             </ul>
             <ul>
               <li>Plows
                 <ul>
-                  <li><Link href="#0"><a>Residential</a></Link></li>
-                  <li><Link href="#0"><a>Vocational</a></Link></li>
-                  <li><Link href="#0"><a>Commercial</a></Link></li>
+                  <li>Western
+                    <ul>
+                      <li>
+                        <Link href="/product-list/western-vehicle-mounted-products">
+                          <a>Standard Vehicle Mounted</a>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/product-list/western-industrial-products">
+                          <a>Industrial</a>
+                        </Link>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <Link href="/product-list/snowex-products"><a>Snowex Plows</a></Link>
+                  </li>
                 </ul>
               </li>
               <li>Trailers
@@ -64,14 +73,16 @@ const Footer = () => (
               222 W 92nd Ave<br />
               Anchorage, AK 99515
             </address>
-            <a href="#0">Directions</a>
+            <a
+              href="https://www.google.com/maps/place/TrailerCraft+Inc/@61.1367921,-149.8868337,17z/data=!3m1!4b1!4m5!3m4!1s0x56c89777f1a8bbff:0x7e518b56156fa94!8m2!3d61.1367895!4d-149.884645"
+            >Directions</a>
             <p>
               <strong>Phone:</strong>
-              <a href="#0">(907) 563-3238</a>
+              <a href="tel:1-907-563-3238">(907) 563-3238</a>
             </p>
             <p>
               <strong>Toll-free:</strong>
-              <a href="#0">1-800-478-3238</a>
+              <a href="tel:1-800-478-3238">1-800-478-3238</a>
             </p>
             <p>
               <strong>Hours:</strong>
@@ -85,14 +96,16 @@ const Footer = () => (
               2143 Van Horn Road<br />
               Fairbanks, AK 99701
             </address>
-            <a href="#0">Directions</a>
+            <a
+              href="https://www.google.com/maps/place/Trailercraft+Inc/@64.812603,-147.7684629,17z/data=!3m1!4b1!4m5!3m4!1s0x51325a94334d968d:0x65c1b39bfbc6d2a4!8m2!3d64.8126007!4d-147.7662741"
+            >Directions</a>
             <p>
               <strong>Phone:</strong>
-              <a href="#0">(907) 451-0033</a>
+              <a href="tel:1-907-451-0033">(907) 451-0033</a>
             </p>
             <p>
               <strong>Toll-free:</strong>
-              <a href="#0">1-800-478-0513</a>
+              <a href="tel:1-800-478-0513">1-800-478-0513</a>
             </p>
             <p>
               <strong>Hours:</strong>

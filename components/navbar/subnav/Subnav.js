@@ -52,7 +52,7 @@ const Subnav = ({columns}) => (
               <div className={css.sciItems}>
                 {products.map(({slug, title, metadata}, i) => (
                   <Link
-                    href={`${pageRoute ? pageRoute : ''}/${slug}`}
+                    href={`${pageRoute ? pageRoute : '/product'}/${slug}`}
                     key={i}
                   >
                     <a

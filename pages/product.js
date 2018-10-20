@@ -4,21 +4,35 @@ import renderHTML from 'react-render-html';
 import css from './product.scss';
 
 const Product = ({title, data}) => (
-  <div className={css.productContainer}>
-    <h1>{ title }</h1>
-    <img
-      src={`${data.product_image.imgix_url}`}
-      alt={`${title} Image`}
-    />
-    { renderHTML(data.product_description) }
-    {data.manufacturers_product_link_url && (
-      <p>
-        <a href={data.manufacturers_product_link_url} target="_blank">
-          Learn More from the Manufacturer
-        </a>
-      </p>
-    )}
-    <p>Call or stop by to learn more.</p>
+  <div>
+    <div className={css.productContainer}>
+      <div className={css.product}>
+        <div
+          className={css.productImgContainer}
+          style={{
+            backgroundImage: `url(${data.product_image.imgix_url}?w=500)`
+          }}
+        >
+          <h3>{ title }</h3>
+        </div>
+        <div className={css.productDescription}>
+          { renderHTML(data.product_description) }
+          {data.manufacturers_product_link_url && (
+            <p>
+              <a
+                href={data.manufacturers_product_link_url}
+                target="_blank"
+              >Learn more from the manufacturer.</a>
+            </p>
+          )}
+        </div>
+      </div>
+    </div>
+    <div className={css.callToAction}>
+      <div className={css.ctaContent}>
+        <h2>Call or stop by to learn more.</h2>
+      </div>
+    </div>
   </div>
 );
 

@@ -1,12 +1,59 @@
 @import '../global-styles/_variables.scss';
+@import '../global-styles/_utility.scss';
 
 :local {
   .productContainer {
-    max-width: $constrained-width;
-    margin: 0 auto;
+    background-color: $shade;
     padding: 1em 0.5em;
-    img {
-      max-width: 100%;
+    .product {
+      background-color: white;
+      width: 100%;
+      @extend .clearfix;
+      .productImgContainer {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        padding: 14em 0 1em;
+        h3 {
+          background-color: rgba($black, 0.8);
+          color: white;
+          display: inline-block;
+          vertical-align: middle;
+          padding: 0.25em 0.5em;
+        }
+      }
+      .productDescription {
+        padding: 1em;
+      }
+    }
+    @media (min-width: $sm-bp) {
+      padding: 1em;
+      .product {
+        background-color: transparent;
+        max-width: $constrained-width;
+        margin: 0 auto;
+        .productImgContainer {
+          width: 100%;
+          max-width: 20em;
+          float: left;
+        }
+        .productDescription {
+          background-color: white;
+          margin-left: 1em;
+          max-width: calc(100% - 21em);
+          float: left;
+        }
+      }
+    }
+  }
+  .callToAction {
+    background-color: $red;
+    color: white;
+    .ctaContent {
+      text-align: center;
+      max-width: $constrained-width;
+      margin: 0 auto;
+      padding: 3em 1em;
     }
   }
 }

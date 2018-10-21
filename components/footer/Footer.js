@@ -6,11 +6,15 @@ const Footer = () => (
   <footer>
     <div className={css.footer}>
       <div className={css.logoContainer}>
-        <img src="/static/logo_white_trailercraft.svg" alt="TrailerCraft Logo" />
+        <Link href="/">
+          <a>
+            <img src="/static/logo_white_trailercraft.svg" alt="TrailerCraft Logo" />
+          </a>
+        </Link>
       </div>
       <div className={css.footerContent}>
         <div className={css.navContainer}>
-          <h2>Navigation</h2>
+          <h3>Navigation</h3>
           <nav>
             <ul>
               <li>Trucks
@@ -56,8 +60,7 @@ const Footer = () => (
               </li>
               <li>Trailers
                 <ul>
-                  <li><Link href="#0"><a>Equipment Trailers</a></Link></li>
-                  <li><Link href="#0"><a>Side Dump Trailers</a></Link></li>
+                  <li>TODO: ADD TRAILERS</li>
                 </ul>
               </li>
               <li><Link href="/parts-and-services"><a>Parts &amp; Services</a></Link></li>
@@ -85,6 +88,11 @@ const Footer = () => (
               <a href="tel:1-800-478-3238">1-800-478-3238</a>
             </p>
             <p>
+              <strong>After Hours Support</strong>
+              <em>24 Hour Call Out</em>
+              <a href="tel:1-907-563-3238">(907) 563-3238</a>
+            </p>
+            <p>
               <strong>Hours:</strong>
               M-F, 7am to 12pm<br />
               Sat, 9am to 5pm
@@ -106,6 +114,13 @@ const Footer = () => (
             <p>
               <strong>Toll-free:</strong>
               <a href="tel:1-800-478-0513">1-800-478-0513</a>
+            </p>
+            <p>
+              <strong>After Hours Support</strong>
+              <em>Parts</em>
+              <a href="tel:1-907-231-1567">(907) 231-1567</a>
+              <em>Service</em>
+              <a href="tel:1-907-388-3096">(907) 388-3096</a>
             </p>
             <p>
               <strong>Hours:</strong>

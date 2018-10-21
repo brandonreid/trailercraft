@@ -9,6 +9,9 @@
   &.left-pin {
     background-position: center left;
   }
+  &.top-pin {
+    background-position: top center;
+  }
   &.red-gradient {
     position: relative;
     &:before {

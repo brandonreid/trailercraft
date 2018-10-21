@@ -1,0 +1,151 @@
+@import '../global-styles/_variables.scss';
+
+:local {
+.topHero {
+  padding: 13em 0;
+  overflow: hidden;
+  .topHeroText {
+    background-color: rgba($black, 0.8);
+    color: white;
+    margin-left: auto;
+    padding: 2em;
+    max-width: 41em;
+    position: relative;
+    z-index: 5;
+    h2 {
+      font-weight: 800;
+      font-size: 2.3em;
+    }
+    p {
+      line-height: 1.4em;
+      margin-top: 0.25em;
+    }
+  }
+}
+
+.partsSection {
+  border-top: 1.333em solid $black;
+  padding: 12em 0em;
+  overflow: hidden;
+  position: relative;
+  .partsChevron {
+    fill: $black;
+    position: absolute;
+    top: -0.75em;
+    left: 0.5em;
+    width: 4em;
+    height: 3em;
+  }
+  .partsContent {
+    background-color: rgba($black, 0.8);
+    color: white;
+    padding: 2em;
+    max-width: 41em;
+    position: relative;
+    z-index: 5;
+    h2 {
+      font-weight: 800;
+      font-size: 2.3em;
+    }
+    p {
+      line-height: 1.4em;
+      margin-top: 0.25em;
+    }
+  }
+}
+
+.servicesSection {
+  padding: 22em 0 2em;
+  overflow: hidden;
+  position: relative;
+  z-index: 5;
+  box-shadow: 0 0 1.333em 0.75em rgba(black, 0.7);
+  .servicesContent {
+    background-color: rgba($black, 0.8);
+    color: white;
+    margin: 0 auto;
+    padding: 2em;
+    max-width: 45em;
+    position: relative;
+    z-index: 5;
+    h2 {
+      font-weight: 800;
+      font-size: 2.3em;
+    }
+    p {
+      line-height: 1.4em;
+      margin-top: 0.25em;
+    }
+  }
+}
+
+.features {
+  padding-top: 1em;
+  padding-bottom: 1em;;
+  .feature {
+    img {
+      display: none;
+    }
+    .featureText {
+      padding: 1.5em;
+      h3 {
+        font-weight: 700;
+      }
+    }
+  }
+  @media (min-width: $sm-bp) {
+    padding-top: 0;
+    padding-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    .feature {
+      display: flex;
+      align-items: center;
+      img {
+        display: block;
+        width: 50%;
+      }
+    }
+    .featureText {
+      width: 50%;
+    }
+  }
+  @media (min-width: 1050px) {
+    .feature {
+      img {
+        width: 40%;
+      }
+      .featureText {
+        width: 60%;
+      }
+    }
+  }
+  @media (min-width: 1285px) {
+    .feature {
+      display: inline-flex;
+      align-items: center;
+      width: 50%;
+      &:nth-child(3),
+      &:nth-child(4) {
+        flex-direction: row-reverse;
+      }
+      img {
+        width: 50%;
+      }
+      .featureText {
+        width: 50%;
+      }
+    }
+  }
+}
+
+.callToAction {
+  background-color: $red;
+  color: white;
+  text-align: center;
+  padding: 3em 1em;
+  @media (min-width: $sm-bp) {
+    padding: 6em 1em;
+  }
+}
+}

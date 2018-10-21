@@ -49,7 +49,7 @@ class Navbar extends React.Component {
           <svg className={classNames(css.chevron, css.hideMobile)}><use xlinkHref="#chevron" /></svg>
           <a href="tel:1-907-563-3238">(907) 563-3238</a>
           <svg className={css.chevron}><use xlinkHref="#chevron" /></svg>
-          <Link href="/inventory"><a>Current Inventory</a></Link>
+          <Link href="/inventory"><a><strong>Current Inventory</strong></a></Link>
           <Link href="/contact">
             <a className={css.contactLink}>
               <svg className={css.blackAngle}><use xlinkHref="#angle"></use></svg>

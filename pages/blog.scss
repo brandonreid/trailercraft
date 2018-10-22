@@ -71,6 +71,7 @@ $postImgSize: 235px;
         img {
           height: 100%;
           width: auto;
+          max-width: initial;
           position: relative;
           left: 50%;
           transform: translateX(-50%);

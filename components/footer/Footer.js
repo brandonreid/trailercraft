@@ -17,6 +17,7 @@ const Footer = () => (
           <h3>Navigation</h3>
           <nav>
             <ul>
+              <li><Link href="/inventory"><a>Current Inventory</a></Link></li>
               <li>Trucks
                 <ul>
                   <li>Freightliner
@@ -63,8 +64,8 @@ const Footer = () => (
                   <li>TODO: ADD TRAILERS</li>
                 </ul>
               </li>
-              <li><Link href="/parts-and-services"><a>Parts &amp; Services</a></Link></li>
               <li><Link href="/blog"><a>Blog</a></Link></li>
+              <li><Link href="/parts-and-services"><a>Parts &amp; Services</a></Link></li>
               <li><Link href="/contact"><a>Contact</a></Link></li>
             </ul>
           </nav>

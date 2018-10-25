@@ -10,6 +10,9 @@ export default class MyDocument extends Document {
           <link rel="stylesheet" href="/_next/static/style.css" />
           <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,900" rel="stylesheet" />
           <title>TrailerCraft, Inc</title>
+
+          <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+          <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
         </Head>
         <body>
           <svg version="1.1"
@@ -26,6 +29,11 @@ export default class MyDocument extends Document {
               </symbol>
               <symbol id="dropDown" viewBox="0 0 29 14">
                 <polygon className="st0" points="0,0 5,0 14,9 23,0 29,0 14,14 "/>
+              </symbol>
+              <symbol id="close" viewBox="0 0 17 17">
+                <path d="M9.91,8.5l6.79-6.79c0.39-0.39,0.39-1.02,0-1.41s-1.02-0.39-1.41,0L8.5,7.09L1.71,0.29c-0.39-0.39-1.02-0.39-1.41,0
+                  s-0.39,1.02,0,1.41L7.09,8.5l-6.79,6.79C0.1,15.49,0,15.74,0,16s0.1,0.51,0.29,0.71c0.39,0.39,1.02,0.39,1.41,0L8.5,9.91l6.79,6.79
+                  C15.49,16.9,15.74,17,16,17s0.51-0.1,0.71-0.29c0.39-0.39,0.39-1.02,0-1.41L9.91,8.5z"/>
               </symbol>
             </defs>
           </svg>

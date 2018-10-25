@@ -49,4 +49,48 @@
     }
   }
 }
+
+// Modal
+.closeBtn {
+  position: absolute;
+  top: 0.125em;
+  right: 0;
+  svg {
+    fill: $grey;
+    width: 3.4em;
+    height: 3em;
+  }
+  &:hover {
+    svg {
+      fill: $frame;
+    }
+  }
+}
+.topModalContent {
+  background-color: $black;
+  color: white;
+  padding: 1em;
+}
+.sliderContainer {
+  max-width: 50em;
+  padding: 1.5em;
+  div {
+    outline: none;
+  }
+  img {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    max-height: 23em;
+  }
+  button:active {
+    transform: translate(0,-50%);
+  }
+  ul.sliderDots {
+    li button {
+      &:before {
+        color: white;
+      }
+    }
+  }
+}
 }

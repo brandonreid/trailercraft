@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
+import Slider from "react-slick";
 import renderHTML from 'react-render-html';
+import classNames from 'classnames';
 
 import css from './inventory-item.scss';
 
@@ -40,6 +42,17 @@ class InventoryItem extends React.Component {
         location_of_item
       }
     } = this.props.product;
+
+    const sliderSettings = {
+      centerMode: true,
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      variableWidth: true,
+      dotsClass: `${css.sliderDots} slick-dots`
+    };
     
     return (
       <div className={css.productItem}>
@@ -73,13 +86,46 @@ class InventoryItem extends React.Component {
               onRequestClose={this.closeModal}
               contentLabel={`${title} Details`}
               style={{
+                bodyOpen: {
+                  overflow: 'hidden'
+                },
                 overlay: {
                   backgroundColor: 'rgba(0,0,0,0.7)',
                   zIndex: 1000
+                },
+                content: {
+                  padding: 0,
+                  border: 'none'
                 }
               }}
             >
-              <h1>YO</h1>
+              <button
+                className={classNames('symbol', css.closeBtn)}
+                onClick={this.closeModal}
+              >
+                <svg><use xlinkHref="#close" /></svg>
+              </button>
+              <div className={css.topModalContent}>
+                <h2>{ title }</h2>
+                <div className={css.sliderContainer}>
+                  <Slider {...sliderSettings}>
+                    <div>
+                      <img
+                        src={`${featured_image.imgix_url}?w=600`}
+                        alt={`${title} Image 1`}
+                      />
+                    </div>
+                    {product_images.map((img, i) => (
+                      <div key={i}>
+                        <img
+                          src={`${img.product_image.imgix_url}?w=600`}
+                          alt={`${title} Image ${i + 2}`}
+                        />
+                      </div>
+                    ))}
+                  </Slider>
+                </div>
+              </div>
             </Modal>
           </div>
         </div>

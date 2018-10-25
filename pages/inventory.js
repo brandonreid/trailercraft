@@ -1,9 +1,10 @@
 import React from 'react';
 import Cosmic from 'cosmicjs';
-import renderHTML from 'react-render-html';
 import classNames from 'classnames';
 
 import css from './inventory.scss';
+
+import InventoryItem from './inventory-item';
 
 class Inventory extends React.Component {
   constructor(props) {
@@ -93,56 +94,14 @@ class Inventory extends React.Component {
               >Trailers ({ products.trailers.length })</button>
             </div>
           </div>
-          <div className={css.invItems}>
-            {console.log(products[activeTab])}
-            {products[activeTab].length < 1 && (
-              <p className={css.noItems}>
-                There are currently no inventory items to show for this category.
-              </p>
-            )}
-            {products[activeTab].map(({
-              title,
-              metadata: {
-                description,
-                detailed_specs,
-                featured_image,
-                list_price,
-                new_or_used,
-                product_images,
-                location_of_item
-              }
-            }, i) => (
-              <div className={css.productItem} key={i}>
-                <div
-                  className={css.productImg}
-                  style={{
-                    backgroundImage: `url(${featured_image.imgix_url}?w=600)`
-                  }}
-                >
-                  {list_price !== "" ? (
-                    <p>${ list_price }</p>
-                  ) : (
-                    <p>Call for Price</p>
-                  )}
-                </div>
-                <div className={css.productInfo}>
-                  <h3>
-                    { title }
-                    {new_or_used === "Used" && (
-                      <span> (Preowned)</span>
-                    )}
-                  </h3>
-                  <p className={css.productLocation}>
-                    Current Location: { location_of_item }
-                  </p>
-                  <div className={css.productDescription}>
-                    { renderHTML(description) }
-                    <button>View Details</button>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          {products[activeTab].length < 1 && (
+            <p className={css.noItems}>
+              There are currently no inventory items to show for this category.
+            </p>
+          )}
+          {products[activeTab].map((product, i) => (
+            <InventoryItem product={product} key={i} />
+          ))}
         </div>
       </div>
     );

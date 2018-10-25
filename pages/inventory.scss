@@ -1,4 +1,4 @@
-@import '../global-styles/_variables';
+@import '../global-styles/variables';
 
 :local {
 .inventoryContainer {
@@ -9,65 +9,15 @@
   margin: 0 auto;
   padding: 1em 0.5em;
   h1 {
-    margin-bottom: 0.75em;
+    margin-bottom: 0.5em;
   }
 }
 .filters {
   margin-bottom: 1em;
 }
-.invItems {
-  p.noItems {
-    color: $grey;
-    text-align: center;
-    padding: 5em 0;
-  }
-  .productItem {
-    background-color: white;
-    padding: 0.5em;
-    & + .productItem {
-      margin-top: 1em;
-    }
-    .productImg {
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center center;
-      height: 17em;
-      text-align: right;
-      p {
-        background-color: rgba($black, 0.7);
-        color: white;
-        font-weight: bold;
-        padding: 0.25em 0.5em;
-        display: inline-block;
-        vertical-align: middle;
-      }
-    }
-    .productInfo {
-      padding-top: 0.75em;
-      h3 {}
-      .productLocation {
-        font-size: 0.8em;
-        margin-top: 0.125em;
-      }
-      .productDescription {
-        line-height: 1.4em;
-        margin-top: 0.5em;
-        button {
-          margin-top: 0.75em;
-        }
-      }
-    }
-    @media (min-width: 650px) {
-      display: flex;
-      .productImg {
-        flex: 1;
-      }
-      .productInfo {
-        flex: 2;
-        padding-top: 0;
-        padding-left: 0.75em;
-      }
-    }
-  }
+p.noItems {
+  color: $grey;
+  text-align: center;
+  padding: 5em 0;
 }
 }

@@ -1,0 +1,52 @@
+@import '../global-styles/variables';
+
+:local {
+.productItem {
+  background-color: white;
+  padding: 0.5em;
+  & + .productItem {
+    margin-top: 1em;
+  }
+  .productImg {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 17em;
+    text-align: right;
+    p {
+      background-color: rgba($black, 0.7);
+      color: white;
+      font-weight: bold;
+      padding: 0.25em 0.5em;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  .productInfo {
+    padding-top: 0.75em;
+    h3 {}
+    .productLocation {
+      font-size: 0.8em;
+      margin-top: 0.125em;
+    }
+    .productDescription {
+      line-height: 1.4em;
+      margin-top: 0.5em;
+      button {
+        margin-top: 0.75em;
+      }
+    }
+  }
+  @media (min-width: 650px) {
+    display: flex;
+    .productImg {
+      flex: 1;
+    }
+    .productInfo {
+      flex: 2;
+      padding-top: 0;
+      padding-left: 0.75em;
+    }
+  }
+}
+}

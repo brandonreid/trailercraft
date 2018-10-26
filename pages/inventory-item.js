@@ -97,7 +97,14 @@ class InventoryItem extends React.Component {
                 },
                 content: {
                   padding: 0,
-                  border: 'none'
+                  border: 'none',
+                  top: '50%',
+                  left: '50%',
+                  right: 'auto',
+                  bottom: 'auto',
+                  maxWidth: '98vw',
+                  width: '70em',
+                  maxHeight: '98vh'
                 }
               }}
             >

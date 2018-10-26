@@ -94,6 +94,13 @@ class Inventory extends React.Component {
               >Trailers ({ products.trailers.length })</button>
             </div>
           </div>
+          {activeTab === 'vans' && (
+            <div className={css.vanLink}>
+              <a href="http://www.anchorage.ftlvansdealer.com/new-cars-anchorage-ak" target="_blank">
+                View more of our Sprinter Van inventory.
+              </a>
+            </div>
+          )}
           {products[activeTab].length < 1 && (
             <p className={css.noItems}>
               There are currently no inventory items to show for this category.

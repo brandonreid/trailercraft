@@ -34,6 +34,7 @@
       margin-top: 0.5em;
       button {
         margin-top: 0.75em;
+        width: 100%;
       }
     }
   }
@@ -46,6 +47,9 @@
       flex: 2;
       padding-top: 0;
       padding-left: 0.75em;
+      .productDescription button {
+        width: auto;
+      }
     }
   }
 }
@@ -57,40 +61,64 @@
   right: 0;
   svg {
     fill: $grey;
-    width: 3.4em;
-    height: 3em;
+    width: 2.4em;
+    height: 2em;
   }
   &:hover {
     svg {
       fill: $frame;
     }
   }
+  @media (min-width: 950px) {
+    width: 3.4em;
+    height: 3em;
+  }
 }
+
 .topModalContent {
   background-color: $black;
   color: white;
-  padding: 1em;
-}
-.sliderContainer {
-  max-width: 50em;
-  padding: 1.5em;
-  div {
-    outline: none;
-  }
-  img {
-    margin-left: 0.5em;
-    margin-right: 0.5em;
-    max-height: 23em;
-  }
-  button:active {
-    transform: translate(0,-50%);
-  }
-  ul.sliderDots {
-    li button {
-      &:before {
-        color: white;
+  padding: 2em 1em 1em;
+  .sliderContainer {
+    padding: 1.5em 1em;
+    div {
+      outline: none;
+    }
+    img {
+      margin-left: 0.5em;
+      margin-right: 0.5em;
+      max-height: 23em;
+    }
+    button:active {
+      transform: translate(0,-50%);
+    }
+    ul.sliderDots {
+      li button {
+        &:before {
+          color: white;
+        }
       }
     }
   }
+  .topContentText {
+    h2 {
+      max-width: calc(100% - 2.5em);
+    }
+    a {
+      color: lighten($link, 5);
+    }
+  }
+  @media (min-width: 950px) {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    .sliderContainer {
+      width: 50%;
+      padding: 0 2.5em 1.5em 1.5em;
+    }
+  }
+}
+.modalSpecs {
+  padding: 1em;
 }
 }

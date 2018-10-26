@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Link from 'next/link';
 import Modal from 'react-modal';
 import Slider from "react-slick";
 import renderHTML from 'react-render-html';
@@ -51,7 +52,8 @@ class InventoryItem extends React.Component {
       slidesToShow: 1,
       slidesToScroll: 1,
       variableWidth: true,
-      dotsClass: `${css.sliderDots} slick-dots`
+      dotsClass: `${css.sliderDots} slick-dots`,
+      adaptiveHeight: true
     };
     
     return (
@@ -106,7 +108,22 @@ class InventoryItem extends React.Component {
                 <svg><use xlinkHref="#close" /></svg>
               </button>
               <div className={css.topModalContent}>
-                <h2>{ title }</h2>
+                <div className={css.topContentText}>
+                  <h2>{ title }</h2>
+                  <p>Current Location: { location_of_item }</p>
+                  <p>
+                    List Price:
+                    {list_price !== '' ? (
+                      <span> ${ list_price }</span>
+                    ) : (
+                      <span> Call for Price</span>
+                    )}
+                  </p>
+                  { renderHTML(description) }
+                  <p>
+                    <Link href="/contact"><a>Call or stop by to learn more!</a></Link>
+                  </p>
+                </div>
                 <div className={css.sliderContainer}>
                   <Slider {...sliderSettings}>
                     <div>
@@ -125,6 +142,9 @@ class InventoryItem extends React.Component {
                     ))}
                   </Slider>
                 </div>
+              </div>
+              <div className={css.modalSpecs}>
+                { renderHTML(detailed_specs) }
               </div>
             </Modal>
           </div>

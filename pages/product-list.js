@@ -71,7 +71,7 @@ class ProductList extends React.Component {
           </div>
         </div>
         <div className={css.productList}>
-          {products.map(({title, metadata}, i) => (
+          {products && products.length > 0 && products.map(({title, metadata}, i) => (
             <div className={css.product} key={i}>
               <div
                 className={css.productImgContainer}

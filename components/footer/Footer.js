@@ -61,7 +61,12 @@ const Footer = () => (
               </li>
               <li>Trailers
                 <ul>
-                  <li>TODO: ADD TRAILERS</li>
+                  <li>
+                    <Link href="/product-list/doepker-products"><a>Doepker Trailers</a></Link>
+                  </li>
+                  <li>
+                    <Link href="/product-list/felling-trailers-products"><a>Felling Trailers</a></Link>
+                  </li>
                 </ul>
               </li>
               <li><Link href="/blog"><a>Blog</a></Link></li>

@@ -9,7 +9,6 @@ export default class MyDocument extends Document {
           <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
           <link rel="stylesheet" href="/_next/static/style.css" />
           <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,900" rel="stylesheet" />
-          <title>TrailerCraft, Inc</title>
 
           <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
           <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />

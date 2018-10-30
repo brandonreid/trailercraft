@@ -8,6 +8,7 @@ import SubnavTrucks from './subnav/SubnavTrucks';
 import SubnavBusses from './subnav/SubnavBusses';
 import SubnavVans from './subnav/SubnavVans';
 import SubnavPlows from './subnav/SubnavPlows';
+import SubnavTrailers from './subnav/SubnavTrailers';
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -142,11 +143,24 @@ class Navbar extends React.Component {
             </div>
           </div>
 
-          <button className={`${css.navBtn} symbol`}>
-            <img src="/static/trailer.png" />
+          <button
+            className={classNames(`${css.navBtn} symbol`, {
+              [css.showing]: navItemOpen === 'trailers',
+              [css.hoverable]: navItemOpen === ''
+            })}
+            onClick={() => setOpenTab('trailers')}
+          >
+            <img src="/static/plow.png" />
             <span>Trailers</span>
             <svg className={css.dropDownIcon}><use xlinkHref="#dropDown"></use></svg>
           </button>
+          <div className={classNames(css.subnavWrapper, {
+            [css.show]: navItemOpen === 'trailers'
+          })}>
+            <div className={css.subnavContainer}>
+              <SubnavTrailers />
+            </div>
+          </div>
 
           <Link href="/parts-and-services">
             <a className={css.partsAndServices}>Parts &amp; Service</a>

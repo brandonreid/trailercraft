@@ -1,6 +1,7 @@
 import React from 'react';
 import Cosmic from 'cosmicjs';
 import classNames from 'classnames';
+import MetaTags from 'react-meta-tags';
 
 import css from './contact.scss';
 
@@ -56,6 +57,9 @@ class Contact extends React.Component {
     const { activeTab } = this.state;
     return (
       <div className={css.contactContainer}>
+        <MetaTags id="home">
+          <title>Contact</title>
+        </MetaTags>
         <div className={css.containedContact}>
           <h1>Contact</h1>
           <div className={css.tabs}>

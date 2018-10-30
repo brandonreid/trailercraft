@@ -1,5 +1,6 @@
 import React from 'react';
 import Cosmic from 'cosmicjs';
+import MetaTags from 'react-meta-tags';
 
 import css from './index.scss';
 
@@ -57,6 +58,19 @@ class Index extends React.Component {
 
     return (
       <div>
+        <MetaTags id="home">
+          {/* Title must be 60 to 120 characters. */}
+          <meta
+            name="title"
+            content="TrailerCraft, Inc – Home Page – Big Rigs, Busses, Vans, Plows, Trailers and more. Serving Alaska since 1969."
+          />
+          <title>TrailerCraft, Inc – Home Page – Big Rigs, Busses, Vans, Plows, Trailers and more. Serving Alaska since 1969.</title>
+          {/* Description must not exceed 300 characters. */}
+          <meta
+            name="description"
+            content="Equipment, parts and service for commercial and recreational vehicles and equipment. We have locations in Anchorage and Fairbanks."
+          />
+        </MetaTags>
         <section
           className={`${css.homeHero} hero red-gradient`}
           style={{
@@ -100,28 +114,48 @@ class Index extends React.Component {
         </section>
         <section className={css.advantages}>
           <div className={css.advantage}>
-            <img src={ `${data.advantages.advantage_1_image.imgix_url}?w=${advantageImgWidth}` } alt="" />
+            <div
+              className={css.advantageImg}
+              style={{
+                backgroundImage: `url('${data.advantages.advantage_1_image.imgix_url}?w=${advantageImgWidth}')`
+              }}
+            ></div>
             <div className={css.advantageText}>
               <h3>{ data.advantages.advantage_1_header }</h3>
               <p>{ data.advantages.advantage_1_text }</p>
             </div>
           </div>
           <div className={css.advantage}>
-            <img src={ `${data.advantages.advantage_2_image.imgix_url}?w=${advantageImgWidth}` } alt="" />
+            <div
+              className={css.advantageImg}
+              style={{
+                backgroundImage: `url('${data.advantages.advantage_2_image.imgix_url}?w=${advantageImgWidth}')`
+              }}
+            ></div>
             <div className={css.advantageText}>
               <h3>{ data.advantages.advantage_2_header }</h3>
               <p>{ data.advantages.advantage_2_text }</p>
             </div>
           </div>
           <div className={css.advantage}>
-            <img src={ `${data.advantages.advantage_3_image.imgix_url}?w=${advantageImgWidth}` } alt="" />
+            <div
+              className={css.advantageImg}
+              style={{
+                backgroundImage: `url('${data.advantages.advantage_3_image.imgix_url}?w=${advantageImgWidth}')`
+              }}
+            ></div>
             <div className={css.advantageText}>
               <h3>{ data.advantages.advantage_3_header }</h3>
               <p>{ data.advantages.advantage_3_text }</p>
             </div>
           </div>
           <div className={css.advantage}>
-            <img src={ `${data.advantages.advantage_4_image.imgix_url}?w=${advantageImgWidth}` } alt="" />
+            <div
+              className={css.advantageImg}
+              style={{
+                backgroundImage: `url('${data.advantages.advantage_4_image.imgix_url}?w=${advantageImgWidth}')`
+              }}
+            ></div>
             <div className={css.advantageText}>
               <h3>{ data.advantages.advantage_4_header }</h3>
               <p>{ data.advantages.advantage_4_text }</p>
@@ -184,7 +218,6 @@ class Index extends React.Component {
             <h2>{ data.special_feature.special_feature_header }</h2>
             <p>
               { data.special_feature.special_feature_text }
-              <a href={data.special_feature.special_feature_learn_more_link}>Learn More</a>
             </p>
           </div>
         </section>

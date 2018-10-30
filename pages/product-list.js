@@ -1,6 +1,7 @@
 import React from 'react';
 import Cosmic from 'cosmicjs';
 import renderHTML from 'react-render-html';
+import MetaTags from 'react-meta-tags';
 
 import css from './product-list.scss';
 
@@ -26,7 +27,7 @@ class ProductList extends React.Component {
       type: slug
     });
 
-    const pageData = pageRequest.object.metadata;
+    const pageData = pageRequest.object;
     const products = productListRequest.objects;
   
     return {pageData, products};
@@ -51,14 +52,31 @@ class ProductList extends React.Component {
     const {heroWidth} = this.state;
     const {
       pageData: {
-        hero_image,
-        hero_text,
-        manufacturer_logo
+        title,
+        _id,
+        metadata: {
+          hero_image,
+          hero_text,
+          manufacturer_logo
+        }
       },
       products
     } = this.props;
     return (
       <div>
+        <MetaTags id={`productList${_id}`}>
+          {/* Title must be 60 to 120 characters. */}
+          <meta
+            name="title"
+            content={`TrailerCraft, Inc – ${title}`}
+          />
+          <title>TrailerCraft, Ink – {title}</title>
+          {/* Description must not exceed 300 characters. */}
+          <meta
+            name="description"
+            content={hero_text}
+          />
+        </MetaTags>
         <div
           className={`${css.heroContainer} hero`}
           style={{

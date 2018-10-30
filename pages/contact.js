@@ -58,7 +58,17 @@ class Contact extends React.Component {
     return (
       <div className={css.contactContainer}>
         <MetaTags id="home">
-          <title>Contact</title>
+          {/* Title must be 60 to 120 characters. */}
+          <meta
+            name="title"
+            content="TrailerCraft, Inc – Contact Us"
+          />
+          <title>TrailerCraft, Inc – Contact Us</title>
+          {/* Description must not exceed 300 characters. */}
+          <meta
+            name="description"
+            content="Contact Trailercraft, Inc. for trucks, busses, vans, plows, trailers and parts or service."
+          />
         </MetaTags>
         <div className={css.containedContact}>
           <h1>Contact</h1>

@@ -1,10 +1,24 @@
 import Cosmic from 'cosmicjs';
 import renderHTML from 'react-render-html';
+import MetaTags from 'react-meta-tags';
 
 import css from './product.scss';
 
-const Product = ({title, data}) => (
+const Product = ({title, data, slug}) => (
   <div>
+    <MetaTags id={`home${slug}`}>
+      {/* Title must be 60 to 120 characters. */}
+      <meta
+        name="title"
+        content={`TrailerCraft, Inc – Product – ${title}`}
+      />
+      <title>TrailerCraft, Inc – Product – {title}</title>
+      {/* Description must not exceed 300 characters. */}
+      <meta
+        name="description"
+        content="Available at TrailerCraft Inc. in Anchorage or Fairbanks."
+      />
+    </MetaTags>
     <div className={css.productContainer}>
       <div className={css.product}>
         <div
@@ -50,7 +64,7 @@ Product.getInitialProps = async ({ query: { slug }}) => {
   const title = request.object.title;
   const data = request.object.metadata;
 
-  return {title, data};
+  return {title, data, slug};
 }
 
 export default Product;

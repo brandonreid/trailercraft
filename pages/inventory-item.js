@@ -5,6 +5,7 @@ import Modal from 'react-modal';
 import Slider from "react-slick";
 import renderHTML from 'react-render-html';
 import classNames from 'classnames';
+import MetaTags from 'react-meta-tags';
 
 import css from './inventory-item.scss';
 
@@ -58,6 +59,19 @@ class InventoryItem extends React.Component {
     
     return (
       <div className={css.productItem}>
+        <MetaTags id="inventoryItem">
+          {/* Title must be 60 to 120 characters. */}
+          <meta
+            name="title"
+            content={`TrailerCraft, Inc – Inventory Item – ${title}`}
+          />
+          <title>TrailerCraft, Inc – Inventory Item – {title}</title>
+          {/* Description must not exceed 300 characters. */}
+          <meta
+            name="description"
+            content={`${title} – Available now in ${location_of_item} at Trailercraft, Inc.`}
+          />
+        </MetaTags>
         <div
           className={css.productImg}
           style={{

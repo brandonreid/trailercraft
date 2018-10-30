@@ -1,6 +1,7 @@
 import React from 'react';
 import Cosmic from 'cosmicjs';
 import renderHTML from 'react-render-html';
+import MetaTags from 'react-meta-tags';
 
 import css from './blogs.scss';
 
@@ -47,6 +48,19 @@ class Blogs extends React.Component {
 
     return (
       <div className={css.blogsContainer}>
+        <MetaTags id="blogPost">
+          {/* Title must be 60 to 120 characters. */}
+          <meta
+            name="title"
+            content={`TrailerCraft, Inc – Blog – ${title}`}
+          />
+          <title>TrailerCraft, Inc – Blog – {title}</title>
+          {/* Description must not exceed 300 characters. */}
+          <meta
+            name="description"
+            content={metadata.excerpt}
+          />
+        </MetaTags>
         <div
           className='hero'
           style={{

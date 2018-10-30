@@ -2,6 +2,7 @@ import React from 'react';
 import Cosmic from 'cosmicjs';
 import classNames from 'classnames';
 import MetaTags from 'react-meta-tags';
+import Head from 'next/head';
 
 import css from './contact.scss';
 
@@ -57,19 +58,18 @@ class Contact extends React.Component {
     const { activeTab } = this.state;
     return (
       <div className={css.contactContainer}>
-        <MetaTags id="home">
-          {/* Title must be 60 to 120 characters. */}
+        <Head>
           <meta
             name="title"
             content="TrailerCraft, Inc – Contact Us"
           />
-          <title>TrailerCraft, Inc – Contact Us</title>
+          <title>THIS SHOULD WORK</title>
           {/* Description must not exceed 300 characters. */}
           <meta
             name="description"
             content="Contact Trailercraft, Inc. for trucks, busses, vans, plows, trailers and parts or service."
           />
-        </MetaTags>
+        </Head>
         <div className={css.containedContact}>
           <h1>Contact</h1>
           <div className={css.tabs}>

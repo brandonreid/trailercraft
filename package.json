@@ -26,7 +26,6 @@
     "node-sass": "^4.9.3",
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
-    "react-meta-tags": "^0.7.1",
     "react-modal": "^3.6.1",
     "react-render-html": "^0.6.0",
     "react-slick": "^0.23.2",

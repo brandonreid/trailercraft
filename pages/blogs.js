@@ -1,7 +1,7 @@
 import React from 'react';
 import Cosmic from 'cosmicjs';
 import renderHTML from 'react-render-html';
-import MetaTags from 'react-meta-tags';
+import Head from 'next/head';
 
 import css from './blogs.scss';
 
@@ -48,7 +48,7 @@ class Blogs extends React.Component {
 
     return (
       <div className={css.blogsContainer}>
-        <MetaTags id="blogPost">
+        <Head>
           {/* Title must be 60 to 120 characters. */}
           <meta
             name="title"
@@ -60,7 +60,7 @@ class Blogs extends React.Component {
             name="description"
             content={metadata.excerpt}
           />
-        </MetaTags>
+        </Head>
         <div
           className='hero'
           style={{

@@ -1,7 +1,7 @@
 import React from 'react';
 import Cosmic from 'cosmicjs';
 import classNames from 'classnames';
-import MetaTags from 'react-meta-tags';
+import Head from 'next/head';
 
 import css from './parts-and-services.scss';
 
@@ -66,7 +66,7 @@ class PartsAndServices extends React.Component {
 
     return (
       <div>
-        <MetaTags id="partsAndServices">
+        <Head>
           {/* Title must be 60 to 120 characters. */}
           <meta
             name="title"
@@ -78,14 +78,14 @@ class PartsAndServices extends React.Component {
             name="description"
             content="Factory trained technicians, state of the art facilities and the largest supply of parts in Alaska. We service all manner of commercial and residential trucks, busses, vans, plows, trailers and more."
           />
-        </MetaTags>
+        </Head>
         <section
           className={classNames(css.topHero, 'hero red-gradient')}
           style={{
             backgroundImage: `url(${top_hero_banner.hero_image.imgix_url}?w=${heroWidth})`
           }}>
           <div className={css.topHeroText}>
-            <h2>{ top_hero_banner.hero_title }</h2>
+            <h1>{ top_hero_banner.hero_title }</h1>
             <p>{ top_hero_banner.hero_text }</p>
           </div>
         </section>

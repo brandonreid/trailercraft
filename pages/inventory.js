@@ -1,7 +1,7 @@
 import React from 'react';
 import Cosmic from 'cosmicjs';
 import classNames from 'classnames';
-import MetaTags from 'react-meta-tags';
+import Head from 'next/head';
 
 import css from './inventory.scss';
 
@@ -69,7 +69,7 @@ class Inventory extends React.Component {
 
     return (
       <div className={css.inventoryContainer}>
-        <MetaTags id="inventory">
+        <Head>
           {/* Title must be 60 to 120 characters. */}
           <meta
             name="title"
@@ -81,7 +81,7 @@ class Inventory extends React.Component {
             name="description"
             content="The current inventory of products available at Trailercraft, Ink. in Anchorage and/or Fairbanks."
           />
-        </MetaTags>
+        </Head>
         <div className={css.inventoryWrapper}>
           <h1>Current Inventory</h1>
           <div className={css.filters}>

@@ -74,7 +74,7 @@ class Navbar extends React.Component {
             })}
             onClick={() => setOpenTab('trucks')}
           >
-            <img src="/static/truck.png" />
+            <img src="/static/truck.png" alt="Truck" title="Truck" />
             <span>Trucks</span>
             <svg className={css.dropDownIcon}><use xlinkHref="#dropDown"></use></svg>
           </button>
@@ -93,7 +93,7 @@ class Navbar extends React.Component {
             })}
             onClick={() => setOpenTab('busses')}
           >
-            <img src="/static/bus.png" />
+            <img src="/static/bus.png" alt="Bus" title="Bus" />
             <span>Busses</span>
             <svg className={css.dropDownIcon}><use xlinkHref="#dropDown"></use></svg>
           </button>
@@ -112,7 +112,7 @@ class Navbar extends React.Component {
             })}
             onClick={() => setOpenTab('vans')}
           >
-            <img src="/static/van.png" />
+            <img src="/static/van.png" alt="Van" title="Van" />
             <span>Vans</span>
             <svg className={css.dropDownIcon}><use xlinkHref="#dropDown"></use></svg>
           </button>
@@ -131,7 +131,7 @@ class Navbar extends React.Component {
             })}
             onClick={() => setOpenTab('plows')}
           >
-            <img src="/static/plow.png" />
+            <img src="/static/plow.png" alt="Plow" title="Plow" />
             <span>Plows</span>
             <svg className={css.dropDownIcon}><use xlinkHref="#dropDown"></use></svg>
           </button>
@@ -150,7 +150,7 @@ class Navbar extends React.Component {
             })}
             onClick={() => setOpenTab('trailers')}
           >
-            <img src="/static/plow.png" />
+            <img src="/static/plow.png" alt="Trailer" title="Trailer" />
             <span>Trailers</span>
             <svg className={css.dropDownIcon}><use xlinkHref="#dropDown"></use></svg>
           </button>

@@ -1,6 +1,6 @@
 import React from 'react';
 import Cosmic from 'cosmicjs';
-import MetaTags from 'react-meta-tags';
+import Head from 'next/head';
 
 import css from './index.scss';
 
@@ -58,7 +58,7 @@ class Index extends React.Component {
 
     return (
       <div>
-        <MetaTags id="home">
+        <Head>
           {/* Title must be 60 to 120 characters. */}
           <meta
             name="title"
@@ -70,7 +70,7 @@ class Index extends React.Component {
             name="description"
             content="Equipment, parts and service for commercial and recreational vehicles and equipment. We have locations in Anchorage and Fairbanks."
           />
-        </MetaTags>
+        </Head>
         <section
           className={`${css.homeHero} hero red-gradient`}
           style={{
@@ -85,10 +85,10 @@ class Index extends React.Component {
         </section>
         <section className={css.heritage}>
           <svg><use xlinkHref="#chevron" /></svg>
-          <p>
+          <h1>
             <strong>{ data.number_of_years_in_business }</strong>
             <span>Years of business,<br /> employing over { data.apx_number_of_alaskan_employees } Alaskans.</span>
-          </p>
+          </h1>
         </section>
         <section
           className={`${css.coreValue} hero top-left-pin`}

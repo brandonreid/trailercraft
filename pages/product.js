@@ -1,12 +1,12 @@
 import Cosmic from 'cosmicjs';
 import renderHTML from 'react-render-html';
-import MetaTags from 'react-meta-tags';
+import Head from 'next/head';
 
 import css from './product.scss';
 
 const Product = ({title, data, slug}) => (
   <div>
-    <MetaTags id={`home${slug}`}>
+    <Head>
       {/* Title must be 60 to 120 characters. */}
       <meta
         name="title"
@@ -18,7 +18,7 @@ const Product = ({title, data, slug}) => (
         name="description"
         content="Available at TrailerCraft Inc. in Anchorage or Fairbanks."
       />
-    </MetaTags>
+    </Head>
     <div className={css.productContainer}>
       <div className={css.product}>
         <div
@@ -27,7 +27,7 @@ const Product = ({title, data, slug}) => (
             backgroundImage: `url(${data.product_image.imgix_url}?w=500)`
           }}
         >
-          <h3>{ title }</h3>
+          <h1>{ title }</h1>
         </div>
         <div className={css.productDescription}>
           { renderHTML(data.product_description) }

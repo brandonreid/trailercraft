@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Link from 'next/link';
+import Head from 'next/head';
 import Modal from 'react-modal';
 import Slider from "react-slick";
 import renderHTML from 'react-render-html';
 import classNames from 'classnames';
-import MetaTags from 'react-meta-tags';
 
 import css from './inventory-item.scss';
 
@@ -59,7 +59,7 @@ class InventoryItem extends React.Component {
     
     return (
       <div className={css.productItem}>
-        <MetaTags id="inventoryItem">
+        <Head>
           {/* Title must be 60 to 120 characters. */}
           <meta
             name="title"
@@ -71,7 +71,7 @@ class InventoryItem extends React.Component {
             name="description"
             content={`${title} – Available now in ${location_of_item} at Trailercraft, Inc.`}
           />
-        </MetaTags>
+        </Head>
         <div
           className={css.productImg}
           style={{

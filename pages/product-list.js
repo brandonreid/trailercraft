@@ -1,7 +1,7 @@
 import React from 'react';
 import Cosmic from 'cosmicjs';
 import renderHTML from 'react-render-html';
-import MetaTags from 'react-meta-tags';
+import Head from 'next/head';
 
 import css from './product-list.scss';
 
@@ -64,7 +64,7 @@ class ProductList extends React.Component {
     } = this.props;
     return (
       <div>
-        <MetaTags id={`productList${_id}`}>
+        <Head>
           {/* Title must be 60 to 120 characters. */}
           <meta
             name="title"
@@ -76,7 +76,7 @@ class ProductList extends React.Component {
             name="description"
             content={hero_text}
           />
-        </MetaTags>
+        </Head>
         <div
           className={`${css.heroContainer} hero`}
           style={{
@@ -85,6 +85,7 @@ class ProductList extends React.Component {
         >
           <div className={css.heroContent}>
             <img src={manufacturer_logo.imgix_url} alt="Manufacturer Logo"/>
+            <h1 className="sr-only">{title}</h1>
             <p>{ hero_text }</p>
           </div>
         </div>

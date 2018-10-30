@@ -1,4 +1,8 @@
-import Document, { Head, Main, NextScript } from 'next/document'
+import Document, { Head, Main, NextScript } from 'next/document';
+import MetaTagsServer from 'react-meta-tags/server';
+
+const metaTagsInstance = MetaTagsServer();
+const metaTags = metaTagsInstance.getTags();
 
 export default class MyDocument extends Document {
   render() {
@@ -6,6 +10,8 @@ export default class MyDocument extends Document {
       <html lang="en">
         <Head>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta charSet="utf-8"/>
+          {metaTags}
           <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
           <link rel="stylesheet" href="/_next/static/style.css" />
           <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,900" rel="stylesheet" />

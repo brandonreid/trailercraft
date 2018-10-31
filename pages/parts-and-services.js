@@ -117,28 +117,48 @@ class PartsAndServices extends React.Component {
 
         <section className={css.features}>
           <div className={css.feature}>
-            <img src={ `${feature_1.feature_1_image.imgix_url}?w=${featureImgWidth}` } alt="" />
+            <div
+              className={css.featureImg}
+              style={{
+                backgroundImage: `url('${feature_1.feature_1_image.imgix_url}?w=${featureImgWidth}')`
+              }}
+            ></div>
             <div className={css.featureText}>
               <h3>{ feature_1.feature_1_title }</h3>
               <p>{ feature_1.feature_1_text }</p>
             </div>
           </div>
           <div className={css.feature}>
-            <img src={ `${feature_2.feature_2_image.imgix_url}?w=${featureImgWidth}` } alt="" />
+            <div
+              className={css.featureImg}
+              style={{
+                backgroundImage: `url('${feature_2.feature_2_image.imgix_url}?w=${featureImgWidth}')`
+              }}
+            ></div>
             <div className={css.featureText}>
               <h3>{ feature_2.feature_2_title }</h3>
               <p>{ feature_2.feature_2_text }</p>
             </div>
           </div>
           <div className={css.feature}>
-            <img src={ `${feature_3.feature_3_image.imgix_url}?w=${featureImgWidth}` } alt="" />
+            <div
+              className={css.featureImg}
+              style={{
+                backgroundImage: `url('${feature_3.feature_3_image.imgix_url}?w=${featureImgWidth}')`
+              }}
+            ></div>
             <div className={css.featureText}>
               <h3>{ feature_3.feature_3_title }</h3>
               <p>{ feature_3.feature_3_text }</p>
             </div>
           </div>
           <div className={css.feature}>
-            <img src={ `${feature_4.feature_4_image.imgix_url}?w=${featureImgWidth}` } alt="" />
+            <div
+              className={css.featureImg}
+              style={{
+                backgroundImage: `url('${feature_4.feature_4_image.imgix_url}?w=${featureImgWidth}')`
+              }}
+            ></div>
             <div className={css.featureText}>
               <h3>{ feature_4.feature_4_title }</h3>
               <p>{ feature_4.feature_4_text }</p>

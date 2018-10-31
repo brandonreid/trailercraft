@@ -74,7 +74,7 @@ class Index extends React.Component {
         <section
           className={`${css.homeHero} hero red-gradient`}
           style={{
-            backgroundImage: `url(${data.home_hero.home_hero_image.imgix_url}?w=${heroWidth})`
+            backgroundImage: `url(${data.home_hero.home_hero_image.imgix_url.replace(/ /g, "%20")}?w=${heroWidth})`
           }}>
           <div className={css.homeHeroText}>
             <h2>{ data.home_hero.home_hero_title }</h2>
@@ -93,7 +93,7 @@ class Index extends React.Component {
         <section
           className={`${css.coreValue} hero top-left-pin`}
           style={{
-            backgroundImage: `url(${data.core_value.core_value_background_image.imgix_url}?w=${heroWidth})`
+            backgroundImage: `url(${data.core_value.core_value_background_image.imgix_url.replace(/ /g, "%20")}?w=${heroWidth})`
           }}>
           <div className={css.valueText}>
             <svg><use xlinkHref="#chevron" /></svg>
@@ -104,7 +104,7 @@ class Index extends React.Component {
         <section
           className={`${css.advantagesIntro} hero red-gradient`}
           style={{
-            backgroundImage: `url(${data.advantages_intro.advantages_intro_background_image.imgix_url}?w=${heroWidth})`
+            backgroundImage: `url(${data.advantages_intro.advantages_intro_background_image.imgix_url.replace(/ /g, "%20")}?w=${heroWidth})`
           }}>
           <svg><use xlinkHref="#chevron" /></svg>
           <div className={css.advantageText}>
@@ -117,7 +117,7 @@ class Index extends React.Component {
             <div
               className={css.advantageImg}
               style={{
-                backgroundImage: `url('${data.advantages.advantage_1_image.imgix_url}?w=${advantageImgWidth}')`
+                backgroundImage: `url('${data.advantages.advantage_1_image.imgix_url.replace(/ /g, "%20")}?w=${advantageImgWidth}')`
               }}
             ></div>
             <div className={css.advantageText}>
@@ -129,7 +129,7 @@ class Index extends React.Component {
             <div
               className={css.advantageImg}
               style={{
-                backgroundImage: `url('${data.advantages.advantage_2_image.imgix_url}?w=${advantageImgWidth}')`
+                backgroundImage: `url('${data.advantages.advantage_2_image.imgix_url.replace(/ /g, "%20")}?w=${advantageImgWidth}')`
               }}
             ></div>
             <div className={css.advantageText}>
@@ -141,7 +141,7 @@ class Index extends React.Component {
             <div
               className={css.advantageImg}
               style={{
-                backgroundImage: `url('${data.advantages.advantage_3_image.imgix_url}?w=${advantageImgWidth}')`
+                backgroundImage: `url('${data.advantages.advantage_3_image.imgix_url.replace(/ /g, "%20")}?w=${advantageImgWidth}')`
               }}
             ></div>
             <div className={css.advantageText}>
@@ -153,7 +153,7 @@ class Index extends React.Component {
             <div
               className={css.advantageImg}
               style={{
-                backgroundImage: `url('${data.advantages.advantage_4_image.imgix_url}?w=${advantageImgWidth}')`
+                backgroundImage: `url('${data.advantages.advantage_4_image.imgix_url.replace(/ /g, "%20")}?w=${advantageImgWidth}')`
               }}
             ></div>
             <div className={css.advantageText}>
@@ -177,7 +177,7 @@ class Index extends React.Component {
                 <a className={css.locationMap}
                   href={data.call_to_action.anchorage_google_maps_link}>
                   <img
-                    src={`${data.call_to_action.anchorage_map_image.imgix_url}?w=${mapImgWidth}`}
+                    src={`${data.call_to_action.anchorage_map_image.imgix_url.replace(/ /g, "%20")}?w=${mapImgWidth}`}
                     alt="Map to Anchorage Location"
                     target="_blank"
                     rel="noopener"
@@ -197,7 +197,7 @@ class Index extends React.Component {
                 <a className={css.locationMap}
                   href={data.call_to_action.fairbanks_google_maps_link}>
                   <img
-                    src={`${data.call_to_action.fairbanks_map_image.imgix_url}?w=${mapImgWidth}`}
+                    src={`${data.call_to_action.fairbanks_map_image.imgix_url.replace(/ /g, "%20")}?w=${mapImgWidth}`}
                     alt="Map to Anchorage Location"
                     target="_blank"
                     rel="noopener"
@@ -211,7 +211,7 @@ class Index extends React.Component {
         <section
           className={`${css.specialFeature} hero red-gradient`}
           style={{
-            backgroundImage: `url(${data.special_feature.special_feature_background.imgix_url}?w=${heroWidth})`
+            backgroundImage: `url(${data.special_feature.special_feature_background.imgix_url.replace(/ /g, "%20")}?w=${heroWidth})`
           }}>
           <svg><use xlinkHref="#chevron" /></svg>
           <div className={css.specialFeatureText}>

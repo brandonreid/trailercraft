@@ -24,7 +24,7 @@ const Product = ({title, data, slug}) => (
         <div
           className={css.productImgContainer}
           style={{
-            backgroundImage: `url(${data.product_image.imgix_url}?w=500)`
+            backgroundImage: `url(${data.product_image.imgix_url.replace(/ /g, "%20")}?w=500)`
           }}
         >
           <h1>{ title }</h1>

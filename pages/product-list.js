@@ -80,11 +80,11 @@ class ProductList extends React.Component {
         <div
           className={`${css.heroContainer} hero`}
           style={{
-            backgroundImage: `url(${hero_image.imgix_url}?w=${heroWidth})`
+            backgroundImage: `url(${hero_image.imgix_url.replace(/ /g, "%20")}?w=${heroWidth})`
           }}
         >
           <div className={css.heroContent}>
-            <img src={manufacturer_logo.imgix_url} alt="Manufacturer Logo"/>
+            <img src={manufacturer_logo.imgix_url.replace(/ /g, "%20")} alt="Manufacturer Logo"/>
             <h1 className="sr-only">{title}</h1>
             <p>{ hero_text }</p>
           </div>
@@ -95,7 +95,7 @@ class ProductList extends React.Component {
               <div
                 className={css.productImgContainer}
                 style={{
-                  backgroundImage: `url(${metadata.product_image.imgix_url}?w=500)`
+                  backgroundImage: `url(${metadata.product_image.imgix_url.replace(/ /g, "%20")}?w=500)`
                 }}
               >
                 <h3>{ title }</h3>

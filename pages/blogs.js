@@ -52,9 +52,9 @@ class Blogs extends React.Component {
           {/* Title must be 60 to 120 characters. */}
           <meta
             name="title"
-            content={`TrailerCraft, Inc – Blog – ${title}`}
+            content={`TrailerCraft, Inc – Blog Post – ${title}`}
           />
-          <title>TrailerCraft, Inc – Blog – {title}</title>
+          <title>TrailerCraft, Inc – Blog Post – {title}</title>
           {/* Description must not exceed 300 characters. */}
           <meta
             name="description"

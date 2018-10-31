@@ -62,9 +62,9 @@ class Index extends React.Component {
           {/* Title must be 60 to 120 characters. */}
           <meta
             name="title"
-            content="TrailerCraft, Inc – Home Page – Big Rigs, Busses, Vans, Plows, Trailers and more. Serving Alaska since 1969."
+            content="TrailerCraft, Inc – Home Page"
           />
-          <title>TrailerCraft, Inc – Home Page – Big Rigs, Busses, Vans, Plows, Trailers and more. Serving Alaska since 1969.</title>
+          <title>TrailerCraft, Inc – Home Page</title>
           {/* Description must not exceed 300 characters. */}
           <meta
             name="description"

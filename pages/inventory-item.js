@@ -118,7 +118,8 @@ class InventoryItem extends React.Component {
                   bottom: 'auto',
                   maxWidth: '98vw',
                   width: '70em',
-                  maxHeight: '98vh'
+                  maxHeight: '98vh',
+                  overflow: 'scroll'
                 }
               }}
             >

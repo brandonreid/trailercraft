@@ -20,6 +20,7 @@
     }
   }
   .ReactModal__Content {
+    -webkit-overflow-scrolling: touch;
     transition: transform 500ms cubic-bezier(0,0,0,1) 200ms,
                 opacity 500ms ease 200ms;
     &--after-open {

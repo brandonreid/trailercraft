@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Router from 'next/router';
 import classNames from 'classnames';
 
 import css from './Navbar.scss';
@@ -21,8 +22,18 @@ class Navbar extends React.Component {
     this.setOpenTab = this.setOpenTab.bind(this);
   }
 
+  componentDidUpdate() {
+    Router.onRouteChangeStart = url => {
+      this.setOpenTab('');
+    }
+  }
+
   setOpenTab(tabName) {
-    if (this.state.navItemOpen === tabName) {
+    if (tabName === '') {
+      this.setState({
+        navItemOpen: ''
+      });
+    } else if (this.state.navItemOpen === tabName) {
       this.setState({
         navItemOpen: ''
       });
@@ -84,6 +95,10 @@ class Navbar extends React.Component {
             <div className={css.subnavContainer}>
               <SubnavTrucks />
             </div>
+            <div
+              className={css.subnavBackdrop}
+              onClick={() => setOpenTab('trucks')}
+            ></div>
           </div>
 
           <button
@@ -103,6 +118,10 @@ class Navbar extends React.Component {
             <div className={css.subnavContainer}>
               <SubnavBusses />
             </div>
+            <div
+              className={css.subnavBackdrop}
+              onClick={() => setOpenTab('busses')}
+            ></div>
           </div>
 
           <button
@@ -122,6 +141,10 @@ class Navbar extends React.Component {
             <div className={css.subnavContainer}>
               <SubnavVans />
             </div>
+            <div
+              className={css.subnavBackdrop}
+              onClick={() => setOpenTab('vans')}
+            ></div>
           </div>
 
           <button
@@ -141,6 +164,10 @@ class Navbar extends React.Component {
             <div className={css.subnavContainer}>
               <SubnavPlows />
             </div>
+            <div
+              className={css.subnavBackdrop}
+              onClick={() => setOpenTab('plows')}
+            ></div>
           </div>
 
           <button
@@ -150,7 +177,7 @@ class Navbar extends React.Component {
             })}
             onClick={() => setOpenTab('trailers')}
           >
-            <img src="/static/plow.png" alt="Trailer" title="Trailer" />
+            <img src="/static/trailer.png" alt="Trailer" title="Trailer" />
             <span>Trailers</span>
             <svg className={css.dropDownIcon}><use xlinkHref="#dropDown"></use></svg>
           </button>
@@ -160,6 +187,10 @@ class Navbar extends React.Component {
             <div className={css.subnavContainer}>
               <SubnavTrailers />
             </div>
+            <div
+              className={css.subnavBackdrop}
+              onClick={() => setOpenTab('trailers')}
+            ></div>
           </div>
 
           <Link href="/parts-and-services">

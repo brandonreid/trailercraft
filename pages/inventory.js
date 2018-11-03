@@ -86,6 +86,9 @@ class Inventory extends React.Component {
           <h1>Current Inventory</h1>
           <div className={css.filters}>
             <div className="tab-list collapse-xs">
+              <a className={css.vanLink} href="http://www.anchorage.ftlvansdealer.com/new-cars-anchorage-ak" target="_blank">
+                View our Sprinter Van inventory.
+              </a>
               <button
                 className={classNames('tab-item', {'active': activeTab === 'trucks'})}
                 onClick={() => setActiveTab('trucks')}
@@ -94,10 +97,6 @@ class Inventory extends React.Component {
                 className={classNames('tab-item', {'active': activeTab === 'busses'})}
                 onClick={() => setActiveTab('busses')}
               >Busses ({ products.busses.length })</button>
-              <button
-                className={classNames('tab-item', {'active': activeTab === 'vans'})}
-                onClick={() => setActiveTab('vans')}
-              >Vans ({ products.vans.length })</button>
               <button
                 className={classNames('tab-item', {'active': activeTab === 'plows'})}
                 onClick={() => setActiveTab('plows')}
@@ -108,13 +107,6 @@ class Inventory extends React.Component {
               >Trailers ({ products.trailers.length })</button>
             </div>
           </div>
-          {activeTab === 'vans' && (
-            <div className={css.vanLink}>
-              <a href="http://www.anchorage.ftlvansdealer.com/new-cars-anchorage-ak" target="_blank">
-                View more of our Sprinter Van inventory.
-              </a>
-            </div>
-          )}
           {products[activeTab].length < 1 && (
             <p className={css.noItems}>
               There are currently no inventory items to show for this category.

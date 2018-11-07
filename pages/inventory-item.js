@@ -165,9 +165,11 @@ class InventoryItem extends React.Component {
                   </Slider>
                 </div>
               </div>
-              <div className={css.modalSpecs}>
-                { renderHTML(detailed_specs) }
-              </div>
+              {detailed_specs && (
+                <div className={css.modalSpecs}>
+                  { renderHTML(detailed_specs) }
+                </div>
+              )}
             </Modal>
           </div>
         </div>

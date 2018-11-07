@@ -90,21 +90,27 @@ class Inventory extends React.Component {
                 View our Sprinter Van inventory.
               </a>
               <button
-                className={classNames('tab-item', {'active': activeTab === 'trucks'})}
-                onClick={() => setActiveTab('trucks')}
+              className={classNames('tab-item', {'active': activeTab === 'trucks'})}
+              onClick={() => setActiveTab('trucks')}
               >Trucks ({ products.trucks.length })</button>
-              <button
-                className={classNames('tab-item', {'active': activeTab === 'busses'})}
-                onClick={() => setActiveTab('busses')}
-              >Busses ({ products.busses.length })</button>
-              <button
-                className={classNames('tab-item', {'active': activeTab === 'plows'})}
-                onClick={() => setActiveTab('plows')}
-              >Plows ({ products.plows.length })</button>
-              <button
-                className={classNames('tab-item', {'active': activeTab === 'trailers'})}
-                onClick={() => setActiveTab('trailers')}
-              >Trailers ({ products.trailers.length })</button>
+              {products.busses.length > 0 && (
+                <button
+                  className={classNames('tab-item', {'active': activeTab === 'busses'})}
+                  onClick={() => setActiveTab('busses')}
+                >Busses ({ products.busses.length })</button>
+              )}
+              {products.plows.length > 0 && (
+                <button
+                  className={classNames('tab-item', {'active': activeTab === 'plows'})}
+                  onClick={() => setActiveTab('plows')}
+                >Plows ({ products.plows.length })</button>
+              )}
+              {products.trailers.length > 0 && (
+                <button
+                  className={classNames('tab-item', {'active': activeTab === 'trailers'})}
+                  onClick={() => setActiveTab('trailers')}
+                >Trailers ({ products.trailers.length })</button>
+              )}
             </div>
           </div>
           {products[activeTab].length < 1 && (

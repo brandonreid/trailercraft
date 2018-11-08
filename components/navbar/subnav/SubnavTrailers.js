@@ -35,29 +35,21 @@ async function SubnavTrailers() {
     {
       logoUrl: '/static/logo_doepker.jpg',
       logoAlt: 'Doepker Logo',
-      contentItems: [
-        {
-          itemTitle: 'Doepker Trailers',
-          moreLink: '/product-list/doepker-products',
-          mobileTitle: 'Doepker Trailers',
-          products: [
-            ...doepkerProducts
-          ]
-        }
-      ]
+      contentText: `
+        <p>
+          We sell and service Doepker Trailer products.
+          Learn more about Doepker product selections at <a href="http://doepker.com/" target="_blank">doepker.com</a>
+        </p>
+      `
     }, {
       logoUrl: '/static/logo_felling-trailers.jpg',
       logoAlt: 'Felling Trailers Logo',
-      contentItems: [
-        {
-          itemTitle: 'Felling Trailers',
-          moreLink: '/product-list/felling-trailers-products',
-          mobileTitle: 'Felling Trailers',
-          products: [
-            ...fellingTrailerProducts
-          ]
-        }
-      ]
+      contentText: `
+        <p>
+          We sell and service Felling Trailers products.
+          Learn more about Felling Trailers at <a href="https://www.felling.com/" target="_blank">felling.com</a>
+        </p>
+      `
     }
   ];
 

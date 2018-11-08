@@ -32,6 +32,12 @@
         border-top: 1px solid $frame;
       }
     }
+    .contentText {
+      padding: 0.75em;
+      a {
+        font-weight: bold;
+      }
+    }
   }
   .logoContainer,
   .colContent {
@@ -116,6 +122,14 @@
             display: inline-block;
             vertical-align: middle;
           }
+        }
+      }
+      .contentText {
+        font-size: 1.2em;
+        background-color: white;
+        padding: 1em;
+        a {
+          font-weight: bold;
         }
       }
     }

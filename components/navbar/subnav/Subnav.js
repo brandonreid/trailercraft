@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import renderHTML from 'react-render-html';
 
 import css from './Subnav.scss';
 
@@ -23,10 +24,10 @@ import css from './Subnav.scss';
 
 const Subnav = ({columns}) => (
   <div className={css.componentContainer}>
-    {columns.map(({logoUrl, logoAlt, pageRoute, contentItems}, i) => (
+    {columns.map(({logoUrl, logoAlt, pageRoute, contentItems, contentText}, i) => (
       <div className={css.column} key={i}>
         <div className={css.mobileMenu}>
-          {contentItems.map(({moreLink, mobileTitle}, i) => (
+          {contentItems && contentItems.map(({moreLink, mobileTitle}, i) => (
             <div className={css.mobileLink} key={i}>
               <Link href={moreLink}>
                 <a>
@@ -36,6 +37,11 @@ const Subnav = ({columns}) => (
               </Link>
             </div>
           ))}
+          {contentText && (
+            <div className={css.contentText}>
+              { renderHTML(contentText) }
+            </div>
+          )}
         </div>
         <div className={css.logoContainer}>
           <div className={css.logo}>
@@ -43,7 +49,7 @@ const Subnav = ({columns}) => (
           </div>
         </div>
         <div className={css.colContent}>
-          {contentItems.map(({itemTitle, moreLink, products}, i) => (
+          {contentItems && contentItems.map(({itemTitle, moreLink, products}, i) => (
             <div className={css.subContentItem} key={i}>
               <div className={css.sciHeader}>
                 <p>{ itemTitle }</p>
@@ -68,6 +74,11 @@ const Subnav = ({columns}) => (
               </div>
             </div>
           ))}
+          {contentText && (
+            <div className={css.contentText}>
+              { renderHTML(contentText) }
+            </div>
+          )}
         </div>
       </div>
     ))}

@@ -36,7 +36,7 @@ class Index extends React.Component {
       let minorWidth = windowWidth;
 
       if (windowWidth > 768) {
-        minorWidth = windowWidth / 3;
+        minorWidth = windowWidth / 2.5;
         majorWidth = windowWidth - (windowWidth / 6);
       }
 

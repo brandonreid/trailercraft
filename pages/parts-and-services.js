@@ -76,7 +76,7 @@ class PartsAndServices extends React.Component {
           {/* Description must not exceed 300 characters. */}
           <meta
             name="description"
-            content="Factory trained technicians, state of the art facilities and the largest supply of parts in Alaska. We service all manner of commercial and residential trucks, busses, vans, plows, trailers and more."
+            content="Factory trained technicians, state of the art facilities and the largest supply of parts in Alaska. We service all manner of commercial and residential trucks, buses, vans, plows, trailers and more."
           />
         </Head>
 

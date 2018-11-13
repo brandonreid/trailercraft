@@ -10,7 +10,7 @@ function Loader() {
   );
 }
 
-async function SubnavBusses() {
+async function SubnavBuses() {
   const api = Cosmic();
   const bucket = api.bucket({
     slug: process.env.COSMIC_BUCKET,
@@ -18,12 +18,12 @@ async function SubnavBusses() {
     write_key: process.env.COSMIC_WRITE_KEY
   });
 
-  const bussesRequest = await bucket.getObjects({
+  const busesRequest = await bucket.getObjects({
     type: 'bus-products',
     limit: 6
   });
 
-  const busses = bussesRequest.objects;
+  const buses = busesRequest.objects;
 
   const columns = [
     {
@@ -31,11 +31,11 @@ async function SubnavBusses() {
       logoAlt: 'Blue Bird Logo',
       contentItems: [
         {
-          itemTitle: 'Busses',
+          itemTitle: 'Buses',
           moreLink: '/product-list/bus-products',
-          mobileTitle: 'Blue Bird Busses',
+          mobileTitle: 'Blue Bird Buses',
           products: [
-            ...busses
+            ...buses
           ]
         }
       ]
@@ -47,4 +47,4 @@ async function SubnavBusses() {
   );
 };
 
-export default asyncReactor(SubnavBusses, Loader);
+export default asyncReactor(SubnavBuses, Loader);

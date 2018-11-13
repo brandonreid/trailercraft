@@ -31,7 +31,7 @@ class Inventory extends React.Component {
 
     const products = {
       trucks: [],
-      busses: [],
+      buses: [],
       vans: [],
       plows: [],
       trailers: []
@@ -41,7 +41,7 @@ class Inventory extends React.Component {
       products.trucks = request.objects.filter((item) => {
         return item.metadata.category === 'Truck';
       });
-      products.busses = request.objects.filter((item) => {
+      products.buses = request.objects.filter((item) => {
         return item.metadata.category === 'Bus';
       });
       products.vans = request.objects.filter((item) => {
@@ -93,11 +93,11 @@ class Inventory extends React.Component {
               className={classNames('tab-item', {'active': activeTab === 'trucks'})}
               onClick={() => setActiveTab('trucks')}
               >Trucks ({ products.trucks.length })</button>
-              {products.busses.length > 0 && (
+              {products.buses.length > 0 && (
                 <button
-                  className={classNames('tab-item', {'active': activeTab === 'busses'})}
-                  onClick={() => setActiveTab('busses')}
-                >Busses ({ products.busses.length })</button>
+                  className={classNames('tab-item', {'active': activeTab === 'buses'})}
+                  onClick={() => setActiveTab('buses')}
+                >Buses ({ products.buses.length })</button>
               )}
               {products.plows.length > 0 && (
                 <button

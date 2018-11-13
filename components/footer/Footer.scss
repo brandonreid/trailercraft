@@ -44,6 +44,33 @@
           }
         }
       }
+      .socialLinks {
+        h4 {
+          margin-top: 1em;
+          margin-bottom: 0.5em;
+        }
+        a {
+          display: inline-block;
+          vertical-align: middle;
+          margin-right: 1em;
+          text-decoration: none;
+          transform: scale(1);
+          transition: transform 200ms ease;
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+        svg {
+          width: 2.5em;
+          height: 2.5em;
+          &.facebook {
+            fill: white;
+          }
+          &.instagram {
+            fill: white;
+          }
+        }
+      }
     }
     .locationsContainer {
       flex: 1;

@@ -74,6 +74,15 @@ const Footer = () => (
               <li><Link href="/contact"><a>Contact</a></Link></li>
             </ul>
           </nav>
+          <div className={css.socialLinks}>
+            <h4>Social Media</h4>
+            <a href="https://www.facebook.com/TrailerCraft.FreightlinerofAlaska/" target="_blank">
+              <svg className={css.facebook}><use xlinkHref="#facebook"></use></svg>
+            </a>
+            <a href="https://www.instagram.com/trailercraft_ak/" target="_blank">
+              <svg className={css.instagram}><use xlinkHref="#instagram"></use></svg>
+            </a>
+          </div>
         </div>
         <div className={css.locationsContainer}>
           <div className={css.location}>

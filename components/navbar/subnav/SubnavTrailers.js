@@ -38,7 +38,7 @@ async function SubnavTrailers() {
       contentText: `
         <p>
           We sell and service Doepker Trailer products.
-          Learn more about Doepker product selections at <a href="http://doepker.com/" target="_blank">doepker.com</a>
+          Learn more about Doepker product selections at <a href="http://www.doepker.com/" target="_blank">doepker.com</a>
         </p>
       `
     }, {

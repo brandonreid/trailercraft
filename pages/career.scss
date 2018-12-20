@@ -1,0 +1,27 @@
+@import '../global-styles/variables';
+@import '../global-styles/utility';
+
+:local {
+  .careerPost {
+    max-width: $constrained-width;
+    margin: 0 auto;
+    padding: 1em;
+    @extend .clearfix;
+    h1 {
+      @media (max-width: $sm-bp) {
+        font-size: 1.5em;
+      }
+    }
+    .location {
+      margin-top: 0.25em;
+      margin-bottom: 1em;
+    }
+    .careerImg {
+      max-width: 300px;
+      max-height: 200px;
+      height: auto;
+      float: left;
+      margin-right: 1em;
+    }
+  }
+}

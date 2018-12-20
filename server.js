@@ -27,6 +27,12 @@ app.prepare()
       app.render(req, res, page, queryParams);
     });
 
+    server.get('/careers/:id', (req, res) => {
+      const page = '/career';
+      const queryParams = { slug: req.params.id };
+      app.render(req, res, page, queryParams);
+    });
+
     server.get('*', (req, res) => handle(req, res));
 
     server.listen(process.env.PORT || 3000, err => {

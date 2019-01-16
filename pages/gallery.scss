@@ -1,0 +1,55 @@
+@import '../global-styles/variables';
+
+$quarterConstrainedWidth: $constrained-width / 4;
+
+:local {
+.gallery {
+  background-color: $black;
+  color: white;
+}
+.galleryContainer {
+  max-width: $constrained-width;
+  margin: 0 auto;
+  padding: 1em 0.5em;
+}
+.galleryTiles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1em auto 0;
+  .galleryItem {
+    background-color: $shade;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(50vw - 1em);
+    height: calc(50vw - 1em);
+    cursor: pointer;
+    position: relative;
+    transition: transform 150ms ease;
+    &:hover {
+      z-index: 10;
+      transform: scale(1.1);
+    }
+    img {
+      max-width: initial;
+      flex-shrink: 0;
+      min-width: 100%;
+      min-height: 100%;
+      opacity: 0;
+    }
+    @media (min-width: $sm-bp) {
+      width: calc(33.33vw - 1em);
+      height: calc(33.33vw - 1em);
+    }
+    @media (min-width: $constrained-width) {
+      width: calc(#{$quarterConstrainedWidth} - 0.25em);
+      height: calc(#{$quarterConstrainedWidth} - 0.25em);
+    }
+  }
+}
+}

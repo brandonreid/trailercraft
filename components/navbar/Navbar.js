@@ -51,17 +51,17 @@ class Navbar extends React.Component {
       <div className={`${css.navbar} clearfix`}>
         <div className={css.subnav}>
           <svg className={css.redAngle}><use xlinkHref="#angle"></use></svg>
-          <Link href="/contact?location=anchorage">
-            <a className={classNames(css.locationLink, css.hideMobile)}>Anchorage</a>
-          </Link>
-          <svg className={classNames(css.chevron, css.hideMobile)}><use xlinkHref="#chevron" /></svg>
-          <Link href="/contact?location=fairbanks">
-            <a className={classNames(css.locationLink, css.hideMobile)}>Fairbanks</a>
-          </Link>
-          <svg className={classNames(css.chevron, css.hideMobile)}><use xlinkHref="#chevron" /></svg>
-          <a href="tel:1-907-563-3238">(907) 563-3238</a>
-          <svg className={css.chevron}><use xlinkHref="#chevron" /></svg>
           <Link href="/inventory"><a><strong>Current Inventory</strong></a></Link>
+          <svg className={css.chevron}><use xlinkHref="#chevron" /></svg>
+          <a href="tel:1-907-563-3238">(907) 563-3238</a>
+          <svg className={classNames(css.chevron, css.hideMobile)}><use xlinkHref="#chevron" /></svg>
+          <Link href="/careers">
+            <a className={css.hideMobile}>Careers</a>
+          </Link>
+          <svg className={classNames(css.chevron, css.hideMobile)}><use xlinkHref="#chevron" /></svg>
+          <Link href="/gallery">
+            <a className={css.hideMobile}>Gallery</a>
+          </Link>
           <Link href="/contact">
             <a className={css.contactLink}>
               <svg className={css.blackAngle}><use xlinkHref="#angle"></use></svg>

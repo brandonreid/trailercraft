@@ -1,5 +1,6 @@
 import React from 'react'
 import App, { Container } from 'next/app'
+import Router from 'next/router';
 
 import '../global-styles/global-styles.scss';
 
@@ -15,6 +16,22 @@ export default class MyApp extends App {
     }
 
     return { pageProps }
+  }
+
+  componentDidMount() {
+    Router.onRouteChangeComplete = url => {
+      this.trackPageView(url);
+    };
+  }
+
+  trackPageView(url) {
+    try {
+      window.gtag('config', 'UA-132762810-1', {
+        page_location: url
+      });
+    } catch (error) {
+      console.error('Failed to send google analytics update. Url: ', url);
+    }
   }
 
   render () {

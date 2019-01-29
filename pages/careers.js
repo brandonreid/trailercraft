@@ -47,6 +47,13 @@ class Careers extends React.Component {
         </Head>
         <section className={css.careersContainer}>
           <h1>Careers at Trailercraft, Inc.</h1>
+          <p className={css.emailTo}>
+            <a
+              href="https://cosmic-s3.imgix.net/ac2880a0-2342-11e9-931e-19c0e1e6c59d-Application-for-Employment-VS-3.pdf"
+              target="_blank"
+            >Click here to download the application.</a><br />
+            Please email your resume and application to <a href="mailto:ann@trailercraft.com">ann@trailercraft.com</a>.
+          </p>
           {!posts && (
             <p className={css.noJobs}>There are currently no listed career opportunities available</p>
           )}

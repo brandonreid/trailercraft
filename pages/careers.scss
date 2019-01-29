@@ -11,10 +11,14 @@
       margin: 0 auto;
       padding: 1em;
       h1 {
-        margin-bottom: 0.75em;
+        margin-bottom: 0;
         @media (max-width: 550px) {
           font-size: 1.5em;
         }
+      }
+      .emailTo {
+        margin-top: 0.5em;
+        margin-bottom: 1em;
       }
       .noJobs {
         color: $grey;
@@ -22,12 +26,12 @@
       }
     }
     .post {
+      border-top: 1px solid $frame;
       display: block;
       text-decoration: none;
+      padding-top: 1em;
       & + .post {
-        border-top: 1px solid $frame;
         margin-top: 1em;
-        padding-top: 1em;
       }
       .postImage {
         background-size: cover;

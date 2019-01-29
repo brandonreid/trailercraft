@@ -1,4 +1,5 @@
-button {
+button,
+a.button-style {
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
   background-color: $default;
   color: $text;

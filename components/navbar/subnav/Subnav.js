@@ -47,6 +47,9 @@ const Subnav = ({columns}) => (
           <div className={css.logo}>
             <img src={logoUrl} alt={logoAlt}/>
           </div>
+          <p>
+            <Link href="/inventory"><a>View Current Inventory</a></Link>
+          </p>
         </div>
         <div className={css.colContent}>
           {contentItems && contentItems.map(({itemTitle, moreLink, products}, i) => (

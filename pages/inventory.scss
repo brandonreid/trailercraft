@@ -15,14 +15,35 @@
 .filters {
   margin-bottom: 1em;
 }
-.vanLink {
+a.vanLink.vanLink {
+  background-color: $red;
+  border-color: darken($red, 10%);
+  color: white;
   font-weight: bold;
-  text-align: center;
   display: block;
-  padding: 0 0.75em 0.75em;
+  margin-bottom: 1em;
+  &:hover,
+  &:focus {
+    background-color: lighten($red, 5%);
+    color: white;
+  }
+  svg {
+    display: inline-block;
+    vertical-align: middle;
+    width: 1em;
+    height: 1em;
+    margin-left: 0.75em;
+    path {
+      fill: white;
+    }
+  }
+  & + button:not(.no-autospace) {
+    margin-left: 0;
+  }
+
   @media (min-width: 815px) {
     display: inline-block;
-    padding: 0.5em 0 0;
+    margin-bottom: 0;
     float: right;
   }
 }

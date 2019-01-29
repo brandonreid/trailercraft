@@ -23,6 +23,7 @@ $delay: 100ms;
     display: none;
   }
   a {
+    font-weight: 700;
     color: white;
     display: inline-block;
     padding: 0.25em 0.5em 0.5em;
@@ -45,7 +46,7 @@ $delay: 100ms;
   }
   a.contactLink {
     background-color: $black;
-    font-weight: 800;
+    font-weight: 700;
     margin-left: 0.25em;
     padding: 0.5em 0.75ej;
     display: inline-block;
@@ -262,7 +263,7 @@ $delay: 100ms;
 }
 @media (min-width: $sm-bp) {
   button.navBtn.hoverable:hover + .subnavWrapper,
-  .subnavWrapper:hover,
+  .mainNav:not(.routeChanged) .subnavWrapper:hover,
   .subnavWrapper.show {
     z-index: 500;
     top: 100%;

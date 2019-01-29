@@ -16,13 +16,26 @@ class Navbar extends React.Component {
     super(props);
 
     this.state = {
-      navItemOpen: ''
+      navItemOpen: '',
+      routeChanged: false
     }
 
     this.setOpenTab = this.setOpenTab.bind(this);
   }
 
+  trackRouteChanged() {
+    if (this.state.routeChanged === false) {
+      this.setState({routeChanged: true});
+
+      setTimeout(() => {
+        this.setState({routeChanged: false});
+      }, 1000);
+    }
+  }
+
   componentDidUpdate() {
+    this.trackRouteChanged();
+
     Router.onRouteChangeStart = url => {
       this.setOpenTab('');
     }
@@ -45,13 +58,13 @@ class Navbar extends React.Component {
   }
 
   render() {
-    const {navItemOpen} = this.state;
+    const {navItemOpen, routeChanged} = this.state;
     const {setOpenTab} = this;
     return (
       <div className={`${css.navbar} clearfix`}>
         <div className={css.subnav}>
           <svg className={css.redAngle}><use xlinkHref="#angle"></use></svg>
-          <Link href="/inventory"><a><strong>Current Inventory</strong></a></Link>
+          <Link href="/inventory"><a>Current Inventory</a></Link>
           <svg className={css.chevron}><use xlinkHref="#chevron" /></svg>
           <a href="tel:1-907-563-3238">(907) 563-3238</a>
           <svg className={classNames(css.chevron, css.hideMobile)}><use xlinkHref="#chevron" /></svg>
@@ -76,7 +89,9 @@ class Navbar extends React.Component {
             </a>
           </Link>
         </div>
-        <div className={css.mainNav}>
+        <div className={classNames(css.mainNav, {
+          [css.routeChanged]: routeChanged
+        })}>
 
           <button
             className={classNames(`${css.navBtn} symbol`, {

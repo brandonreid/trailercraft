@@ -62,6 +62,7 @@
     .logoContainer {
       background-color: $black;
       display: block;
+      position: relative;
       .logo {
         background-color: white;
         display: inline-block;
@@ -72,6 +73,17 @@
         img {
           max-width: 100%;
           max-height: 2.5em;
+        }
+      }
+      p {
+        display: inline-block;
+        vertical-align: middle;
+        position: absolute;
+        right: 1em;
+        top: 50%;
+        a {
+          color: $shade;
+          
         }
       }
     }

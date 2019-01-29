@@ -23,36 +23,39 @@ class Navbar extends React.Component {
     this.setOpenTab = this.setOpenTab.bind(this);
   }
 
-  trackRouteChanged() {
-    if (this.state.routeChanged === false) {
-      this.setState({routeChanged: true});
-
-      setTimeout(() => {
-        this.setState({routeChanged: false});
-      }, 1000);
-    }
-  }
-
   componentDidUpdate() {
-    this.trackRouteChanged();
-
     Router.onRouteChangeStart = url => {
-      this.setOpenTab('');
+      this.setOpenTab('', true);
     }
   }
 
-  setOpenTab(tabName) {
+  setOpenTab(tabName, trackChange) {
+    let navItemOpen;
+
     if (tabName === '') {
-      this.setState({
-        navItemOpen: ''
-      });
+      navItemOpen = '';
     } else if (this.state.navItemOpen === tabName) {
+      navItemOpen = '';
+    } else {
+      navItemOpen = tabName;
+    }
+
+    if (trackChange && this.state.routeChanged === false) {
       this.setState({
-        navItemOpen: ''
+        routeChanged: true,
+        navItemOpen
       });
+
+      setTimeout(
+        function () {
+          this.setState({routeChanged: false});
+        }
+        .bind(this),
+        1500
+      );
     } else {
       this.setState({
-        navItemOpen: tabName
+        navItemOpen
       });
     }
   }

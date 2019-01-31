@@ -69,7 +69,7 @@ class InventoryItem extends React.Component {
           {/* Description must not exceed 300 characters. */}
           <meta
             name="description"
-            content={`${title} – Available now in ${location_of_item} at Trailercraft, Inc.`}
+            content={`${title} – Available now in ${location_of_item} at TrailerCraft, Inc.`}
           />
         </Head>
         <div

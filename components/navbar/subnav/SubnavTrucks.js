@@ -87,7 +87,7 @@ async function SubnavTrucks() {
   ];
 
   return (
-    <Subnav columns={columns} />
+    <Subnav columns={columns} truckLink="true" />
   );
 };
 

@@ -74,7 +74,7 @@ class Blog extends React.Component {
           {/* Description must not exceed 300 characters. */}
           <meta
             name="description"
-            content="The Trailercraft blog. Where we comment on the latest industry news, best practices and equipment around Alaskan trucking, plowing, towing and more."
+            content="The TrailerCraft blog. Where we comment on the latest industry news, best practices and equipment around Alaskan trucking, plowing, towing and more."
           />
         </Head>
         <section

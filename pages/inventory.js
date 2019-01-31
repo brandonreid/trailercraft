@@ -79,7 +79,7 @@ class Inventory extends React.Component {
           {/* Description must not exceed 300 characters. */}
           <meta
             name="description"
-            content="The current inventory of products available at Trailercraft, Ink. in Anchorage and/or Fairbanks."
+            content="The current inventory of products available at TrailerCraft, Ink. in Anchorage and/or Fairbanks."
           />
         </Head>
         <div className={css.inventoryWrapper}>

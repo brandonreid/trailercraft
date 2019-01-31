@@ -42,11 +42,11 @@ class Careers extends React.Component {
           {/* Description must not exceed 300 characters. */}
           <meta
             name="description"
-            content="Careers at Trailercraft, Inc. Join our team and help keep Alaska moving."
+            content="Careers at TrailerCraft, Inc. Join our team and help keep Alaska moving."
           />
         </Head>
         <section className={css.careersContainer}>
-          <h1>Careers at Trailercraft, Inc.</h1>
+          <h1>Careers at TrailerCraft, Inc.</h1>
           <p className={css.emailTo}>
             <a
               href="https://cosmic-s3.imgix.net/ac2880a0-2342-11e9-931e-19c0e1e6c59d-Application-for-Employment-VS-3.pdf"

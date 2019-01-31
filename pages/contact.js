@@ -67,7 +67,7 @@ class Contact extends React.Component {
           {/* Description must not exceed 300 characters. */}
           <meta
             name="description"
-            content="Contact Trailercraft, Inc. for trucks, buses, vans, plows, trailers and parts or service."
+            content="Contact TrailerCraft, Inc. for trucks, buses, vans, plows, trailers and parts or service."
           />
         </Head>
         <div className={css.containedContact}>

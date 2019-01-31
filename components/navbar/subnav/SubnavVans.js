@@ -43,7 +43,7 @@ async function SubnavVans() {
   ];
 
   return (
-    <Subnav columns={columns} />
+    <Subnav columns={columns} vanLink="true" />
   );
 };
 

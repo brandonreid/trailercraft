@@ -77,7 +77,7 @@ class Career extends React.Component {
           {/* Description must not exceed 300 characters. */}
           <meta
             name="description"
-            content="Careers at Trailercraft, Inc. Join our team and help keep Alaska moving."
+            content="Careers at TrailerCraft, Inc. Join our team and help keep Alaska moving."
           />
         </Head>
         <section className={css.careerPost}>

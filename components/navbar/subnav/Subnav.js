@@ -22,7 +22,7 @@ import css from './Subnav.scss';
 //   }
 // ];
 
-const Subnav = ({columns}) => (
+const Subnav = ({columns, truckLink, vanLink}) => (
   <div className={css.componentContainer}>
     {columns.map(({logoUrl, logoAlt, pageRoute, contentItems, contentText}, i) => (
       <div className={css.column} key={i}>
@@ -47,9 +47,18 @@ const Subnav = ({columns}) => (
           <div className={css.logo}>
             <img src={logoUrl} alt={logoAlt}/>
           </div>
-          <p>
-            <Link href="/inventory"><a>View Current Inventory</a></Link>
-          </p>
+          {truckLink && (
+            <p>
+              <Link href="/inventory"><a>View Current Inventory</a></Link>
+            </p>
+          )}
+          {vanLink && (
+            <p>
+              <a href="http://www.anchorage.ftlvansdealer.com/new-cars-anchorage-ak" target="_blank">
+                View Current Sprinter Van Inventory
+              </a>
+            </p>
+          )}
         </div>
         <div className={css.colContent}>
           {contentItems && contentItems.map(({itemTitle, moreLink, products}, i) => (

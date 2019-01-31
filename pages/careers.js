@@ -52,7 +52,7 @@ class Careers extends React.Component {
               href="https://cosmic-s3.imgix.net/ac2880a0-2342-11e9-931e-19c0e1e6c59d-Application-for-Employment-VS-3.pdf"
               target="_blank"
             >Click here to download the application.</a><br />
-            Please email your resume and application to <a href="mailto:ann@trailercraft.com">ann@trailercraft.com</a>.
+            Please email your resume and application to <a href="mailto:anno@trailercraft.com">anno@trailercraft.com</a>.
           </p>
           {!posts && (
             <p className={css.noJobs}>There are currently no listed career opportunities available</p>

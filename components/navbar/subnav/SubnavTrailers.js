@@ -54,7 +54,7 @@ async function SubnavTrailers() {
   ];
 
   return (
-    <Subnav columns={columns} />
+    <Subnav columns={columns} invLink="trailers" />
   );
 };
 

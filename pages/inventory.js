@@ -18,6 +18,24 @@ class Inventory extends React.Component {
     this.setActiveTab = this.setActiveTab.bind(this);
   }
 
+  componentDidMount() {
+    if (window && window.location) {
+      // check route param and assign the location if there is one.
+      const vars = {};
+      window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+          vars[key] = value;
+      });
+      if (vars && vars.tab !== undefined) {
+        if (this.props.products[vars.tab] !== undefined
+            && this.props.products[vars.tab].length > 0) {
+          this.setState({
+            activeTab: vars.tab
+          });
+        }
+      }
+    }
+  }
+
   static async getInitialProps() {
     const api = Cosmic();
     const bucket = api.bucket({

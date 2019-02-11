@@ -22,7 +22,7 @@ import css from './Subnav.scss';
 //   }
 // ];
 
-const Subnav = ({columns, truckLink, vanLink}) => (
+const Subnav = ({columns, invLink, vanLink}) => (
   <div className={css.componentContainer}>
     {columns.map(({logoUrl, logoAlt, pageRoute, contentItems, contentText}, i) => (
       <div className={css.column} key={i}>
@@ -47,9 +47,9 @@ const Subnav = ({columns, truckLink, vanLink}) => (
           <div className={css.logo}>
             <img src={logoUrl} alt={logoAlt}/>
           </div>
-          {truckLink && (
+          {invLink && (
             <p>
-              <Link href="/inventory"><a>View Current Inventory</a></Link>
+              <Link href={`/inventory?tab=${invLink}`}><a>View Current Inventory</a></Link>
             </p>
           )}
           {vanLink && (

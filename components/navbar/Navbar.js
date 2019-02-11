@@ -17,7 +17,8 @@ class Navbar extends React.Component {
 
     this.state = {
       navItemOpen: '',
-      routeChanged: false
+      routeChanged: false,
+      isIe: false
     }
 
     this.setOpenTab = this.setOpenTab.bind(this);
@@ -26,6 +27,16 @@ class Navbar extends React.Component {
   componentDidUpdate() {
     Router.onRouteChangeStart = url => {
       this.setOpenTab('', true);
+    }
+  }
+
+  componentDidMount() {
+    if (document !== undefined) {
+      const isIe = /*@cc_on!@*/false || !!document.documentMode;
+
+      if (isIe) {
+        this.setState({isIe: true});
+      }
     }
   }
 
@@ -61,10 +72,14 @@ class Navbar extends React.Component {
   }
 
   render() {
-    const {navItemOpen, routeChanged} = this.state;
+    const {navItemOpen, routeChanged, isIe} = this.state;
     const {setOpenTab} = this;
     return (
-      <div className={`${css.navbar} clearfix`}>
+      <div className={classNames(
+        css.navbar,
+        'clearfix',
+        isIe ? '' : css.hoverableNav
+      )}>
         <div className={css.subnav}>
           <svg className={css.redAngle}><use xlinkHref="#angle"></use></svg>
           <Link href="/inventory"><a>Current Inventory</a></Link>

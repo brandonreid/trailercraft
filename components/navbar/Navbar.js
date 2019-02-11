@@ -78,7 +78,7 @@ class Navbar extends React.Component {
       <div className={classNames(
         css.navbar,
         'clearfix',
-        isIe ? '' : css.hoverableNav
+        isIe ? css.isIe : ''
       )}>
         <div className={css.subnav}>
           <svg className={css.redAngle}><use xlinkHref="#angle"></use></svg>

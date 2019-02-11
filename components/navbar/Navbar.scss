@@ -262,17 +262,15 @@ $delay: 100ms;
   }
 }
 @media (min-width: $sm-bp) {
-  .navbar.hoverableNav {
-    button.navBtn.hoverable:hover + .subnavWrapper,
-    .mainNav:not(.routeChanged) .subnavWrapper:hover,
-    .subnavWrapper.show {
-      z-index: 500;
-      top: 100%;
-      transition: z-index $transition step-start,
-                  top $transition step-start;
-      .subnavContainer {
-        transform: translateY(0);
-      }
+  button.navBtn.hoverable:hover + .subnavWrapper,
+  .mainNav:not(.routeChanged) .subnavWrapper:hover,
+  .subnavWrapper.show {
+    z-index: 500;
+    top: 100%;
+    transition: z-index $transition step-start,
+                top $transition step-start;
+    .subnavContainer {
+      transform: translateY(0);
     }
   }
 }

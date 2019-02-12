@@ -77,8 +77,7 @@ console.log('is IE?', isIE);
     return (
       <div className={classNames(
         css.navbar,
-        'clearfix',
-        isIe ? css.isIe : ''
+        'clearfix'
       )}>
         <div className={css.subnav}>
           <svg className={css.redAngle}><use xlinkHref="#angle"></use></svg>
@@ -108,7 +107,9 @@ console.log('is IE?', isIE);
           </Link>
         </div>
         <div className={classNames(css.mainNav, {
-          [css.routeChanged]: routeChanged
+          [css.routeChanged]: routeChanged,
+          [css.notIe]: !isIe,
+          [css.isIe]: isIe
         })}>
 
           <button

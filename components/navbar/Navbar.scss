@@ -238,21 +238,39 @@ $delay: 100ms;
   .subnavBackdrop {
     display: none;
   }
-  @media (min-width: $sm-bp) {
+}
+@media (min-width: $sm-bp) {
+  .subnavWrapper {
     height: auto;
-    opacity: 1;
     position: absolute;
     right: 0;
     left: 0;
-    top: -200vh;
     z-index: -100;
+    &.show {
+      .subnavBackdrop {
+        display: block;
+        width: 100vw;
+        height: calc(100vh - 1em);
+      }
+    }
+  }
+  .notIe .subnavWrapper {
+    opacity: 1;
+    top: -200vh;
     transition: z-index $transition step-end $delay,
-                top $transition step-end $delay;
+                top $transition step-end;
     .subnavContainer {
       transform: translateY(-100%);
       transition: transform $transition cubic-bezier(.5,0,0,1) $delay;
     }
+  }
+  .isIe .subnavWrapper {
+    opacity: 0;
+    top: 100%;
+    transition: opacity $transition ease;
     &.show {
+      opacity: 1;
+      z-index: 500;
       .subnavBackdrop {
         display: block;
         width: 100vw;
@@ -262,15 +280,17 @@ $delay: 100ms;
   }
 }
 @media (min-width: $sm-bp) {
-  button.navBtn.hoverable:hover + .subnavWrapper,
-  .mainNav:not(.routeChanged) .subnavWrapper:hover,
-  .subnavWrapper.show {
-    z-index: 500;
-    top: 100%;
-    transition: z-index $transition step-start,
-                top $transition step-start;
-    .subnavContainer {
-      transform: translateY(0);
+  .notIe {
+    button.navBtn.hoverable:hover + .subnavWrapper,
+    .mainNav:not(.routeChanged) .subnavWrapper:hover,
+    .subnavWrapper.show {
+      z-index: 500;
+      top: 100%;
+      transition: z-index $transition step-start,
+                  top $transition step-start;
+      .subnavContainer {
+        transform: translateY(0);
+      }
     }
   }
 }

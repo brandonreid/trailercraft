@@ -54,7 +54,7 @@ const Subnav = ({columns, invLink, vanLink}) => (
           )}
           {vanLink && (
             <p>
-              <a href="http://www.anchorage.ftlvansdealer.com/new-cars-anchorage-ak" target="_blank">
+              <a href="http://www.anchorage.ftlvansdealer.com/inventory" target="_blank">
                 View Current Sprinter Van Inventory
               </a>
             </p>

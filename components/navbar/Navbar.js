@@ -33,7 +33,7 @@ class Navbar extends React.Component {
   componentDidMount() {
     if (navigator !== undefined) {
       const isIE = !!navigator.userAgent.match(/Trident/g) || !!navigator.userAgent.match(/MSIE/g);
-console.log('is IE?', isIE);
+
       if (isIE) {
         this.setState({isIe: true});
       }

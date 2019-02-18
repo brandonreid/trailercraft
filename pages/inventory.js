@@ -104,7 +104,7 @@ class Inventory extends React.Component {
           <h1>Current Inventory</h1>
           <div className={css.filters}>
             <div className="tab-list collapse-xs">
-              <a className={classNames(css.vanLink, 'button-style')} href="http://www.anchorage.ftlvansdealer.com/new-cars-anchorage-ak" target="_blank">
+              <a className={classNames(css.vanLink, 'button-style')} href="http://www.anchorage.ftlvansdealer.com/inventory" target="_blank">
                 View Our Sprinter Van Inventory
                 <svg
                   aria-hidden="true"

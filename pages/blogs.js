@@ -64,7 +64,7 @@ class Blogs extends React.Component {
         <div
           className='hero'
           style={{
-            backgroundImage: `url(${metadata.featured_image.imgix_url.replace(/ /g, "%20")}?w=${heroWidth})`
+            backgroundImage: `url(${metadata.featured_image.imgix_url}?w=${heroWidth})`
           }}
         >
           <div className={css.heroTextContainer}>

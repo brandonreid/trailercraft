@@ -80,7 +80,7 @@ class Blog extends React.Component {
         <section
           className={`${css.blogHero} hero`}
           style={{
-            backgroundImage: `url(${blog.hero_image.imgix_url.replace(/ /g, "%20")}?w=${heroImageWidth})`
+            backgroundImage: `url(${blog.hero_image.imgix_url}?w=${heroImageWidth})`
           }}
         >
           <div className={css.blogHeroContentContainer}>
@@ -98,7 +98,7 @@ class Blog extends React.Component {
               <a className={css.post}>
                 <div className={css.postImage}>
                   <img
-                    src={`${metadata.featured_image.imgix_url.replace(/ /g, "%20")}?w=${thumbnailWidth}`}
+                    src={`${metadata.featured_image.imgix_url}?w=${thumbnailWidth}`}
                     alt=""
                   />
                 </div>

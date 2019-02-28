@@ -83,7 +83,7 @@ class PartsAndServices extends React.Component {
         <section
           className={classNames(css.topHero, 'hero red-gradient')}
           style={{
-            backgroundImage: `url(${top_hero_banner.hero_image.imgix_url.replace(/ /g, "%20")}?w=${heroWidth})`
+            backgroundImage: `url(${top_hero_banner.hero_image.imgix_url}?w=${heroWidth})`
           }}>
           <div className={css.topHeroText}>
             <h1>{ top_hero_banner.hero_title }</h1>
@@ -94,7 +94,7 @@ class PartsAndServices extends React.Component {
         <section
           className={classNames(css.partsSection, 'hero')}
           style={{
-            backgroundImage: `url(${parts_statement.parts_statement_image.imgix_url.replace(/ /g, "%20")}?w=${heroWidth})`
+            backgroundImage: `url(${parts_statement.parts_statement_image.imgix_url}?w=${heroWidth})`
           }}
         >
           <svg className={css.partsChevron}><use xlinkHref="#chevron" /></svg>
@@ -107,7 +107,7 @@ class PartsAndServices extends React.Component {
         <section
           className={classNames(css.servicesSection, 'hero top-pin')}
           style={{
-            backgroundImage: `url(${services_statement.services_statement_image.imgix_url.replace(/ /g, "%20")}?w=${heroWidth})`
+            backgroundImage: `url(${services_statement.services_statement_image.imgix_url}?w=${heroWidth})`
           }}
         >
           <div className={css.servicesContent}>
@@ -121,7 +121,7 @@ class PartsAndServices extends React.Component {
             <div
               className={css.featureImg}
               style={{
-                backgroundImage: `url('${feature_1.feature_1_image.imgix_url.replace(/ /g, "%20")}?w=${featureImgWidth}')`
+                backgroundImage: `url('${feature_1.feature_1_image.imgix_url}?w=${featureImgWidth}')`
               }}
             ></div>
             <div className={css.featureText}>
@@ -133,7 +133,7 @@ class PartsAndServices extends React.Component {
             <div
               className={css.featureImg}
               style={{
-                backgroundImage: `url('${feature_2.feature_2_image.imgix_url.replace(/ /g, "%20")}?w=${featureImgWidth}')`
+                backgroundImage: `url('${feature_2.feature_2_image.imgix_url}?w=${featureImgWidth}')`
               }}
             ></div>
             <div className={css.featureText}>
@@ -145,7 +145,7 @@ class PartsAndServices extends React.Component {
             <div
               className={css.featureImg}
               style={{
-                backgroundImage: `url('${feature_3.feature_3_image.imgix_url.replace(/ /g, "%20")}?w=${featureImgWidth}')`
+                backgroundImage: `url('${feature_3.feature_3_image.imgix_url}?w=${featureImgWidth}')`
               }}
             ></div>
             <div className={css.featureText}>
@@ -157,7 +157,7 @@ class PartsAndServices extends React.Component {
             <div
               className={css.featureImg}
               style={{
-                backgroundImage: `url('${feature_4.feature_4_image.imgix_url.replace(/ /g, "%20")}?w=${featureImgWidth}')`
+                backgroundImage: `url('${feature_4.feature_4_image.imgix_url}?w=${featureImgWidth}')`
               }}
             ></div>
             <div className={css.featureText}>

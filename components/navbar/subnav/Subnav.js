@@ -76,7 +76,7 @@ const Subnav = ({columns, invLink, vanLink}) => (
                     <a
                       className={css.sciItem}
                       style={{
-                        backgroundImage: `url(${metadata.product_image.imgix_url.replace(/ /g, "%20")}?w=300)`
+                        backgroundImage: `url(${metadata.product_image.imgix_url}?w=300)`
                       }}
                     >
                       <span>{ title }</span>

@@ -75,7 +75,7 @@ class InventoryItem extends React.Component {
         <div
           className={css.productImg}
           style={{
-            backgroundImage: `url(${featured_image.imgix_url.replace(/ /g, "%20")}?w=600)`
+            backgroundImage: `url(${featured_image.imgix_url}?w=600)`
           }}
         >
           {list_price !== "" ? (
@@ -150,14 +150,14 @@ class InventoryItem extends React.Component {
                   <Slider {...sliderSettings}>
                     <div>
                       <img
-                        src={`${featured_image.imgix_url.replace(/ /g, "%20")}?w=600`}
+                        src={`${featured_image.imgix_url}?w=600`}
                         alt={`${title} Image 1`}
                       />
                     </div>
                     {product_images.map((img, i) => (
                       <div key={i}>
                         <img
-                          src={`${img.product_image.imgix_url.replace(/ /g, "%20")}?w=600`}
+                          src={`${img.product_image.imgix_url}?w=600`}
                           alt={`${title} Image ${i + 2}`}
                         />
                       </div>

@@ -281,8 +281,6 @@ $delay: 100ms;
 }
 @media (min-width: $sm-bp) {
   .notIe {
-    button.navBtn.hoverable:hover + .subnavWrapper,
-    .mainNav:not(.routeChanged) .subnavWrapper:hover,
     .subnavWrapper.show {
       z-index: 500;
       top: 100%;

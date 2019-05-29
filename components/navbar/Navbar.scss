@@ -249,7 +249,7 @@ $delay: 100ms;
     &.show {
       .subnavBackdrop {
         display: block;
-        width: 100vw;
+        width: 100%;
         height: calc(100vh - 1em);
       }
     }
@@ -273,7 +273,7 @@ $delay: 100ms;
       z-index: 500;
       .subnavBackdrop {
         display: block;
-        width: 100vw;
+        width: 100%;
         height: calc(100vh - 1em);
       }
     }

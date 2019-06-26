@@ -23,11 +23,16 @@ class Career extends React.Component {
       write_key: process.env.COSMIC_WRITE_KEY
     });
 
+    const pageData = await bucket.getObject({
+      slug: 'careers'
+    });
+    const page = pageData.object;
+
     const post = await bucket.getObject({
       slug
     });
 
-    return {post};
+    return {page, post};
   }
 
   // componentDidMount() {
@@ -54,6 +59,7 @@ class Career extends React.Component {
   render() {
     // const {heroImageWidth, thumbnailWidth} = this.state;
     const {
+      page,
       post: {
         object: {
           title,
@@ -94,10 +100,10 @@ class Career extends React.Component {
           </div>
           <p className={css.emailTo}>
             <a
-              href="https://cosmic-s3.imgix.net/ac2880a0-2342-11e9-931e-19c0e1e6c59d-Application-for-Employment-VS-3.pdf"
+              href={page.metadata.application_pdf.url || '#0'}
               target="_blank"
             >Click here to download the application.</a><br />
-            Please email your resume and application to <a href="mailto:anno@trailercraft.com">anno@trailercraft.com</a>.
+            Please email your resume and application to <a href={`mailto:${page.metadata.application_email_address}`}>{ page.metadata.application_email_address }</a>.
           </p>
         </section>
       </div>

@@ -17,6 +17,12 @@ class Careers extends React.Component {
       read_key: process.env.COSMIC_READ_KEY,
       write_key: process.env.COSMIC_WRITE_KEY
     });
+
+    const pageData = await bucket.getObject({
+      slug: 'careers'
+    });
+    const page = pageData.object;
+
   
     const postsData = await bucket.getObjects({
       type: 'job-postings',
@@ -25,11 +31,11 @@ class Careers extends React.Component {
     });
     const posts = postsData.objects;
 
-    return {posts};
+    return {page, posts};
   }
 
   render() {
-    const {posts} = this.props;
+    const {page, posts} = this.props;
     return (
       <div className={css.careersList}>
         <Head>
@@ -49,10 +55,10 @@ class Careers extends React.Component {
           <h1>Careers at TrailerCraft, Inc.</h1>
           <p className={css.emailTo}>
             <a
-              href="https://cosmic-s3.imgix.net/ac2880a0-2342-11e9-931e-19c0e1e6c59d-Application-for-Employment-VS-3.pdf"
+              href={page.metadata.application_pdf.url || '#0'}
               target="_blank"
             >Click here to download the application.</a><br />
-            Please email your resume and application to <a href="mailto:anno@trailercraft.com">anno@trailercraft.com</a>.
+            Please email your resume and application to <a href={`mailto:${page.metadata.application_email_address}`}>{ page.metadata.application_email_address }</a>.
           </p>
           {!posts && (
             <p className={css.noJobs}>There are currently no listed career opportunities available</p>

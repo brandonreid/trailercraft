@@ -47,7 +47,10 @@ class AboutUs extends React.Component {
           <div className={css.videoWrapper}>
             <div className={css.videoContainer}>
               <h2>About TrailerCraft, Inc.</h2>
-              <div className={css.responsiveVideo}>{renderHTML(youtube_embed_code)}</div>
+              <div className={css.responsiveVideo}>
+                {renderHTML(youtube_embed_code)}
+                <div class={css.spinner}><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+              </div>
             </div>
           </div>
         )}

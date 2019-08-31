@@ -1,0 +1,50 @@
+@import '../global-styles/variables';
+
+:local {
+.AboutUsContainer {}
+
+.videoWrapper {
+  background-color: $black;
+  padding: 3em 0.5em;
+  box-shadow: inset 0 1px 22px 0 black;
+
+  h2 {
+    color: white;
+    margin-bottom: 1em;
+  }
+
+  .videoContainer {
+    max-width: $constrained-width;
+    margin: 0 auto;
+  }
+
+  .responsiveVideo {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+    iframe,
+    object,
+    embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.storyContent {
+  max-width: $constrained-width;
+  margin: 0 auto;
+  padding: 3em 0.5em;
+  img {
+    max-width: 100%;
+  }
+  ul {
+    li + li {
+      margin-top: 0.5em;
+    }
+  }
+}
+}

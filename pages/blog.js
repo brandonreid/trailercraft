@@ -92,8 +92,6 @@ class Blog extends React.Component {
         </section>
         <section className={css.blogListContainer}>
           {posts.map(({title, metadata, slug}, i) => (
-            // TODO: Figure out best way to route this...
-            // Ideally the route will be /blog/the-slug
             <Link key={i} href={`/blogs/${slug}`}>
               <a className={css.post}>
                 <div className={css.postImage}>

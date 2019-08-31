@@ -1,6 +1,8 @@
 import React from 'react';
 import Cosmic from 'cosmicjs';
 import Head from 'next/head';
+import renderHTML from 'react-render-html';
+import Link from 'next/link';
 
 import css from './index.scss';
 
@@ -89,6 +91,12 @@ class Index extends React.Component {
             <strong>{ data.number_of_years_in_business }</strong>
             <span>Years of business,<br /> employing over { data.apx_number_of_alaskan_employees } Alaskans.</span>
           </h1>
+          {data.about_us_youtube_embed_code && (
+            <div className={css.videoContainer}>
+              <div className={css.responsiveVideo}>{renderHTML(data.about_us_youtube_embed_code)}</div>
+              <p>Watch the full video on the <Link href="./about-us"><a>About Us</a></Link> page.</p>
+            </div>
+          )}
         </section>
         <section
           className={`${css.coreValue} hero top-left-pin`}

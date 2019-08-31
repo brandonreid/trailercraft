@@ -89,6 +89,10 @@ class Navbar extends React.Component {
             <a className={css.hideMobile}>Careers</a>
           </Link>
           <svg className={classNames(css.chevron, css.hideMobile)}><use xlinkHref="#chevron" /></svg>
+          <Link href="/about-us">
+            <a className={css.hideMobile}>About</a>
+          </Link>
+          <svg className={classNames(css.chevron, css.hideMobile)}><use xlinkHref="#chevron" /></svg>
           <Link href="/gallery">
             <a className={css.hideMobile}>Gallery</a>
           </Link>

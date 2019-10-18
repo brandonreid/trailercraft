@@ -18,7 +18,29 @@ class Contact extends React.Component {
   }
 
   setActiveTab(location) {
-    this.setState({activeTab: location});
+    const ua = window.navigator.userAgent;
+    const isIE = ua.indexOf('MSIE ') > 0
+                 || ua.indexOf('Trident/') > 0
+                 || ua.indexOf('Edge/') > 0;
+
+    if (isIE) {
+      // If IE, navigate the URL to force the tab switch.
+      const vars = [];
+      let currentUrl = window.location.href;
+      
+      currentUrl.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+      });
+  
+      if (vars && vars.location !== undefined) {
+        window.location =  `${currentUrl.split("?")[0]}?location=${location}`;
+      } else {
+        window.location =  `${currentUrl}?location=${location}`;
+      }
+    } else {
+      // otherwise just update the state.
+      this.setState({activeTab: location});
+    }
   }
 
   componentDidMount() {

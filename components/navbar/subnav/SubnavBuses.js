@@ -27,13 +27,13 @@ async function SubnavBuses() {
 
   const columns = [
     {
-      logoUrl: '/static/logo_blue-bird.png',
-      logoAlt: 'Blue Bird Logo',
+      logoUrl: '/static/logo_thomas-buses.png',
+      logoAlt: 'Thomas Built Buses',
       contentItems: [
         {
           itemTitle: 'Buses',
           moreLink: '/product-list/bus-products',
-          mobileTitle: 'Blue Bird Buses',
+          mobileTitle: 'Thomas Built Buses',
           products: [
             ...buses
           ]

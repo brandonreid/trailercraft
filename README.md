@@ -5,11 +5,11 @@ Sass is used for styles.
 Api requests are made using the [CosmicJS NPM package](https://www.npmjs.com/package/cosmicjs).
 
 ## Getting Started
-- Clone and `npm install`
+- Clone and `npm install`. (npm v6* def works)
 - Add a `.env` file to the root of your project with your CosmicJS environment variables.
 - `npm run dev`
 
-### Environment Variables
+### Environment Variables (really only need cosmic_bucket).
 ```
 COSMIC_BUCKET=XXXX
 COSMIC_WRITE_KEY=XXXX

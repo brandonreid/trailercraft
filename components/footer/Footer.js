@@ -115,6 +115,11 @@ const Footer = () => (
               M-F, 7am to Midnight<br />
               Sat, 9am to 5pm
             </p>
+            <img
+              className={css.eleteSportLogo}
+              src="https://cosmic-s3.imgix.net/883e1390-059f-11ea-95fe-01afbd7f5f3b-ELITELOGORGBgraySMFLATtransparent-bg.png"
+              alt="Elete Sport Logo"
+            />
           </div>
           <div className={css.location}>
             <h3>Fairbanks</h3>

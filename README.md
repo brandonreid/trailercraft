@@ -10,6 +10,8 @@ Api requests are made using the [CosmicJS NPM package](https://www.npmjs.com/pac
 - `npm run dev`
 
 ### Environment Variables (really only need cosmic_bucket).
+Get these by logging into [CosmicJS.com](https://cosmicjs.com/), Settings/Basic Settings of the trailercraft bucket.
+The `COSMIC_BUCKET` is `trailercraft`, then generate a new read key.
 ```
 COSMIC_BUCKET=XXXX
 COSMIC_WRITE_KEY=XXXX

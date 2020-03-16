@@ -6,6 +6,7 @@ import classNames from 'classnames';
 import css from './Navbar.scss';
 
 import SubnavTrucks from './subnav/SubnavTrucks';
+import SubnavFuso from './subnav/SubnavFuso';
 import SubnavBuses from './subnav/SubnavBuses';
 import SubnavVans from './subnav/SubnavVans';
 import SubnavPlows from './subnav/SubnavPlows';
@@ -136,6 +137,29 @@ class Navbar extends React.Component {
             <div
               className={css.subnavBackdrop}
               onClick={() => setOpenTab('trucks')}
+            ></div>
+          </div>
+
+          <button
+            className={classNames(`${css.navBtn} symbol`, {
+              [css.showing]: navItemOpen === 'fuso',
+              [css.hoverable]: navItemOpen === ''
+            })}
+            onClick={() => setOpenTab('fuso')}
+          >
+            <img src="/static/fuso.png" alt="Fuso" title="Fuso" />
+            <span>Fuso</span>
+            <svg className={css.dropDownIcon}><use xlinkHref="#dropDown"></use></svg>
+          </button>
+          <div className={classNames(css.subnavWrapper, {
+            [css.show]: navItemOpen === 'fuso'
+          })}>
+            <div className={css.subnavContainer}>
+              <SubnavFuso />
+            </div>
+            <div
+              className={css.subnavBackdrop}
+              onClick={() => setOpenTab('fuso')}
             ></div>
           </div>
 
